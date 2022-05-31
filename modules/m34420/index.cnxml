@@ -1,0 +1,3135 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Cartesian Vectors and Tensors: Their Algebra</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34420</md:content-id>
+  <md:title>Cartesian Vectors and Tensors: Their Algebra</md:title>
+  <md:abstract/>
+  <md:uuid>6d841c1a-23d3-47bc-a435-0b03f155727b</md:uuid>
+</metadata>
+
+<content>
+       <list id="id6074254" list-type="labeled-item"><title>Topics Covered in this Chapter</title><item>Definition of a vector</item>
+        <item>Examples of vectors</item>
+        <item>Scalar multiplication</item>
+        <item>Addition of vectors – coplanar vectors</item>
+        <item>Unit vectors</item>
+        <item>A basis of non-coplanar vectors</item>
+        <item>Scalar product – orthogonality</item>
+        <item>Directional cosines for coordinate transformation</item>
+        <item>Vector product</item>
+        <item>Velocity due to rigid body rotations</item>
+        <item>Triple scalar product</item>
+        <item>Triple vector product</item>
+        <item>Second order tensors</item>
+        <item>Examples of second order tensors</item>
+        <item>Scalar multiplication and addition</item>
+        <item>Contraction and multiplication</item>
+        <item>The vector of an antisymmetric tensor</item>
+        <item>Canonical form of a symmetric tensor</item>
+      </list>
+      <note id="id16763596" type="Note">Reading Assignment: Chapter 2 of Aris, Appendix A of BSL</note>
+      <para id="id5606939"> The algebra of vectors and tensors will be described here with Cartesian coordinates so the student can see the operations in terms of its components without the complexity of curvilinear coordinate systems.</para>
+      <section id="id7946720">
+        <title>Definition of a vector</title>
+        
+        <para id="eip-523">Suppose <m:math>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mi>i</m:mi>
+</m:msub>
+</m:math> , i.e., (<m:math>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+</m:math>, <m:math>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+</m:math>, <m:math>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mn>3</m:mn>
+</m:msub>
+</m:math>), are the Cartesian coordinates of a point <m:math>
+<m:mi>P</m:mi>
+</m:math> in a frame of reference, <m:math><m:mn>0123</m:mn></m:math>.  Let <m:math>
+ <m:mrow>
+  <m:mn>0</m:mn><m:mover accent="true">
+   <m:mn>1</m:mn>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  <m:mover accent="true">
+   <m:mn>2</m:mn>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  <m:mover accent="true">
+   <m:mn>3</m:mn>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  
+ </m:mrow>
+</m:math>  be another Cartesian frame of reference with the same origin but defined by a rigid rotation.  The coordinates of the point <m:math><m:mi>P</m:mi></m:math> in the new frame of reference is  <m:math>
+ <m:mrow>
+  <m:msub>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   
+   <m:mi>j</m:mi>
+  </m:msub>
+  
+ </m:mrow>
+</m:math>
+ where the coordinates are related to those in the old frame as follows. </para><equation id="eip-559"><m:math mode="display">
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mover accent="true">
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mi>j</m:mi>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+<m:mspace width="5pt"/>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>2</m:mn><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>3</m:mn><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>3</m:mn>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+
+<m:mspace width="5pt"/>
+     <m:msub>
+      <m:mover accent="true">
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mi>j</m:mi>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mover accent="true">
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mover accent="true">
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mn>3</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mover accent="true">
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mn>3</m:mn>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  </m:math>
+</equation>
+
+<para id="id13206857234234">where <emphasis effect="italics">l</emphasis><sub><emphasis effect="italics">ij</emphasis><emphasis effect="italics"/></sub> are the cosine of the angle between the old and new coordinate systems. Summation over repeated indices is understood when a term or a product appears with a common index.</para><para id="eip-402"><definition id="eip-id1171141060412"><term>
+Cartesian Vector
+</term>
+<meaning id="eip-id1171126648028"> A Cartesian vector, a, in three dimensions is a quantity with three components <m:math>
+<m:msub>
+<m:mi>a</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+</m:math>, 
+<m:math>
+<m:msub>
+<m:mi>a</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+</m:math>, 
+<m:math>
+<m:msub>
+<m:mi>a</m:mi>
+<m:mn>3</m:mn>
+</m:msub>
+</m:math> in the frame of reference 0123, which, under rotation of the coordinate frame to 
+
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0</m:mn><m:mover accent="true">
+    <m:mn>1</m:mn>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mover accent="true">
+    <m:mn>2</m:mn>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mover accent="true">
+    <m:mn>3</m:mn>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   
+  </m:mrow>
+  
+ </m:semantics>
+</m:math>
+  , become components  
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mover accent="true">
+     <m:mi>a</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    
+    <m:mn>1</m:mn>
+   </m:msub>
+<m:mo>,</m:mo>
+   <m:msub>
+    <m:mover accent="true">
+     <m:mi>a</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    
+    <m:mn>2</m:mn>
+   </m:msub>
+<m:mo>,</m:mo>
+   <m:msub>
+    <m:mover accent="true">
+     <m:mi>a</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    
+    <m:mn>3</m:mn>
+   </m:msub>
+
+
+   
+  </m:mrow>
+  
+ </m:semantics>
+</m:math>
+, where
+
+	 
+</meaning>
+</definition>
+<equation id="eip-id1166806038869">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mover accent="true">
+     <m:mi>a</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    
+    <m:mi>j</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mi>j</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>a</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiqadggagaqeamaaBaaaleaacaWGQbaabeaakiabg2da9iaadYgadaWgaaWcbaGaamyAaiaadQgaaeqaaOGaamyyamaaBaaaleaacaWGPbaabeaaaaa@3E14@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation></para>
+        
+      </section>
+      <section id="id13468505">
+        <title>Examples of vectors</title>
+        <para id="id13891923"> In Cartesian coordinates, the length of the position vector of a point from the origin is equal to the square root of the sum of the square of the coordinates. The <emphasis effect="italics">magnitude</emphasis> of a vector, <emphasis effect="bold">a</emphasis>, is defined as follows.</para>
+        <equation id="eip-331"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>a</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       <m:msub>
+        <m:mi>a</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msup>
+   
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaamaaemaabaGaaCyyaaGaay5bSlaawIa7aiabg2da9maabmaabaGaamyyamaaBaaaleaacaWGPbaabeaakiaadggadaWgaaWcbaGaamyAaaqabaaakiaawIcacaGLPaaadaahaaWcbeqaaiaaigdacaGGVaGaaGOmaaaaaaa@42ED@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id17946655">A vector with a magnitude of unity is called a <emphasis effect="italics">unit vector</emphasis>. The vector, <emphasis effect="bold">a</emphasis>/|<emphasis effect="bold">a</emphasis>|, is a unit vector with the direction of <emphasis effect="bold">a</emphasis>. Its components are equal to the cosine of the angle between <emphasis effect="bold">a</emphasis> and the coordinate axis. Some special unit vectors are the unit vectors in the direction of the coordinate axis and the normal vector of a surface.</para>
+        <section id="id14398213">
+          <title>Scalar multiplication</title>
+          <para id="id7752988">If α is a scalar and <emphasis effect="bold">a</emphasis> is a vector, the product α<emphasis effect="bold">a</emphasis> is a vector with components, α<sub><emphasis effect="italics">a</emphasis><emphasis effect="italics">i</emphasis></sub>, magnitude α|<emphasis effect="bold">a</emphasis>|, and the same direction as <emphasis effect="bold">a</emphasis>. </para>
+        </section>
+      </section>
+      <section id="id13001391">
+        <title>Addition of vectors – Coplanar vectors</title>
+        <para id="id15970721">If <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis> are vectors with components <emphasis effect="italics">a</emphasis><sub><emphasis effect="italics">i</emphasis></sub><emphasis effect="italics"/> and <emphasis effect="italics">b</emphasis><sub>i</sub>, then the sum of <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis> is a vector with components, <emphasis effect="italics">a</emphasis><sub>i</sub>+<emphasis effect="italics">b</emphasis><sub>i</sub>.</para>
+        <para id="id16168604"> The order and association of the addition of vectors are immaterial.</para>
+        <equation id="eip-802"><m:math>
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>+</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>=</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>+</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>+</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle><m:mo>=</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>+</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id17159775">The subtraction of one vector from another is the same as multiplying one by the scalar (-1) and adding the resulting vectors.</para>
+        <para id="id17728100">If <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis> are two vectors from the same origin, they are <emphasis effect="italics">colinear</emphasis> or parallel if one is a linear combination of the other, i.e., they both have the same direction. If <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis> are two vectors from the same origin, then all linear combination of <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis> are in the same plane as <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis>, i.,e., they are <emphasis effect="italics">coplanar</emphasis>. We will prove this statement when we get to the triple scalar product.</para>
+        <section id="id7527662">
+          <title>Unit vectors</title>
+          <para id="id13521822"> The unit vectors in the direction of a set of mutually orthogonal coordinate axis are defined as follows.</para>
+          <equation id="eip-751"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+    <m:mrow>
+     <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>1</m:mn>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>0</m:mn>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>0</m:mn>
+      </m:mtd>
+     </m:mtr>
+     
+    </m:mtable>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo><m:mtext> </m:mtext><m:mtext> </m:mtext><m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+    <m:mrow>
+     <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>0</m:mn>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>1</m:mn>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>0</m:mn>
+      </m:mtd>
+     </m:mtr>
+     
+    </m:mtable>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo><m:mtext> </m:mtext><m:mtext> </m:mtext><m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+    <m:mrow>
+     <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>0</m:mn>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>0</m:mn>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>1</m:mn>
+      </m:mtd>
+     </m:mtr>
+     
+    </m:mtable>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+  
+ </m:semantics>
+</m:math>
+</equation>
+          
+          <para id="id11386567">The suffixes to <emphasis effect="bold">e</emphasis> are enclosed in parentheses to show that they do not denote components. A vector, <emphasis effect="bold">a</emphasis>, can be expressed in terms of its components, (<emphasis effect="italics">a</emphasis><sub><emphasis effect="italics">1</emphasis></sub><emphasis effect="italics">, a</emphasis><sub><emphasis effect="italics">2</emphasis></sub><emphasis effect="italics">,</emphasis><emphasis effect="italics">a</emphasis><sub><emphasis effect="italics">3</emphasis></sub>) and the unit vectors.</para>
+          <equation id="eip-236"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>=</m:mo><m:msub>
+    <m:mi>a</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+<m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+    <m:mrow>
+     <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>+</m:mo><m:msub>
+    <m:mi>a</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+<m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+    <m:mrow>
+     <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>+</m:mo><m:msub>
+    <m:mi>a</m:mi>
+    <m:mn>3</m:mn>
+   </m:msub>
+<m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+    <m:mrow>
+     <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   
+  </m:mrow>
+  </m:semantics>
+</m:math>
+</equation>
+          <para id="id16005241">This equation can be multiplied and divided by the magnitude of <emphasis effect="bold">a</emphasis> to express the vector in terms of its magnitude and direction.</para>
+          <equation id="eip-556"><m:math>
+ <m:semantics>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:msub>
+          <m:mi>a</m:mi>
+          <m:mn>1</m:mn>
+         </m:msub>
+         
+        </m:mrow>
+        <m:mrow>
+         <m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow>
+        </m:mrow>
+       </m:mfrac>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:mfrac>
+        <m:mrow>
+         <m:msub>
+          <m:mi>a</m:mi>
+          <m:mn>2</m:mn>
+         </m:msub>
+         
+        </m:mrow>
+        <m:mrow>
+         <m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow>
+        </m:mrow>
+       </m:mfrac>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:mfrac>
+        <m:mrow>
+         <m:msub>
+          <m:mi>a</m:mi>
+          <m:mn>3</m:mn>
+         </m:msub>
+         
+        </m:mrow>
+        <m:mrow>
+         <m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow>
+        </m:mrow>
+       </m:mfrac>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+       <m:mo>λ</m:mo>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+       <m:mo>λ</m:mo>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+        <m:mo>λ</m:mo>
+        <m:mn>3</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+ </m:semantics>
+</m:math>
+</equation>
+          <para id="id17569613">where λ<sub>i</sub> are the directional cosines of <emphasis effect="bold">a</emphasis>. </para>
+          <para id="id13483583">A special unit vector we will use often is the normal vector to a surface, <emphasis effect="bold">n</emphasis>. The components of the normal vector are the directional cosines of the normal direction to the surface.</para>
+        </section>
+        <section id="id8346785">
+          <title>Scalar product – Orthogonality</title>
+          <para id="id13476038"> The <emphasis effect="italics">scalar product</emphasis> (or <emphasis effect="italics">dot product</emphasis>) of two vectors, <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis> is defined as</para>
+          
+          <equation id="eip-641"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mi>cos</m:mi><m:mi>θ</m:mi>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaahggacqGHIaYTcaWHIbGaeyypa0ZaaqWaaeaacaWHHbaacaGLhWUaayjcSdGaaGPaVpaaemaabaGaaCOyaaGaay5bSlaawIa7aiaaykW7ciGGJbGaai4BaiaacohacqaH4oqCaaa@49FF@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation><para id="id12978566">where θ is the angle between the two vectors. If the two vectors are perpendicular to each other, i.e., they are <emphasis effect="italics">orthogonal</emphasis>, then the scalar product is zero. The unit vectors along the Cartesian coordinate axis are orthogonal and their scalar product is equal to the Kronecker delta.</para>
+          <equation id="eip-629"><m:math>
+ <m:semantics>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mi>i</m:mi><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>•</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+</m:mtd>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:msub>
+      <m:mi>δ</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+<m:mtd/>    
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:mrow><m:mo>{</m:mo> <m:mrow>
+      <m:mtable>
+       <m:mtr>
+        <m:mtd>
+         <m:mrow>
+          <m:mn>1</m:mn><m:mo>,</m:mo><m:mi>i</m:mi><m:mo>=</m:mo><m:mi>j</m:mi>
+         </m:mrow>
+        </m:mtd>
+       </m:mtr>
+       <m:mtr>
+        <m:mtd>
+         <m:mrow>
+          <m:mn>0</m:mn><m:mo>,</m:mo><m:mi>i</m:mi><m:mo>≠</m:mo><m:mi>j</m:mi>
+         </m:mrow>
+        </m:mtd>
+       </m:mtr>
+       
+      </m:mtable>
+     </m:mrow> </m:mrow>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+</m:semantics>
+  </m:math></equation>
+          <para id="id15876605"> The scalar product is commutative and distributive. The cosine of the angle measured from <emphasis effect="bold">a</emphasis> to <emphasis effect="bold">b</emphasis> is the same as measured from <emphasis effect="bold">b</emphasis> to <emphasis effect="bold">a</emphasis>. Thus the scalar product can be expressed in terms of the components of the vectors.</para>
+          <equation id="eip-45"><m:math>
+ <m:semantics>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle>
+</m:mtd>
+<m:mtd>
+<m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>3</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>•</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>3</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd/>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mi>j</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>δ</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd/>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaqqabaGaaCyyaiabgkci3kaahkgacqGH9aqpdaqadaqaaiaadggadaWgaaWcbaGaaGymaaqabaGccaaMc8UaaCyzamaaBaaaleaacaGGOaGaaGymaiaacMcaaeqaaOGaey4kaSIaamyyamaaBaaaleaacaaIYaaabeaakiaaykW7caWHLbWaaSbaaSqaaiaacIcacaaIYaGaaiykaaqabaGccqGHRaWkcaWGHbWaaSbaaSqaaiaaiodaaeqaaOGaaGPaVlaahwgadaWgaaWcbaGaaiikaiaaiodacaGGPaaabeaaaOGaayjkaiaawMcaaiabgkci3oaabmaabaGaamOyamaaBaaaleaacaaIXaaabeaakiaaysW7caWHLbWaaSbaaSqaaiaacIcacaaIXaGaaiykaaqabaGccqGHRaWkcaWGIbWaaSbaaSqaaiaaikdaaeqaaOGaaGPaVlaahwgadaWgaaWcbaGaaiikaiaaikdacaGGPaaabeaakiabgUcaRiaadkgadaWgaaWcbaGaaG4maaqabaGccaaMc8UaaCyzamaaBaaaleaacaGGOaGaaG4maiaacMcaaeqaaaGccaGLOaGaayzkaaaabaGaeyypa0JaamyyamaaBaaaleaacaWGPbaabeaakiaaykW7caWGIbWaaSbaaSqaaiaadQgaaeqaaOGaeqiTdq2aaSbaaSqaaiaadMgacaWGQbaabeaaaOqaaiabg2da9iaadggadaWgaaWcbaGaamyAaaqabaGccaaMc8UaamOyamaaBaaaleaacaWGPbaabeaaaaaa@7B19@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+          <para id="id8844962">The scalar product of a vector with itself is the square of the magnitude of the vector.</para>
+          <equation id="eip-716"><m:math>
+ <m:semantics>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle>
+</m:mtd>
+<m:mtd>
+<m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mi>cos</m:mi><m:mn>0</m:mn>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd/>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msup>
+      <m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle>
+</m:mtd>
+<m:mtd>
+<m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd/>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msup>
+      <m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaqqabaGaaCyyaiabgkci3kaahggacqGH9aqpdaabdaqaaiaahggaaiaawEa7caGLiWoacaaMc8+aaqWaaeaacaWHHbaacaGLhWUaayjcSdGaaGPaVlGacogacaGGVbGaai4CaiaaykW7caaIWaaabaGaeyypa0ZaaqWaaeaacaWHHbaacaGLhWUaayjcSdWaaWbaaSqabeaacaaIYaaaaaGcbaGaaCyyaiabgkci3kaahggacqGH9aqpcaWGHbWaaSbaaSqaaiaadMgaaeqaaOGaaGPaVlaadggadaWgaaWcbaGaamyAaaqabaaakeaacqGH9aqpdaabdaqaaiaahggaaiaawEa7caGLiWoadaahaaWcbeqaaiaaikdaaaaaaaa@6096@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+          <para id="id13542287"> The most common application of the scalar product is the projection or component of a vector in the direction of another vector. For example, suppose <emphasis effect="bold">n</emphasis> is a unit vector (e.g., the normal to a surface) the component of <emphasis effect="bold">a</emphasis> in the direction of <emphasis effect="bold">n</emphasis> is as follows.</para><equation id="eip-433"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">n</m:mi></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mi>cos</m:mi><m:mi>θ</m:mi>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaahggacqGHIaYTcaWHUbGaeyypa0ZaaqWaaeaacaWHHbaacaGLhWUaayjcSdGaaGPaVlGacogacaGGVbGaai4CaiaaykW7cqaH4oqCaaa@45FE@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+          
+        </section>
+      </section>
+      <section id="id12931741">
+        <title>Directional Cosines for Coordinate Transformation</title>
+        <para id="eip-246">The properties of the directional cosines for the rotation of the Cartesian coordinate reference frame can now be easily illustrated.  Suppose the unit vectors in the original system is <m:math>
+<m:msub>
+<m:mi mathvariant="bold">e</m:mi>
+<m:mrow>
+<m:mo>(</m:mo>
+<m:mi>i</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:msub>
+</m:math> and in the rotated system is <m:math>
+<m:msub>
+<m:mrow>
+<m:mover>
+<m:mrow>
+<m:mi mathvariant="bold">e</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mo>_</m:mo>
+</m:mrow>
+</m:mover>
+</m:mrow>
+<m:mrow>
+<m:mo>(</m:mo>
+<m:mi>j</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:msub>
+</m:math> .  The components of the unit vector, <m:math>
+<m:msub>
+<m:mrow>
+<m:mover>
+<m:mrow>
+<m:mi mathvariant="bold">e</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mo>_</m:mo>
+</m:mrow>
+</m:mover>
+</m:mrow>
+<m:mrow>
+<m:mo>(</m:mo>
+<m:mi>j</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:msub>
+</m:math> , in the original reference frame is 
+<m:math>
+<m:msub>
+<m:mi>l</m:mi>
+<m:mrow>
+<m:mi>i</m:mi>
+<m:mi>j</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>.  This can be expressed as the scalar product.</para><equation id="eip-315"><m:math>
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mover accent="true">
+       <m:mi>e</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      </m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi>e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>2</m:mn><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi>e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>3</m:mn><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi>e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>,</m:mo><m:mtext> </m:mtext><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi>e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>i</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>•</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mover accent="true">
+       <m:mi>e</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      </m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:mo>,</m:mo><m:mtext> </m:mtext><m:mi>i</m:mi><m:mo>,</m:mo><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8sipiYdHaVhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaeqabaGabCyzayaaraWaaSbaaSqaaiaahIcacaWHQbGaaCykaaqabaGccqGH9aqpcaWGSbWaaSbaaSqaaiaaigdacaWGQbaabeaakiaaykW7caWHLbWaaSbaaSqaaiaahIcacaWHXaGaaCykaaqabaGccqGHRaWkcaWGSbWaaSbaaSqaaiaaikdacaWGQbaabeaakiaaykW7caWHLbWaaSbaaSqaaiaahIcacaWHYaGaaCykaaqabaGccqGHRaWkcaWGSbWaaSbaaSqaaiaaiodacaWGQbaabeaakiaaykW7caWHLbWaaSbaaSqaaiaahIcacaWHZaGaaCykaaqabaGccaaMe8UaaiilaiaaywW7caWGQbGaeyypa0JaaGymaiaacYcacaaIYaGaaiilaiaaiodaaeaacaWHLbWaaSbaaSqaaiaahIcacaWHPbGaaCykaaqabaGccqGHIaYTceWHLbGbaebadaWgaaWcbaGaaCikaiaahQgacaWHPaaabeaakiabg2da9iaadYgadaWgaaWcbaGaamyAaiaadQgaaeqaaOGaaGjbVlaacYcacaaMf8UaamyAaiaacYcacaWGQbGaeyypa0JaaGymaiaacYcacaaIYaGaaiilaiaaiodaaaaa@7331@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        
+        
+        <para id="id11772634">Since 
+       <m:math>
+<m:msub>
+<m:mrow>
+<m:mover>
+<m:mrow>
+<m:mi mathvariant="bold">e</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mo>_</m:mo>
+</m:mrow>
+</m:mover>
+</m:mrow>
+<m:mrow>
+<m:mo>(</m:mo>
+<m:mi>j</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:msub>
+</m:math>
+       is a unit vector, it has a magnitude of unity.</para>
+        
+        <equation id="eip-843"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mover accent="true">
+     <m:mi>e</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    </m:mstyle>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+    </m:mrow>
+   </m:msub>
+   <m:mo>•</m:mo><m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mover accent="true">
+     <m:mi>e</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    </m:mstyle>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+    </m:mrow>
+   </m:msub>
+   <m:mo>=</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>=</m:mo><m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>+</m:mo><m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>+</m:mo><m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mn>3</m:mn><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mn>3</m:mn><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>,</m:mo><m:mtext> </m:mtext><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8sipiYdHaVhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiqahwgagaqeamaaBaaaleaacaWHOaGaaCOAaiaahMcaaeqaaOGaeyOiGCRabCyzayaaraWaaSbaaSqaaiaahIcacaWHQbGaaCykaaqabaGccqGH9aqpcaaIXaGaeyypa0JaamiBamaaBaaaleaacaWGPbGaaiikaiaadQgacaGGPaaabeaakiaaykW7caWGSbWaaSbaaSqaaiaadMgacaGGOaGaamOAaiaacMcaaeqaaOGaeyypa0JaamiBamaaBaaaleaacaaIXaGaaiikaiaadQgacaGGPaaabeaakiaaykW7caWGSbWaaSbaaSqaaiaaigdacaGGOaGaamOAaiaacMcaaeqaaOGaey4kaSIaamiBamaaBaaaleaacaaIYaGaaiikaiaadQgacaGGPaaabeaakiaaykW7caWGSbWaaSbaaSqaaiaaikdacaGGOaGaamOAaiaacMcaaeqaaOGaey4kaSIaamiBamaaBaaaleaacaaIZaGaaiikaiaadQgacaGGPaaabeaakiaaykW7caWGSbWaaSbaaSqaaiaaiodacaGGOaGaamOAaiaacMcaaeqaaOGaaGjbVlaacYcacaaMf8UaamOAaiabg2da9iaaigdacaGGSaGaaGOmaiaacYcacaaIZaaaaa@7487@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation><para id="eip-960">Also, the axis of a Cartesian system are orthorgonal.</para><equation id="eip-722"><m:math>
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>i</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>•</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mrow>
+      <m:mtable>
+       <m:mtr>
+        <m:mtd>
+         <m:mrow>
+          <m:mn>0</m:mn><m:mo>,</m:mo><m:mtext> </m:mtext><m:mtext>if</m:mtext><m:mi>i</m:mi>
+<m:mo>≠</m:mo>
+<m:mi>j</m:mi>
+         </m:mrow>
+        </m:mtd>
+       </m:mtr>
+       <m:mtr>
+        <m:mtd>
+         <m:mrow>
+          <m:mn>1</m:mn><m:mo>,</m:mo><m:mtext> </m:mtext><m:mtext>if</m:mtext><m:mi>i</m:mi><m:mo>=</m:mo><m:mi>j</m:mi>
+         </m:mrow>
+        </m:mtd>
+       </m:mtr>
+       
+      </m:mtable>
+     </m:mrow> </m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mtext>thus</m:mtext>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>i</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>•</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>d</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8sipiYdHaVhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaeqabaGaaCyzamaaBaaaleaacaWHOaGaaCyAaiaahMcaaeqaaOGaeyOiGCRaaCyzamaaBaaaleaacaWHOaGaaCOAaiaahMcaaeqaaOGaeyypa0ZaaiqaaeaafaqabeGabaaabaGaaGimaiaaysW7caGGSaGaaGzbVlaabMgacaqGMbGaaGjbVlaadMgacqGHGjsUcaWGQbaabaGaaGymaiaacYcacaaMf8UaaeyAaiaabAgacaaMe8UaamyAaiabg2da9iaadQgaaaaacaGL7baaaeaacaqG0bGaaeiAaiaabwhacaqGZbaabaGaaCyzamaaBaaaleaacaWHOaGaaCyAaiaahMcaaeqaaOGaeyOiGCRaaCyzamaaBaaaleaacaWHOaGaaCOAaiaahMcaaeqaaOGaeyypa0JaeqiTdq2aaSbaaSqaaiaadMgacaWGQbaabeaaaaaa@6583@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation><equation id="eip-319"><m:math>
+ <m:semantics>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mover accent="true">
+       <m:mi>e</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      </m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>i</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+     <m:mo>•</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mover accent="true">
+       <m:mi>e</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      </m:mstyle>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mo stretchy="false">(</m:mo><m:mi>j</m:mi><m:mo stretchy="false">)</m:mo></m:mstyle>
+      </m:mrow>
+     </m:msub>
+</m:mtd>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mi>i</m:mi>
+      </m:mrow>
+     </m:msub>
+<m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mi>i</m:mi>
+      </m:mrow>
+     </m:msub>
+<m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>2</m:mn><m:mi>i</m:mi>
+      </m:mrow>
+     </m:msub>
+<m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>2</m:mn><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>3</m:mn><m:mi>i</m:mi>
+      </m:mrow>
+     </m:msub>
+<m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mn>3</m:mn><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+<m:mo>,</m:mo><m:mi>i</m:mi><m:mo>,</m:mo><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd/>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msub>
+      <m:mi>δ</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8sipiYdHaVhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaqqabaGabCyzayaaraWaaSbaaSqaaiaahIcacaWHPbGaaCykaaqabaGccqGHIaYTceWHLbGbaebadaWgaaWcbaGaaCikaiaahQgacaWHPaaabeaakiabg2da9iaadYgadaWgaaWcbaGaam4AaiaadMgaaeqaaOGaaGPaVlaadYgadaWgaaWcbaGaam4AaiaadQgaaeqaaOGaeyypa0JaamiBamaaBaaaleaacaaIXaGaamyAaaqabaGccaaMc8UaamiBamaaBaaaleaacaaIXaGaamOAaaqabaGccqGHRaWkcaWGSbWaaSbaaSqaaiaaikdacaWGPbaabeaakiaaykW7caWGSbWaaSbaaSqaaiaaikdacaWGQbaabeaakiabgUcaRiaadYgadaWgaaWcbaGaaG4maiaadMgaaeqaaOGaaGPaVlaadYgadaWgaaWcbaGaaG4maiaadQgaaeqaaOGaaGjbVlaacYcacaaMf8UaamyAaiaacYcacaWGQbGaeyypa0JaaGymaiaacYcacaaIYaGaaiilaiaaiodaaeaacqGH9aqpcqaH0oazdaWgaaWcbaGaamyAaiaadQgaaeqaaaaaaa@6E59@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        
+        
+        
+      </section>
+      <section id="id12476723">
+        <title>Vector Product</title>
+        <para id="id8251087">The <emphasis effect="italics">vector product</emphasis> (or <emphasis effect="italics">cross product</emphasis>) of two vectors, <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis>, denoted as <emphasis effect="bold">a</emphasis><emphasis effect="bold">×</emphasis><emphasis effect="bold">b</emphasis>, is a vector that is perpendicular to the plane of <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis> such that <emphasis effect="bold">a</emphasis>, <emphasis effect="bold">b</emphasis>, and <emphasis effect="bold">a</emphasis><emphasis effect="bold">×</emphasis><emphasis effect="bold">b </emphasis>form a right-handed system. (i.e., <emphasis effect="bold">a</emphasis>, <emphasis effect="bold">b</emphasis>, and <emphasis effect="bold">a</emphasis><emphasis effect="bold">×</emphasis><emphasis effect="bold">b </emphasis>have the orientation of the thumb, first finger, and third finger of the right hand.) It has the following magnitude where θ is the angle between <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis>.</para>
+        
+        <equation id="eip-578"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>|</m:mo> <m:mrow>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle>
+   </m:mrow> <m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mtext/><m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mtext/><m:mi>sin</m:mi><m:mi>θ</m:mi>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaamaaemaabaGaaCyyaiabgEna0kaahkgaaiaawEa7caGLiWoacqGH9aqpdaabdaqaaiaahggaaiaawEa7caGLiWoacaaMc8+aaqWaaeaacaWHIbaacaGLhWUaayjcSdGaaGPaVlGacohacaGGPbGaaiOBaiaaykW7cqaH4oqCcqGHEisPaaa@50B4@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation><para id="id15902964">The magnitude of the vector product is equal to the area of a parallelogram two of whose sides are the vectors <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis>.</para>
+        <para id="id11911326">Since the vector product forms a right handed system, the product <emphasis effect="bold">b</emphasis><emphasis effect="bold">×</emphasis><emphasis effect="bold">a</emphasis> has the same magnitude but opposite direction as <emphasis effect="bold">a</emphasis><emphasis effect="bold">×</emphasis><emphasis effect="bold">b</emphasis>, i.e., the vector product is not commutative,</para>
+        
+        <equation id="eip-507"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>=</m:mo><m:mo>-</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaahkgacqGHxdaTcaWHHbGaeyypa0JaeyOeI0IaaCyyaiabgEna0kaahkgaaaa@3FB2@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation><para id="id13649903">The vector product of a vector with itself or with a parallel vector is zero or the null vector, i.e., <emphasis effect="bold">a</emphasis>×<emphasis effect="bold">a</emphasis>=<emphasis effect="bold">0</emphasis>. A quantity that is the negative of itself is zero. Also, the angle between parallel vectors is zero and thus the sine is zero.</para>
+        <para id="eip-96">Consider the vector product of the unit vectors.  They are all of unit length and mutually orthogonal so their vector products will be unit vectors.  Remembering the right-handed rule, we therefore have</para><equation id="eip-205"><m:math>
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>×</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:mo>-</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>×</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>×</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:mo>-</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>×</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>×</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:mo>-</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>×</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaeqabaGaaCyzamaaBaaaleaacaGGOaGaaGOmaiaacMcaaeqaaOGaey41aqRaaCyzamaaBaaaleaacaGGOaGaaG4maiaacMcaaeqaaOGaeyypa0JaeyOeI0IaaCyzamaaBaaaleaacaGGOaGaaG4maiaacMcaaeqaaOGaey41aqRaaCyzamaaBaaaleaacaGGOaGaaGOmaiaacMcaaeqaaOGaeyypa0JaaCyzamaaBaaaleaacaGGOaGaaGymaiaacMcaaeqaaaGcbaGaaCyzamaaBaaaleaacaGGOaGaaG4maiaacMcaaeqaaOGaey41aqRaaCyzamaaBaaaleaacaGGOaGaaGymaiaacMcaaeqaaOGaeyypa0JaeyOeI0IaaCyzamaaBaaaleaacaGGOaGaaGymaiaacMcaaeqaaOGaey41aqRaaCyzamaaBaaaleaacaGGOaGaaG4maiaacMcaaeqaaOGaeyypa0JaaCyzamaaBaaaleaacaGGOaGaaGOmaiaacMcaaeqaaaGcbaGaaCyzamaaBaaaleaacaGGOaGaaGymaiaacMcaaeqaaOGaey41aqRaaCyzamaaBaaaleaacaGGOaGaaGOmaiaacMcaaeqaaOGaeyypa0JaeyOeI0IaaCyzamaaBaaaleaacaGGOaGaaGOmaiaacMcaaeqaaOGaey41aqRaaCyzamaaBaaaleaacaGGOaGaaGymaiaacMcaaeqaaOGaeyypa0JaaCyzamaaBaaaleaacaGGOaGaaG4maiaacMcaaeqaaaaaaa@7BB1@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        
+        <para id="eip-767">The components of the vector product can be expressed in terms of the components of <emphasis effect="bold">a</emphasis> and <emphasis effect="bold">b</emphasis> and applying the above relations between the unit vectors.</para><equation id="eip-636"><m:math>
+ <m:semantics>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle>
+</m:mtd>
+<m:mtd>
+<m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>3</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>×</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       <m:mo>+</m:mo><m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>3</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+        <m:mrow>
+         <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+        </m:mrow>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd/>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>3</m:mn>
+       </m:msub>
+       <m:mo>-</m:mo><m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>3</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>3</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:mo>-</m:mo><m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>3</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:mo>-</m:mo><m:msub>
+        <m:mi>a</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaqqabaGaaCyyaiabgEna0kaahkgacqGH9aqpdaqadaqaaiaadggadaWgaaWcbaGaaGymaaqabaGccaaMc8UaaCyzamaaBaaaleaacaGGOaGaaGymaiaacMcaaeqaaOGaey4kaSIaamyyamaaBaaaleaacaaIYaaabeaakiaaykW7caWHLbWaaSbaaSqaaiaacIcacaaIYaGaaiykaaqabaGccqGHRaWkcaWGHbWaaSbaaSqaaiaaiodaaeqaaOGaaGPaVlaahwgadaWgaaWcbaGaaiikaiaaiodacaGGPaaabeaaaOGaayjkaiaawMcaaiabgEna0oaabmaabaGaamOyamaaBaaaleaacaaIXaaabeaakiaaykW7caWHLbWaaSbaaSqaaiaacIcacaaIXaGaaiykaaqabaGccqGHRaWkcaWGIbWaaSbaaSqaaiaaikdaaeqaaOGaaGPaVlaahwgadaWgaaWcbaGaaiikaiaaikdacaGGPaaabeaakiabgUcaRiaadkgadaWgaaWcbaGaaG4maaqabaGccaaMc8UaaCyzamaaBaaaleaacaGGOaGaaG4maiaacMcaaeqaaaGccaGLOaGaayzkaaaabaGaeyypa0ZaaeWaaeaacaWGHbWaaSbaaSqaaiaaikdaaeqaaOGaamOyamaaBaaaleaacaaIZaaabeaakiabgkHiTiaadggadaWgaaWcbaGaaG4maaqabaGccaWGIbWaaSbaaSqaaiaaikdaaeqaaaGccaGLOaGaayzkaaGaaGPaVlaahwgadaWgaaWcbaGaaiikaiaaigdacaGGPaaabeaakiabgUcaRmaabmaabaGaamyyamaaBaaaleaacaaIZaaabeaakiaadkgadaWgaaWcbaGaaGymaaqabaGccqGHsislcaWGHbWaaSbaaSqaaiaaigdaaeqaaOGaamOyamaaBaaaleaacaaIZaaabeaaaOGaayjkaiaawMcaaiaaykW7caWHLbWaaSbaaSqaaiaacIcacaaIYaGaaiykaaqabaGccqGHRaWkdaqadaqaaiaadggadaWgaaWcbaGaaGymaaqabaGccaWGIbWaaSbaaSqaaiaaikdaaeqaaOGaeyOeI0IaamyyamaaBaaaleaacaaIYaaabeaakiaadkgadaWgaaWcbaGaaGymaaqabaaakiaawIcacaGLPaaacaaMc8UaaCyzamaaBaaaleaacaGGOaGaaG4maiaacMcaaeqaaaaaaa@99D3@</m:annotation>
+ </m:semantics>
+</m:math>
+ </equation>
+        
+        
+        
+        <para id="eip-834">The permutations of the indices and signs in the expression for the vector product may be difficult to remember.  Notice that the expression is the same as that for the expansion of a determinate of the matrix,</para><equation id="eip-528"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>|</m:mo> <m:mrow>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+         <m:mrow>
+          <m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+         <m:mrow>
+          <m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+         <m:mrow>
+          <m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>a</m:mi>
+         <m:mn>1</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>a</m:mi>
+         <m:mn>2</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>a</m:mi>
+         <m:mn>3</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>b</m:mi>
+         <m:mn>1</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>b</m:mi>
+         <m:mn>2</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>b</m:mi>
+         <m:mn>3</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     
+    </m:mtable>
+   </m:mrow> <m:mo>|</m:mo></m:mrow>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaamaaemaabaqbaeqabmWaaaqaaiaahwgadaWgaaWcbaGaaiikaiaaigdacaGGPaaabeaaaOqaaiaahwgadaWgaaWcbaGaaiikaiaaikdacaGGPaaabeaaaOqaaiaahwgadaWgaaWcbaGaaiikaiaaiodacaGGPaaabeaaaOqaaiaadggadaWgaaWcbaGaaGymaaqabaaakeaacaWGHbWaaSbaaSqaaiaaikdaaeqaaaGcbaGaamyyamaaBaaaleaacaaIZaaabeaaaOqaaiaadkgadaWgaaWcbaGaaGymaaqabaaakeaacaWGIbWaaSbaaSqaaiaaikdaaeqaaaGcbaGaamOyamaaBaaaleaacaaIZaaabeaaaaaakiaawEa7caGLiWoaaaa@4DDE@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="eip-120">Expansion of determinants are aided by the permutation symbol, <m:math>
+<m:msub>
+<m:mi>ε</m:mi>
+<m:mrow>
+<m:mi>i</m:mi>
+<m:mi>j</m:mi>
+<m:mi>k</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>.</para><equation id="eip-293"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>ε</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi>
+<m:mi>j</m:mi>
+<m:mi>k</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mrow>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="5pt"/><m:mtext> if any two of </m:mtext><m:mspace width="5pt"/><m:mi>i</m:mi><m:mo>,</m:mo><m:mi>j</m:mi><m:mo>,</m:mo><m:mi>k</m:mi><m:mspace width="5pt"/><m:mtext>are the same</m:mtext><m:mspace width="5pt"/>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="5pt"/><m:mtext> if </m:mtext><m:mspace width="5pt"/><m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi><m:mspace width="5pt"/><m:mtext>is an even permutation of </m:mtext><m:mspace width="5pt"/><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="5pt"/><m:mtext>if</m:mtext><m:mspace width="5pt"/><m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi><m:mspace width="5pt"/><m:mtext>is an odd permutation of</m:mtext><m:mspace width="5pt"/><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     
+    </m:mtable>
+   </m:mrow> </m:mrow>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiabew7aLnaaBaaaleaacaWGPbGaamOAaiaadUgaaeqaaOGaeyypa0ZaaiqaaeaafaqabeWabaaabaGaaGimaiaacYcacaaMeSUaaeyAaiaabAgacaaMeSUaaeyyaiaab6gacaqG5bGaaGjbRlaabshacaqG3bGaae4BaiaaysW6caqGVbGaaeOzaiaaysW6caWGPbGaaiilaiaaysW6caWGQbGaaiilaiaaysW6caWGRbGaaGjbRlaabggacaqGYbGaaeyzaiaaysW6caqG0bGaaeiAaiaabwgacaaMeSUaae4CaiaabggacaqGTbGaaeyzaaqaaiabgUcaRiaaigdacaGGSaGaaGjbRlaabMgacaqGMbGaaGjbRlaadMgacaWGQbGaam4AaiaaysW6caqGPbGaae4CaiaaysW6caqGHbGaaeOBaiaaysW6caqGLbGaaeODaiaabwgacaqGUbGaaGjbRlaabchacaqGLbGaaeOCaiaab2gacaqG1bGaaeiDaiaabggacaqG0bGaaeyAaiaab+gacaqGUbGaaGjbRlaab+gacaqGMbGaaGjbRlaaigdacaGGSaGaaGjbRlaaikdacaGGSaGaaGjbRlaaiodaaeaacqGHsislcaaIXaGaaiilaiaaysW6caqGPbGaaeOzaiaaysW6caWGPbGaamOAaiaadUgacaaMeSUaaeyAaiaabohacaaMeSUaaeyyaiaab6gacaaMeSUaae4BaiaabsgacaqGKbGaaGjbRlaabchacaqGLbGaaeOCaiaab2gacaqG1bGaaeiDaiaabggacaqG0bGaaeyAaiaab+gacaqGUbGaaGjbRlaab+gacaqGMbGaaGjbRlaaigdacaGGSaGaaGjbRlaaikdacaGGSaGaaGjbRlaaiodaaaaacaGL7baaaaa@BE67@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        
+        <para id="eip-44">The expression for the vector product is now as follows.</para><equation id="eip-330"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi>a</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi>b</m:mi></m:mstyle><m:mo>=</m:mo><m:msub>
+    <m:mi>ε</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi>
+    </m:mrow>
+   </m:msub>
+<m:msub>
+    <m:mi>a</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+<m:msub>
+    <m:mi>b</m:mi>
+    <m:mi>j</m:mi>
+   </m:msub>
+<m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mi>e</m:mi></m:mstyle>
+    <m:mrow>
+     <m:mo stretchy="false">(</m:mo><m:mi>k</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaahggacqGHxdaTcaWHIbGaeyypa0JaeqyTdu2aaSbaaSqaaiaadMgacaWGQbGaam4AaaqabaGccaaMc8UaamyyamaaBaaaleaacaWGPbaabeaakiaaykW7caWGIbWaaSbaaSqaaiaadQgaaeqaaOGaaGPaVlaahwgadaWgaaWcbaGaaiikaiaadUgacaGGPaaabeaaaaa@4B9D@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        
+      </section>
+      <section id="id10021202">
+        <title>Velocity due to rigid body rotations</title>
+        <para id="id13065621">We will show that the velocity field of a rigid body can be described by two vectors, a translation velocity, <emphasis effect="bold">v</emphasis><sub>(t)</sub>, and an angular velocity, <emphasis effect="bold">ω</emphasis>. A rigid body has the constraint that the distance between two points in the body does not change with time. The translation velocity is the velocity of a fixed point, <emphasis effect="italics">O</emphasis>, in the body, e.g., the center of mass. Now consider a new reference frame (coordinate system) with the origin at point <emphasis effect="italics">O</emphasis> that is translating with respect to the original reference frame with the velocity <emphasis effect="bold">v</emphasis><sub>(t)</sub>. The rotation of the body about <emphasis effect="italics">O</emphasis> is defined by the angular velocity, <emphasis effect="bold">ω</emphasis>, i.e., with a magnitude ω and a direction of the axis of rotation, <emphasis effect="bold">n</emphasis>, such that the positive direction is the direction that a right handed screw advances when subject to the rotation, .<emphasis effect="bold"/><emphasis effect="bold">ω</emphasis>=ω<emphasis effect="bold"> n</emphasis>. Consider a point <emphasis effect="italics">P</emphasis> not on the axis of rotation, having coordinates <emphasis effect="bold">x</emphasis> in the new reference frame. The velocity of <emphasis effect="italics">P</emphasis> in the new reference frame has a magnitude equal to the product of ω and the radius of the point <emphasis effect="italics">P</emphasis> from the axis of rotation. This radius is equal to the magnitude of <emphasis effect="bold">x</emphasis> and the sine of the angle between <emphasis effect="bold">x</emphasis> and <emphasis effect="bold">ω</emphasis>, i.e., |<emphasis effect="bold">x</emphasis>| sinθ. The velocity of point <emphasis effect="italics">P</emphasis> in the new reference frame can be expressed as</para>
+        <equation id="eip-790"><m:math>
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">v</m:mi></m:mstyle><m:mo>=</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">ω</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">x</m:mi></m:mstyle>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">v</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mi>ω</m:mi><m:mrow><m:mo>|</m:mo> <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">x</m:mi></m:mstyle> <m:mo>|</m:mo></m:mrow><m:mi>sin</m:mi><m:mi>θ</m:mi>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaeqabaGaaCODaiabg2da9iaahM8acqGHxdaTcaWH4baabaWaaqWaaeaacaWH2baacaGLhWUaayjcSdGaeyypa0JaeqyYdCNaaGPaVpaaemaabaGaaCiEaaGaay5bSlaawIa7aiaaykW7ciGGZbGaaiyAaiaac6gacqaH4oqCaaaa@4F1B@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id12943962"> The velocity field of any point of the rigid body in the original reference frame is now</para>
+        <equation id="eip-591"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">v</m:mi></m:mstyle><m:mo>=</m:mo><m:msub>
+    <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">v</m:mi></m:mstyle>
+    <m:mrow>
+     <m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo>
+    </m:mrow>
+   </m:msub>
+   <m:mo>+</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">ω</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">x</m:mi></m:mstyle>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaahAhacqGH9aqpcaWH2bWaaSbaaSqaaiaacIcacaWG0bGaaiykaaqabaGccqGHRaWkcaWHjpGaaGPaVlabgEna0kaahIhaaaa@424D@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id15988787">Since this equation is valid for any pair of points in the rigid body, the relative velocity Δ<emphasis effect="bold">v</emphasis> between a pair of points separated by Δ<emphasis effect="bold">x</emphasis> can be expressed as follows.</para>
+        <equation id="eip-909"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Δ</m:mi><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">v</m:mi></m:mstyle><m:mo>=</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">ω</m:mi></m:mstyle><m:mo>×</m:mo><m:mi>Δ</m:mi><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">x</m:mi></m:mstyle>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiabfs5aejaahAhacqGH9aqpcaWHjpGaey41aqRaeuiLdqKaaCiEaaaa@3F25@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id12112159">Conversely, if the relative velocity between any pair of points is described by the above equation with the same value of angular velocity, then the motion is due to a rigid body rotation.</para>
+      </section>
+      <section id="id10525758">
+        <title>Triple scalar product</title>
+        <para id="id11352601"> The triple scalar product is the scalar product of the first vector with the vector product of the other two vectors. It is denoted as (<emphasis effect="bold">abc</emphasis>) or [<emphasis effect="bold">abc</emphasis>].</para>
+        <equation id="eip-829"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi><m:mi mathvariant="bold">b</m:mi><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow><m:mi mathvariant="bold">b</m:mi><m:mo>×</m:mo><m:mi mathvariant="bold">c</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaamaabmaabaGaaCyyaiaahkgacaWHJbaacaGLOaGaayzkaaGaeyyyIORaaCyyaiabgkci3oaabmaabaGaaCOyaiabgEna0kaahogaaiaawIcacaGLPaaaaaa@43E0@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id17581779">Recall that <emphasis effect="bold">b</emphasis>×<emphasis effect="bold">c</emphasis> has a magnitude equal to the area of a parallelogram with sides <emphasis effect="bold">b</emphasis> and <emphasis effect="bold">c</emphasis> and a direction normal to the plane of <emphasis effect="bold">b</emphasis> and <emphasis effect="bold">c</emphasis>. The scalar product of this normal vector and the vector <emphasis effect="bold">a</emphasis> is equal to the altitude of the parallelepiped with a common origin and sides <emphasis effect="bold">a</emphasis>, <emphasis effect="bold">b</emphasis>, and <emphasis effect="bold">c</emphasis>. The triple scalar product has a magnitude equal to the volume of a parallelepiped with a common origin and sides <emphasis effect="bold">a</emphasis>, <emphasis effect="bold">b</emphasis>, and <emphasis effect="bold">c</emphasis>. The sign of the triple scalar product can be either positive or negative. If <emphasis effect="bold">a</emphasis>, <emphasis effect="bold">b</emphasis>, and <emphasis effect="bold">c</emphasis> are coplanar, then the altitude of the parallelepiped is zero and thus the triple scalar product is zero.</para>
+        <para id="id4669486"> The triple scalar product can be expressed in terms of the components by using the earlier definitions of the vector product and scalar product.</para>
+        <equation id="eip-0"><m:math>
+ <m:semantics>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd columnalign="right">
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+</m:mtd>
+<m:mtd>
+<m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msub>
+      <m:mi>ε</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>c</m:mi>
+      <m:mi>j</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mi>k</m:mi><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd columnalign="right">
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle>
+</m:mtd>
+<m:mtd>
+<m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>m</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mi>m</m:mi><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd columnalign="right">
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+</m:mtd>
+<m:mtd>
+<m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msub>
+      <m:mi>ε</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>m</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>c</m:mi>
+      <m:mi>j</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mi>m</m:mi><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>•</m:mo><m:msub>
+      <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">e</m:mi></m:mstyle>
+      <m:mrow>
+       <m:mo stretchy="false">(</m:mo><m:mi>k</m:mi><m:mo stretchy="false">)</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>ε</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>m</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>c</m:mi>
+      <m:mi>j</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>δ</m:mi>
+      <m:mrow>
+       <m:mi>m</m:mi><m:mi>k</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>ε</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>c</m:mi>
+      <m:mi>j</m:mi>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+<m:mtd/>
+    <m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:msub>      
+<m:mi>ε</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+<m:msub>
+      <m:mi>b</m:mi>
+      <m:mi>j</m:mi>
+     </m:msub>
+<m:msub>
+      <m:mi>c</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaqqabaGaaCOyaiabgEna0kaahogacqGH9aqpcqaH1oqzdaWgaaWcbaGaamyAaiaadQgacaWGRbaabeaakiaaykW7caWGIbWaaSbaaSqaaiaadMgaaeqaaOGaaGPaVlaadogadaWgaaWcbaGaamOAaaqabaGccaaMc8UaaCyzamaaBaaaleaacaGGOaGaam4AaiaacMcaaeqaaaGcbaGaaCyyaiabg2da9iaadggadaWgaaWcbaGaamyBaaqabaGccaaMcSUaaCyzamaaBaaaleaacaGGOaGaamyBaiaacMcaaeqaaaGcbaGaaCyyaiabgkci3oaabmaabaGaaCOyaiabgEna0kaahogaaiaawIcacaGLPaaacqGH9aqpcqaH1oqzdaWgaaWcbaGaamyAaiaadQgacaWGRbaabeaakiaadggadaWgaaWcbaGaamyBaaqabaGccaaMc8UaamOyamaaBaaaleaacaWGPbaabeaakiaaykW7caWGJbWaaSbaaSqaaiaadQgaaeqaaOGaaGPaVlaahwgadaWgaaWcbaGaaiikaiaad2gacaGGPaaabeaakiabgkci3kaahwgadaWgaaWcbaGaaiikaiaadUgacaGGPaaabeaakiabg2da9iabew7aLnaaBaaaleaacaWGPbGaamOAaiaadUgaaeqaaOGaamyyamaaBaaaleaacaWGTbaabeaakiaaykW7caWGIbWaaSbaaSqaaiaadMgaaeqaaOGaaGPaVlaadogadaWgaaWcbaGaamOAaaqabaGccaaMc8UaeqiTdq2aaSbaaSqaaiaad2gacaWGRbaabeaakiabg2da9iabew7aLnaaBaaaleaacaWGPbGaamOAaiaadUgaaeqaaOGaamyyamaaBaaaleaacaWGRbaabeaakiaaykW7caWGIbWaaSbaaSqaaiaadMgaaeqaaOGaaGPaVlaadogadaWgaaWcbaGaamOAaaqabaaakeaacqGH9aqpcqaH1oqzdaWgaaWcbaGaamyAaiaadQgacaWGRbaabeaakiaadggadaWgaaWcbaGaamyAaaqabaGccaaMc8UaamOyamaaBaaaleaacaWGQbaabeaakiaaykW7caWGJbWaaSbaaSqaaiaadUgaaeqaaaaaaa@A767@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id12417835">From the definition of the permutation symbol, the triple scalar product is unchanged by even permutations of <emphasis effect="bold">a</emphasis>, <emphasis effect="bold">b</emphasis>, and <emphasis effect="bold">c</emphasis> but have the opposite algebraic sign for odd permutations. Also, if any two of <emphasis effect="bold">a</emphasis>, <emphasis effect="bold">b</emphasis>, and <emphasis effect="bold">c</emphasis> are identical, then permutation of the two identical vectors results in a triple scalar products that are identical and also opposite in sign. This implies that the triple scalar product is zero if two of the vectors are identical.</para>
+      </section>
+      <section id="id11944945">
+        <title>Triple vector product</title>
+        <para id="id11891138"> The triple vector product of vectors <emphasis effect="bold">a</emphasis>, <emphasis effect="bold">b</emphasis>, and <emphasis effect="bold">c</emphasis> results from the repeated application of the vector product, i.e., <emphasis effect="bold">a</emphasis>×(<emphasis effect="bold">b</emphasis>×<emphasis effect="bold">c</emphasis>). Since <emphasis effect="bold">b</emphasis>×<emphasis effect="bold">c</emphasis> is normal to the plane of <emphasis effect="bold">b</emphasis> and <emphasis effect="bold">c</emphasis> and <emphasis effect="bold">a</emphasis>×(<emphasis effect="bold">b</emphasis>×<emphasis effect="bold">c</emphasis>) is normal to <emphasis effect="bold">b</emphasis>×<emphasis effect="bold">c, a</emphasis>×(<emphasis effect="bold">b</emphasis>×<emphasis effect="bold">c</emphasis>) must be in the plane of <emphasis effect="bold">b</emphasis> and <emphasis effect="bold">c</emphasis>. It is left as an exercise to show that </para>
+        <equation id="eip-227"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>×</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaahggacqGHxdaTdaqadaqaaiaahkgacqGHxdaTcaWHJbaacaGLOaGaayzkaaGaeyypa0ZaaeWaaeaacaWHHbGaeyOiGCRaaC4yaaGaayjkaiaawMcaaiaaykW7caWHIbGaeyOeI0YaaeWaaeaacaWHHbGaeyOiGCRaaCOyaaGaayjkaiaawMcaaiaaykW7caWHJbaaaa@4F06@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        
+      </section>
+      <section id="id11503825">
+        <title>Second order tensors</title>
+        <para id="id9795630"> A second order tensor can be written as a 3×3 matrix.</para>
+        <equation id="eip-769"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">A</m:mi></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mrow>
+          <m:mn>11</m:mn>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mrow>
+          <m:mn>12</m:mn>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mrow>
+          <m:mn>13</m:mn>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mrow>
+          <m:mn>21</m:mn>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mrow>
+          <m:mn>22</m:mn>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mrow>
+          <m:mn>23</m:mn>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mrow>
+          <m:mn>31</m:mn>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mrow>
+          <m:mn>32</m:mn>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mrow>
+          <m:mn>33</m:mn>
+         </m:mrow>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     
+    </m:mtable>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaahgeacqGH9aqpdaWadaqaauaabeqadmaaaeaacaWGbbWaaSbaaSqaaiaaigdacaaIXaaabeaaaOqaaiaadgeadaWgaaWcbaGaaGymaiaaikdaaeqaaaGcbaGaamyqamaaBaaaleaacaaIXaGaaG4maaqabaaakeaacaWGbbWaaSbaaSqaaiaaikdacaaIXaaabeaaaOqaaiaadgeadaWgaaWcbaGaaGOmaiaaikdaaeqaaaGcbaGaamyqamaaBaaaleaacaaIYaGaaG4maaqabaaakeaacaWGbbWaaSbaaSqaaiaaiodacaaIXaaabeaaaOqaaiaadgeadaWgaaWcbaGaaG4maiaaikdaaeqaaaGcbaGaamyqamaaBaaaleaacaaIZaGaaG4maaqabaaaaaGccaGLBbGaayzxaaaaaa@4FD4@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id16886272">A tensor is a physical entity that is the same quantity in different coordinate systems. Thus a second order tensor is defined as an entity whose components transform on rotation of the Cartesian frame of reference as follows.</para>
+        <equation id="eip-3"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mover accent="true">
+     <m:mi>A</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    
+    <m:mrow>
+     <m:mi>p</m:mi><m:mi>q</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:mo>=</m:mo><m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mi>p</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>l</m:mi>
+    <m:mrow>
+     <m:mi>j</m:mi><m:mi>q</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>A</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mi>j</m:mi>
+    </m:mrow>
+   </m:msub>
+   
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiqadgeagaqeamaaBaaaleaacaWGWbGaamyCaaqabaGccqGH9aqpcaWGSbWaaSbaaSqaaiaadMgacaWGWbaabeaakiaaykW7caWGSbWaaSbaaSqaaiaadQgacaWGXbaabeaakiaaykW7caWGbbWaaSbaaSqaaiaadMgacaWGQbaabeaaaaa@45E7@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id17955533"> If <emphasis effect="italics">A</emphasis><emphasis effect="italics">ij</emphasis><emphasis effect="italics">=A</emphasis><emphasis effect="italics">ji</emphasis><sub/>the tensor is said to be <emphasis effect="italics">symmetric</emphasis> and a symmetric tensor has only six distinct components. If <emphasis effect="italics">A</emphasis><emphasis effect="italics">ij</emphasis><emphasis effect="italics">=-A</emphasis><emphasis effect="italics">ij</emphasis><sub/>the tensor is said to be <emphasis effect="italics">antisymmetric</emphasis> and such a tensor is characterized by only three nonzero components for the diagonal terms, <emphasis effect="italics">A</emphasis><emphasis effect="italics">i</emphasis><sub>i</sub>, are zero. The tensor whose <emphasis effect="italics">ij</emphasis><sup>th</sup> element is <emphasis effect="italics">A</emphasis><emphasis effect="italics">ji</emphasis> is called the transpose <emphasis effect="bold">A’ </emphasis>of <emphasis effect="bold">A</emphasis>. The determinant of a tensor is the determinant of the matrix of its components.</para>
+        <equation id="eip-950"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>det</m:mi><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">A</m:mi></m:mstyle><m:mo>=</m:mo><m:msub>
+    <m:mi>ε</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>A</m:mi>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mi>i</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>A</m:mi>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mi>j</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:msub>
+    <m:mi>A</m:mi>
+    <m:mrow>
+     <m:mn>3</m:mn><m:mi>k</m:mi>
+    </m:mrow>
+   </m:msub>
+   
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiGacsgacaGGLbGaaiiDaiaaykW7caWHbbGaeyypa0JaeqyTdu2aaSbaaSqaaiaadMgacaWGQbGaam4AaaqabaGccaaMc8UaamyqamaaBaaaleaacaaIXaGaamyAaaqabaGccaaMc8UaamyqamaaBaaaleaacaaIYaGaamOAaaqabaGccaaMc8UaamyqamaaBaaaleaacaaIZaGaam4Aaaqabaaaaa@4D43@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+<section id="fs-id1169694200885">
+        <title>Examples of second order tensors</title>
+        <para id="id17249763">A second order tensor we have already encountered is the <emphasis effect="italics">Kronecker delta</emphasis>
+
+<m:math>
+<m:msub>
+<m:mi>δ</m:mi>
+<m:mrow>
+<m:mi>i</m:mi>
+<m:mi>j</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>. Of its nine components, the six off-diagonal components vanish and the three diagonal components are equal to unity. It transforms as a tensor upon transforming its components to a rotated frame of reference.</para>
+        <equation id="eip-437"><m:math>
+ <m:semantics>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mover accent="true">
+       <m:mi>δ</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mrow>
+       <m:mi>p</m:mi><m:mi>q</m:mi>
+      </m:mrow>
+     </m:msub>
+</m:mtd>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>p</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>j</m:mi><m:mi>q</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>δ</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+<m:mtd/>
+    <m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>p</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>q</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+<m:mtd/>
+    <m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:msub>
+      <m:mi>δ</m:mi>
+      <m:mrow>
+       <m:mi>p</m:mi><m:mi>q</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaqqabaGafqiTdqMbaebadaWgaaWcbaGaamiCaiaadghaaeqaaOGaeyypa0JaamiBamaaBaaaleaacaWGPbGaamiCaaqabaGccaaMc8UaamiBamaaBaaaleaacaWGQbGaamyCaaqabaGccaaMc8UaeqiTdq2aaSbaaSqaaiaadMgacaWGQbaabeaaaOqaaiabg2da9iaadYgadaWgaaWcbaGaamyAaiaadchaaeqaaOGaaGPaVlaadYgadaWgaaWcbaGaamyAaiaadghaaeqaaaGcbaGaeyypa0JaeqiTdq2aaSbaaSqaaiaadchacaWGXbaabeaaaaaa@5522@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id12453946">because of the orthogonality relation between the directional cosines <emphasis effect="italics">l</emphasis><sub><emphasis effect="italics">ij</emphasis></sub>. In fact, the components of <emphasis effect="italics">δ</emphasis><sub><emphasis effect="italics">ij</emphasis></sub>in all coordinates remain the same. <emphasis effect="italics">δ</emphasis><sub><emphasis effect="italics">ij</emphasis></sub> is called the isotropic tensor for that reason. The transport coefficients (e.g., thermal conductivity) of an <emphasis effect="underline"> isotropic</emphasis> medium can be expressed as a scalar quantity multiplying <emphasis effect="italics">δ</emphasis><sub><emphasis effect="italics">ij</emphasis></sub><emphasis effect="italics">.</emphasis></para>
+        <para id="id13460280">If a and b are two vectors, the set of nine products, <emphasis effect="italics">a</emphasis>
+<sub><emphasis effect="italics">i</emphasis></sub>
+<emphasis effect="italics">b</emphasis>
+<sub><emphasis effect="italics">j</emphasis></sub>
+<emphasis effect="italics">=A</emphasis>
+<sub><emphasis effect="italics">ij</emphasis></sub>, is a second order tensor, for</para>
+        <equation id="eip-249"><m:math>
+ <m:semantics>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mover accent="true">
+       <m:mi>A</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mrow>
+       <m:mi>p</m:mi><m:mi>q</m:mi>
+      </m:mrow>
+     </m:msub>
+</m:mtd>
+<m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:msub>
+      <m:mover accent="true">
+       <m:mi>a</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mi>p</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mover accent="true">
+       <m:mi>b</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mi>q</m:mi>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>p</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>a</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>j</m:mi><m:mi>q</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mi>j</m:mi>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>p</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>j</m:mi><m:mi>q</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>a</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+      <m:msub>
+        <m:mi>b</m:mi>
+        <m:mi>j</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+<m:mtd/>
+    <m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>p</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>l</m:mi>
+      <m:mrow>
+       <m:mi>j</m:mi><m:mi>q</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaqqabaGabmyqayaaraWaaSbaaSqaaiaadchacaWGXbaabeaakiabg2da9iqadggagaqeamaaBaaaleaacaWGWbaabeaakiaaykW7ceWGIbGbaebadaWgaaWcbaGaamyCaaqabaGccqGH9aqpcaWGSbWaaSbaaSqaaiaadMgacaWGWbaabeaakiaaykW7caWGHbWaaSbaaSqaaiaadMgaaeqaaOGaaGPaVlaadYgadaWgaaWcbaGaamOAaiaadghaaeqaaOGaaGPaVlaadkgadaWgaaWcbaGaamOAaaqabaGccqGH9aqpcaWGSbWaaSbaaSqaaiaadMgacaWGWbaabeaakiaaysW7caWGSbWaaSbaaSqaaiaadQgacaWGXbaabeaakiaaykW7daqadaqaaiaadggadaWgaaWcbaGaamyAaaqabaGccaaMc8UaamOyamaaBaaaleaacaWGQbaabeaaaOGaayjkaiaawMcaaaqaaiabg2da9iaadYgadaWgaaWcbaGaamyAaiaadchaaeqaaOGaaGPaVlaadYgadaWgaaWcbaGaamOAaiaadghaaeqaaOGaaGPaVlaadgeadaWgaaWcbaGaamyAaiaadQgaaeqaaaaaaa@6E07@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id10292762">An important example of this is the momentum flux tensor. If ρ is the density and <emphasis effect="bold">v</emphasis> is the velocity, <emphasis effect="italics">ρ</emphasis><emphasis effect="italics"> v</emphasis><sub><emphasis effect="italics">i</emphasis></sub> is the <emphasis effect="italics">i</emphasis><sup>th</sup> component in the direction <emphasis effect="italics">Oi</emphasis>. The rate at which this momentum crosses a unit area normal to <emphasis effect="italics">Oj</emphasis> is the tensor, <emphasis effect="italics">ρ</emphasis><emphasis effect="italics"> v</emphasis><sub><emphasis effect="italics">i </emphasis></sub><emphasis effect="italics">v</emphasis><sub><emphasis effect="italics">j</emphasis></sub><emphasis effect="italics">.</emphasis></para></section>
+      </section>
+      <section id="id13504120">
+        <title>Scalar multiplication and addition</title>
+        <para id="id12347370">If α is a scalar and <emphasis effect="bold">A</emphasis> a second order tensor, the scalar product of α and <emphasis effect="bold">A </emphasis>is a tensor α<emphasis effect="bold">A</emphasis> each of whose components is α times the corresponding component of <emphasis effect="bold">A</emphasis>.</para>
+        <para id="id6096438">The sum of two second order tensors is a second order tensor each of whose components is the sum of the corresponding components of the two tensors. Thus the <emphasis effect="italics">ij</emphasis><sup>th</sup> component of <emphasis effect="bold">A</emphasis>+<emphasis effect="bold">B</emphasis> is <emphasis effect="italics">A</emphasis><sub><emphasis effect="italics">ij</emphasis></sub> + <emphasis effect="italics">B</emphasis><sub><emphasis effect="italics">ij</emphasis></sub>. Notice that the tensors must be of the same order to be added; a vector can not be added to a second order tensor. A linear combination of tensors results from using both scalar multiplication and addition. α<emphasis effect="bold">A</emphasis> + ß<emphasis effect="bold">B</emphasis> is the tensor whose <emphasis effect="italics">ij</emphasis><sup>th</sup> component is α<emphasis effect="italics">A</emphasis><sub><emphasis effect="italics">ij</emphasis></sub> + ß<emphasis effect="italics">B</emphasis><sub><emphasis effect="italics">ij</emphasis></sub>. Subtraction may therefore be defined by putting <m:math>
+<m:mi>α</m:mi>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+</m:math>, 
+<m:math>
+<m:mi>ß</m:mi>
+<m:mo>=</m:mo>
+<m:mn>-1</m:mn>
+</m:math>.</para>
+        <para id="id14049700"> Any second order tensor can be represented as the sum of a symmetric part and an antisymmetric part. For</para>
+        
+        <equation id="eip-662"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>A</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mi>j</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mi>j</m:mi><m:mi>i</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:mo>-</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mi>j</m:mi><m:mi>i</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaadgeadaWgaaWcbaGaamyAaiaadQgaaeqaaOGaeyypa0ZaaSaaaeaacaaIXaaabaGaaGOmaaaadaqadaqaaiaadgeadaWgaaWcbaGaamyAaiaadQgaaeqaaOGaey4kaSIaamyqamaaBaaaleaacaWGQbGaamyAaaqabaaakiaawIcacaGLPaaacqGHRaWkdaWcaaqaaiaaigdaaeaacaaIYaaaamaabmaabaGaamyqamaaBaaaleaacaWGPbGaamOAaaqabaGccqGHsislcaWGbbWaaSbaaSqaaiaadQgacaWGPbaabeaaaOGaayjkaiaawMcaaaaa@4DFB@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id9753519">and changing <emphasis effect="italics">i</emphasis> and <emphasis effect="italics">j</emphasis> in the first factor leaves it unchanged but changes the sign of the second. Thus,</para>
+        <equation id="eip-452"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">A</m:mi></m:mstyle><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">A</m:mi></m:mstyle><m:mo>+</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">A</m:mi><m:mo>'</m:mo></m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">A</m:mi></m:mstyle><m:mo>-</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">A</m:mi><m:mo>'</m:mo></m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaahgeacqGH9aqpdaWcaaqaaiaaigdaaeaacaaIYaaaamaabmaabaGaaCyqaiabgUcaRiaahgeacaWHNaaacaGLOaGaayzkaaGaey4kaSYaaSaaaeaacaaIXaaabaGaaGOmaaaadaqadaqaaiaahgeacqGHsislcaWHbbGaaC4jaaGaayjkaiaawMcaaaaa@4510@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id3273654">represents <emphasis effect="bold">A</emphasis> as the sum of a symmetric tensor and antisymmetric tensor.</para>
+      </section>
+      <section id="id10950684">
+        <title>Contraction and multiplication</title>
+        <para id="id9836848">As in vector operations, summation over repeated indices is understood with tensor operations. The operation of identifying two indices of a tensor and so summing on them is known as <emphasis effect="italics">contraction</emphasis>. <emphasis effect="italics">A</emphasis>
+<sub><emphasis effect="italics">ii</emphasis></sub> is the only contraction of <emphasis effect="italics">A</emphasis><sub><emphasis effect="italics">ij</emphasis></sub>,</para>
+        <equation id="eip-386"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>A</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mi>i</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:mo>=</m:mo><m:msub>
+    <m:mi>A</m:mi>
+    <m:mrow>
+     <m:mn>11</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mo>+</m:mo><m:msub>
+    <m:mi>A</m:mi>
+    <m:mrow>
+     <m:mn>22</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mo>+</m:mo><m:msub>
+    <m:mi>A</m:mi>
+    <m:mrow>
+     <m:mn>33</m:mn>
+    </m:mrow>
+   </m:msub>
+   
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaadgeadaWgaaWcbaGaamyAaiaadMgaaeqaaOGaeyypa0JaamyqamaaBaaaleaacaaIXaGaaGymaaqabaGccqGHRaWkcaWGbbWaaSbaaSqaaiaaikdacaaIYaaabeaakiabgUcaRiaadgeadaWgaaWcbaGaaG4maiaaiodaaeqaaaaa@42DB@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id13622854">and this is no longer a tensor of the second order but a scalar, or a tensor of order zero. The scalar <emphasis effect="italics">A</emphasis><sub><emphasis effect="italics">ii</emphasis></sub> is known as the trace of the second order tensor <emphasis effect="bold">A</emphasis>. The notation tr <emphasis effect="bold">A</emphasis> is sometimes used. The contraction operation in computing the trace of a tensor <emphasis effect="bold">A</emphasis> is analogous to the operation in the calculation the magnitude of a vector <emphasis effect="bold">a</emphasis>, i.e., <m:math>
+<m:mo>|</m:mo>
+<m:mi mathvariant="bold">a</m:mi>
+<m:msup>
+<m:mo>|</m:mo>
+<m:mn>2</m:mn>
+</m:msup>
+<m:mo>=</m:mo>
+<m:mi mathvariant="bold">a</m:mi>
+<m:mo mathvariant="bold">⋅</m:mo>
+<m:mi mathvariant="bold">a</m:mi>
+<m:mo>=</m:mo>
+<m:msub>
+<m:mi>a</m:mi>
+<m:mi>1</m:mi>
+</m:msub>
+<m:msub>
+<m:mi>a</m:mi>
+<m:mi>1</m:mi>
+</m:msub>
+<m:mo>+</m:mo>
+<m:msub>
+<m:mi>a</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:msub>
+<m:mi>a</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mo>+</m:mo>
+<m:msub>
+<m:mi>a</m:mi>
+<m:mn>3</m:mn>
+</m:msub>
+<m:msub>
+<m:mi>a</m:mi>
+<m:mn>3</m:mn>
+</m:msub>
+</m:math></para>
+        <para id="id9742123"> If <emphasis effect="bold">A</emphasis> and <emphasis effect="bold">B</emphasis> are two second order tensors, we can form 81 numbers from the products of the 9 components of each. The full set of these products is a fourth order tensor. Contracted products result in second order or zero order tensors. We will not have an occasion to use products of tensors in our course.</para>
+        <para id="id16685733">The product <emphasis effect="italics">A</emphasis><emphasis effect="italics">ij</emphasis><emphasis effect="italics"> a</emphasis><emphasis effect="italics">j</emphasis> of a tensor <emphasis effect="bold">A</emphasis> and a vector <emphasis effect="bold">a</emphasis> is a vector whose <emphasis effect="italics">i</emphasis><sup>th</sup> component is <emphasis effect="italics">A</emphasis><sub><emphasis effect="italics">ij</emphasis></sub><emphasis effect="italics"> a</emphasis><sub><emphasis effect="italics">j</emphasis></sub>. Another possible product of these two is <emphasis effect="italics">A</emphasis><sub><emphasis effect="italics">ij</emphasis></sub><emphasis effect="italics"> a</emphasis><sub><emphasis effect="italics">I</emphasis></sub> . These may be written <emphasis effect="bold">A</emphasis>⋅<emphasis effect="bold">a</emphasis> and <emphasis effect="bold">a</emphasis>⋅<emphasis effect="bold">A</emphasis> , respectively. For example, the diffusive flux of a quantity is computed as the contracted product of the transport coefficient tensor and the potential gradient vector, e.g., <m:math>
+<m:mi mathvariant="bold">q</m:mi>
+<m:mo>=</m:mo>
+<m:mo>-</m:mo>
+<m:mi mathvariant="bold">k</m:mi>
+<m:mo mathvariant="bold">⋅</m:mo>
+<m:mi mathvariant="bold">∇</m:mi>
+<m:mi>T</m:mi>
+</m:math></para>
+      </section>
+      <section id="id13049930">
+        <title>The vector of an antisymmetric tensor</title>
+        <para id="id9470843">We showed earlier that a second order tensor can be represented as the sum of a symmetric part and an antisymmetric part. Also, an antisymmetric tensor is characterized by three numbers. We will later show that the antisymmetric part of the velocity gradient tensor represents the local rotation of the fluid or body. Here, we will develop the relation between the angular velocity vector, <emphasis effect="bold">ω</emphasis>, introduced earlier and the corresponding antisymmetric tensor.</para>
+        <para id="id11902036"> Recall that the relative velocity between a pair of points in a rigid body was described as follows.</para>
+        <equation id="eip-395"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Δ</m:mi><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">v</m:mi></m:mstyle><m:mo>=</m:mo><m:mi>ω</m:mi><m:mo>×</m:mo><m:mi>Δ</m:mi><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">x</m:mi></m:mstyle>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiabfs5aejaahAhacqGH9aqpcqaHjpWDcaaMc8Uaey41aqRaeuiLdqKaaCiEaaaa@4128@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id11072839">We wish to define a tensor <emphasis effect="bold">Ω</emphasis> that also can determine the relative velocity.</para>
+        <equation id="eip-491"><m:math>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd>
+   <m:mi mathvariant="bold">Δ</m:mi>
+<m:mi mathvariant="bold">v</m:mi>
+</m:mtd>
+<m:mtd>
+<m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:mi>ω</m:mi>
+<m:mo>×</m:mo>
+<m:mi mathvariant="bold">Δ</m:mi>
+<m:mi mathvariant="bold">x</m:mi>
+
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+<m:mtd/>
+    <m:mtd>
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd>
+<m:mi mathvariant="bold">Δ</m:mi>
+<m:mi mathvariant="bold">x</m:mi>
+<m:mo mathvariant="bold">•</m:mo>
+<m:mi>Ω</m:mi>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  </m:math>
+</equation>
+        <para id="id13067201">The following relation between the components satisfies this relation.</para>
+        <equation id="eip-568"><m:math>
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mi>Ω</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>ε</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi>
+      </m:mrow>
+     </m:msub>
+<m:msub>
+      <m:mi>ω</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:msub>
+      <m:mi>ω</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     <m:mo>=</m:mo><m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>2</m:mn>
+     </m:mfrac>
+     <m:msub>
+      <m:mi>ε</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>Ω</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mi>j</m:mi>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaeqabaGaeuyQdC1aaSbaaSqaaiaadMgacaWGQbaabeaakiabg2da9iabew7aLnaaBaaaleaacaWGPbGaamOAaiaadUgaaeqaaOGaaGPaVlabeM8a3naaBaaaleaacaWGRbaabeaaaOqaaiabeM8a3naaBaaaleaacaWGRbaabeaakiabg2da9maalaaabaGaaGymaaqaaiaaikdaaaGaeqyTdu2aaSbaaSqaaiaadMgacaWGQbGaam4AaaqabaGccaaMc8UaeuyQdC1aaSbaaSqaaiaadMgacaWGQbaabeaaaaaa@5309@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id13675094">Written in matrix notation these are as follows.</para>
+        <equation id="eip-38"><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ω</m:mi><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>ω</m:mi>
+         <m:mn>1</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>ω</m:mi>
+         <m:mn>2</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>ω</m:mi>
+         <m:mn>3</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     
+    </m:mtable>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo><m:mi>Ω</m:mi><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>0</m:mn>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>ω</m:mi>
+         <m:mn>3</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:mo>-</m:mo><m:msub>
+         <m:mi>ω</m:mi>
+         <m:mn>2</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:mo>-</m:mo><m:msub>
+         <m:mi>ω</m:mi>
+         <m:mn>3</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mn>0</m:mn>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>ω</m:mi>
+         <m:mn>1</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mrow>
+        <m:msub>
+         <m:mi>ω</m:mi>
+         <m:mn>2</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mrow>
+        <m:mo>-</m:mo><m:msub>
+         <m:mi>ω</m:mi>
+         <m:mn>1</m:mn>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mn>0</m:mn>
+      </m:mtd>
+     </m:mtr>
+     
+    </m:mtable>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiabeM8a3jabg2da9maadmaabaqbaeqabmqaaaqaaiabeM8a3naaBaaaleaacaaIXaaabeaaaOqaaiabeM8a3naaBaaaleaacaaIYaaabeaaaOqaaiabeM8a3naaBaaaleaacaaIZaaabeaaaaaakiaawUfacaGLDbaacaGGSaGaaGzbRlaaywW6cqqHPoWvcqGH9aqpdaWadaqaauaabeqadmaaaeaacaaIWaaabaGaeqyYdC3aaSbaaSqaaiaaiodaaeqaaaGcbaGaeyOeI0IaeqyYdC3aaSbaaSqaaiaaikdaaeqaaaGcbaGaeyOeI0IaeqyYdC3aaSbaaSqaaiaaiodaaeqaaaGcbaGaaGimaaqaaiabeM8a3naaBaaaleaacaaIXaaabeaaaOqaaiabeM8a3naaBaaaleaacaaIYaaabeaaaOqaaiabgkHiTiabeM8a3naaBaaaleaacaaIXaaabeaaaOqaaiaaicdaaaaacaGLBbGaayzxaaaaaa@60C8@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+        <para id="id17432170">The notation <emphasis effect="bold">vec </emphasis><emphasis effect="bold">Ω</emphasis> is sometimes used for <emphasis effect="bold">ω</emphasis>. In summary, an antisymmetric tensor is completely characterized by the vector, <emphasis effect="bold">vec </emphasis><emphasis effect="bold">Ω</emphasis>.</para>
+      </section>
+      <section id="id13360848"><title>Canonical form of a symmetric tensor</title><para id="id8764659"> We showed earlier that any second order tensor can be represented as a sum of a symmetric part and an antisymmetric part. The symmetric part is determined by 6 numbers. We now seek the properties of the symmetric part. A theorem in linear algebra states that a symmetric matrix with real elements can be transformed by its eigenvectors to a diagonal matrix with real elements corresponding the eigenvalues. (see Appendix A of Aris.) If the eigenvalues are distinct, then the eigenvector directions are orthogonal. The eigenvectors determine a coordinate system such that the contracted product of the tensor with unit vectors along the coordinate axis is a parallel vector with a magnitude equal to the corresponding eigenvalue. The surface described by the contracted product of all unit vectors in this transformed coordinate system is an ellipsoid with axes corresponding to the coordinate directions.</para>
+        <para id="id11504078"> The eigenvalues and the scalar invariants of a second order tensor can be determined from the characteristic equation.</para>
+        <equation id="eip-703"><m:math>
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mi>det</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>A</m:mi>
+        <m:mrow>
+         <m:mi>i</m:mi><m:mi>j</m:mi>
+        </m:mrow>
+       </m:msub>
+       <m:mo>-</m:mo><m:mi>λ</m:mi><m:msub>
+        <m:mi>δ</m:mi>
+        <m:mrow>
+         <m:mi>i</m:mi><m:mi>j</m:mi>
+        </m:mrow>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>ψ</m:mi><m:mo>-</m:mo><m:mi>λ</m:mi><m:mi>Φ</m:mi><m:mo>+</m:mo><m:msup>
+      <m:mi>λ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mi>Θ</m:mi><m:mo>-</m:mo><m:msup>
+      <m:mi>λ</m:mi>
+      <m:mn>3</m:mn>
+     </m:msup>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mtext>where</m:mtext>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mi>Θ</m:mi><m:mo>=</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>11</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>22</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>33</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>=</m:mo><m:mi>t</m:mi><m:mi>r</m:mi><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">A</m:mi></m:mstyle>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mi>Φ</m:mi><m:mo>=</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>22</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>33</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>-</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>23</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>32</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>33</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>11</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>-</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>31</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>13</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>11</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>22</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>-</m:mo><m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>12</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msub>
+      <m:mi>A</m:mi>
+      <m:mrow>
+       <m:mn>21</m:mn>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mi>ψ</m:mi><m:mo>=</m:mo><m:mi>det</m:mi><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">A</m:mi></m:mstyle>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOabaeqabaGaciizaiaacwgacaGG0bWaaeWaaeaacaWGbbWaaSbaaSqaaiaadMgacaWGQbaabeaakiabgkHiTiabeU7aSjabes7aKnaaBaaaleaacaWGPbGaamOAaaqabaaakiaawIcacaGLPaaacqGH9aqpcqqHOoqwcqGHsislcqaH7oaBcaaMc8UaeuOPdyKaey4kaSIaeq4UdW2aaWbaaSqabeaacaaIYaaaaOGaaGPaVlabfI5arjabgkHiTiabeU7aSnaaCaaaleqabaGaaG4maaaaaOqaaiaabEhacaqGObGaaeyzaiaabkhacaqGLbaabaGaeuiMdeLaeyypa0JaamyqamaaBaaaleaacaaIXaGaaGymaaqabaGccqGHRaWkcaWGbbWaaSbaaSqaaiaaikdacaaIYaaabeaakiabgUcaRiaadgeadaWgaaWcbaGaaG4maiaaiodaaeqaaOGaeyypa0JaamiDaiaadkhacaaMc8UaaCyqaaqaaiabfA6agjabg2da9iaadgeadaWgaaWcbaGaaGOmaiaaikdaaeqaaOGaaGPaVlaadgeadaWgaaWcbaGaaG4maiaaiodaaeqaaOGaeyOeI0IaamyqamaaBaaaleaacaaIYaGaaG4maaqabaGccaaMc8UaamyqamaaBaaaleaacaaIZaGaaGOmaaqabaGccqGHRaWkcaWGbbWaaSbaaSqaaiaaiodacaaIZaaabeaakiaaykW7caWGbbWaaSbaaSqaaiaaigdacaaIXaaabeaakiabgkHiTiaadgeadaWgaaWcbaGaaG4maiaaigdaaeqaaOGaaGPaVlaadgeadaWgaaWcbaGaaGymaiaaiodaaeqaaOGaey4kaSIaamyqamaaBaaaleaacaaIXaGaaGymaaqabaGccaaMc8UaamyqamaaBaaaleaacaaIYaGaaGOmaaqabaGccqGHsislcaWGbbWaaSbaaSqaaiaaigdacaaIYaaabeaakiaaykW7caWGbbWaaSbaaSqaaiaaikdacaaIXaaabeaaaOqaaiabfI6azjabg2da9iGacsgacaGGLbGaaiiDaiaahgeaaaaa@9F4B@</m:annotation>
+ </m:semantics>
+</m:math>
+</equation>
+
+          <list id="id15946200" mark-suffix=")" list-type="enumerated" number-style="lower-alpha"><title>Assignment 2.1</title><item>Relative velocity of points in a rigid body. If <emphasis effect="bold">x</emphasis> and <emphasis effect="bold">y</emphasis> are two points inside a rigid body that is translating and rotating, determine the relation between the relative velocity of these two points as a function of their relative positions. If <emphasis effect="bold">x</emphasis> and <emphasis effect="bold">y</emphasis> are points on a line parallel to the axis of rotation, what is their relative velocity? If <emphasis effect="bold">x</emphasis> and <emphasis effect="bold">y</emphasis> are points on opposite sides of the axis of rotation but with equal distance, r, what is their relative velocity? Draw diagrams.</item>
+            <item>Prove that: <emphasis effect="bold">a</emphasis>•(<emphasis effect="bold">b</emphasis>×<emphasis effect="bold">c</emphasis>) = (<emphasis effect="bold">a</emphasis>×<emphasis effect="bold">b</emphasis>)•<emphasis effect="bold">c</emphasis></item>
+            <item>Show <emphasis effect="bold">a</emphasis>•(<emphasis effect="bold">b</emphasis>×<emphasis effect="bold">c</emphasis>) vanishes identically if two of the three vectors are proportional of one another.</item>
+            <item>Show that if <emphasis effect="bold">a</emphasis> is coplanar with <emphasis effect="bold">b</emphasis> and <emphasis effect="bold">c</emphasis>, then <emphasis effect="bold">a</emphasis>•(<emphasis effect="bold">b</emphasis>×<emphasis effect="bold">c</emphasis>) is zero.</item>
+            <item>Prove that: 
+        <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>×</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>×</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">a</m:mi></m:mstyle><m:mo>•</m:mo><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">b</m:mi></m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mstyle mathsize="normal" mathvariant="bold"><m:mi mathvariant="bold">c</m:mi></m:mstyle>
+  </m:mrow>
+  <m:annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=feaaguart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr4rNCHbGeaGqiVCI8FfYJH8YrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfeaY=biLkVcLq=JHqpepeea0=as0Fb9pgeaYRXxe9vr0=vr0=vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaiaahggacqGHxdaTdaqadaqaaiaahkgacqGHxdaTcaWHJbaacaGLOaGaayzkaaGaeyypa0ZaaeWaaeaacaWHHbGaeyOiGCRaaC4yaaGaayjkaiaawMcaaiaaykW6caWHIbGaeyOeI0YaaeWaaeaacaWHHbGaeyOiGCRaaCOyaaGaayjkaiaawMcaaiaaykW6caWHJbaaaa@4EFE@</m:annotation>
+ </m:semantics>
+</m:math>
+
+      </item>
+            <item>Prove that the contracted product of a tensor <emphasis effect="bold">A</emphasis> and a vector <emphasis effect="bold">a</emphasis>, <emphasis effect="bold">A</emphasis>⋅<emphasis effect="bold">a</emphasis>, transforms under a rotation of coordinates as a vector.</item>
+            <item>Show that you get the same result for relative velocity whether you use <emphasis effect="bold">ω</emphasis> or <emphasis effect="bold">Ω</emphasis> for the rotation of a rigid body.</item>
+          </list>
+        
+      </section>
+   
+  </content>
+</document>

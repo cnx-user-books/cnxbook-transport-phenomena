@@ -1,0 +1,2880 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Flow with Free Surface</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34434</md:content-id>
+  <md:title>Flow with Free Surface</md:title>
+  <md:abstract/>
+  <md:uuid>e05b2cd0-c761-4409-a080-25b300362f13</md:uuid>
+</metadata>
+
+<content>
+      <para id="id75170">We have already encountered free surfaces in systems such as the drainage of a liquid along a wall. In this case the free surface was a material surface and the boundary condition was that of continuity of pressure and shear stress. The same boundary conditions would be used for wind-driven waves on water and the shape of the vortex formed when water drains from a bathtub. The dimensionless numbers of importance are the Reynolds number <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi> Re </m:mi></m:msub><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.166667em"/><m:mi>U</m:mi><m:mspace width="0.166667em"/><m:mi>L</m:mi><m:mo>/</m:mo><m:mi>μ</m:mi></m:mrow></m:math>, Froude number <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mrow><m:mi>F</m:mi><m:mi>r</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:msup><m:mi>U</m:mi><m:mn>2</m:mn></m:msup><m:mo>/</m:mo><m:mi>g</m:mi><m:mspace width="0.166667em"/><m:mi>L</m:mi></m:mrow></m:math>, and gravity number <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi>G</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>ρ</m:mi><m:mspace width="0.166667em"/><m:mi>g</m:mi><m:mspace width="0.166667em"/><m:msup><m:mi>L</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mi>μ</m:mi><m:mspace width="0.166667em"/><m:mi>U</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:msub><m:mi>N</m:mi><m:mi> Re </m:mi></m:msub><m:msub><m:mi>N</m:mi><m:mrow><m:mi>F</m:mi><m:mi>r</m:mi></m:mrow></m:msub></m:mfrac></m:mrow></m:math>. These mentioned systems are of a macroscopic scale compared to surface forces and rheology and thus surface tension, surface elasticity, and surface viscosity were not significant. However, when the system dimensions become about 1 cm or less surface forces are no longer negligible and play an important role in the shape of the interface and in transport processes. The capillary number <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mrow><m:mi>C</m:mi><m:mi>a</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:mi>μ</m:mi><m:mspace width="0.166667em"/><m:mi>U</m:mi><m:mo>/</m:mo><m:mi>σ</m:mi></m:mrow></m:math>
+and Bond number <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mrow><m:mi>B</m:mi><m:mi>o</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.166667em"/><m:mi>g</m:mi><m:mspace width="0.166667em"/><m:msup><m:mi>L</m:mi><m:mn>2</m:mn></m:msup><m:mo>/</m:mo><m:mi>σ</m:mi></m:mrow></m:math>
+introduced in Chapter 6 become important dimensionless groups that quantify the ratio of viscous/capillary and gravity/capillary forces. As the dimensions decrease to about 1 mm we are in the range of capillary phenomena where surface tension and contact angles become important (e.g., the rise of a wetting liquid in a small capillary). As the dimensions decrease to <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mspace width="0.166667em"/><m:mi>μ</m:mi><m:mi>m</m:mi></m:mrow></m:math> we are in the colloidal regime and not only is capillarity a dominant effect but also particles have spontaneous motion due to Brownian motion and thin films display optical interference as in the color of soap films. When the dimensions decrease to the range of 1 nm, it is necessary to include surface forces due to electrostatic, van der Waals, steric and hydrogen bonding effects to describe the thermodynamics and hydrodynamics of the fluid interfaces. At this scale the phases can no longer be assumed to be homogenous right up to the interface. The overlap of the inhomogeneous regions next to the interfaces results in forces that either attract or repel the interfaces.</para>
+      <section id="uid1">
+        <title>Boundary Conditions at a Fluid-Fluid Interface</title>
+        <para id="id75764">Analysis of macroscopic systems usually assume the fluid-fluid interface to simply be a surface of discontinuity in the density and viscosity of the bulk phases with no discontinuity in stress, (i.e., continuous pressure and shear stress across the surface). If there is no significant mass transfer, the surface is also a material surface and thus follows the motion of the fluid particles at the surface.
+</para>
+        <para id="eip-778">Systems with a length scale about a centimeter or less and having fluid-fluid interfaces can no longer neglect the discontinuity in stress across the interface. A momentum balance across the interface is needed to describe the stress at the boundary. Also, if the system has surface-active components that affect the surface tension and/or surface viscosity, then a material balance is also needed to determine the composition of the interfacial region. A general treatment of the momentum balance at fluid-fluid interfaces is given in Chapter 10 of Aris, <emphasis effect="italics">Vectors, Tensors and the Basic Equations of Fluid Mechanics</emphasis>. We summarize the results here assuming no slip at the surface and a Newtonian surface constitutive relation. The terms in the momentum balance are given on the left side and its description is given on the right side.</para><para id="id75783">
+          <m:math overflow="scroll">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>γ</m:mi>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>U</m:mi>
+                          <m:mi>i</m:mi>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>inertial</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>force</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:mi>γ</m:mi>
+                    <m:msup>
+                      <m:mi>g</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msup>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mtext>body</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>force</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:mfenced separators="" open="[" close="]">
+                      <m:mspace width="-1.49994pt"/>
+                      <m:mfenced separators="" open="[" close="]">
+                        <m:msup>
+                          <m:mi>T</m:mi>
+                          <m:mrow>
+                            <m:mi>i</m:mi>
+                            <m:mi>j</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                      </m:mfenced>
+                      <m:mspace width="-1.49994pt"/>
+                    </m:mfenced>
+                    <m:msub>
+                      <m:mi>n</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>traction</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>of</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>the</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>bulk</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>phases</m:mtext>
+                    <m:mspace width="1.em"/>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>n</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msup>
+                    <m:mn>2</m:mn>
+                    <m:mi>H</m:mi>
+                    <m:mi>σ</m:mi>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mtext>normal</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>force</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>due</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>to</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>surface</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>tension</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:msubsup>
+                      <m:mi>t</m:mi>
+                      <m:mi>α</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msubsup>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>a</m:mi>
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msub>
+                      <m:mi>σ</m:mi>
+                      <m:mrow>
+                        <m:mo>,</m:mo>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>gradient</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>of</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>surface</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>tension</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>κ</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>ε</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msubsup>
+                      <m:mi>t</m:mi>
+                      <m:mi>α</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msubsup>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>a</m:mi>
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:msup>
+                          <m:mi>a</m:mi>
+                          <m:mrow>
+                            <m:mi>λ</m:mi>
+                            <m:mi>μ</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:msubsup>
+                          <m:mi>t</m:mi>
+                          <m:mi>λ</m:mi>
+                          <m:mi>j</m:mi>
+                        </m:msubsup>
+                        <m:msub>
+                          <m:mi>U</m:mi>
+                          <m:mrow>
+                            <m:mi>j</m:mi>
+                            <m:mo>,</m:mo>
+                            <m:mi>μ</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mo>,</m:mo>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mtext>dilatational</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>force</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mi>ε</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>K</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msubsup>
+                      <m:mi>t</m:mi>
+                      <m:mi>α</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msubsup>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>a</m:mi>
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msubsup>
+                      <m:mi>t</m:mi>
+                      <m:mi>β</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msubsup>
+                    <m:msub>
+                      <m:mi>U</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mtext>force</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>due</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>to</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:msub>
+                      <m:mtext>U</m:mtext>
+                      <m:mtext>s</m:mtext>
+                    </m:msub>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>and</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>total</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>curvature</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>ε</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msubsup>
+                      <m:mi>t</m:mi>
+                      <m:mi>α</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msubsup>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msub>
+                      <m:mfenced separators="" open="[" close="]">
+                        <m:mrow>
+                          <m:msup>
+                            <m:mi>ε</m:mi>
+                            <m:mrow>
+                              <m:mi>λ</m:mi>
+                              <m:mi>μ</m:mi>
+                            </m:mrow>
+                          </m:msup>
+                          <m:msub>
+                            <m:mrow>
+                              <m:mo>(</m:mo>
+                              <m:msubsup>
+                                <m:mi>t</m:mi>
+                                <m:mi>μ</m:mi>
+                                <m:mi>j</m:mi>
+                              </m:msubsup>
+                              <m:mspace width="0.166667em"/>
+                              <m:msub>
+                                <m:mi>U</m:mi>
+                                <m:mi>j</m:mi>
+                              </m:msub>
+                              <m:mo>)</m:mo>
+                            </m:mrow>
+                            <m:mrow>
+                              <m:mo>,</m:mo>
+                              <m:mi>λ</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mo>,</m:mo>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mtext>curl(curl</m:mtext>
+                    <m:msub>
+                      <m:mi>U</m:mi>
+                      <m:mi>s</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>)</m:mo>
+                      <m:mo>,</m:mo>
+                      <m:mspace width="0.277778em"/>
+                      <m:mtext>surface</m:mtext>
+                      <m:mspace width="0.277778em"/>
+                      <m:mtext>shear</m:mtext>
+                      <m:mspace width="0.277778em"/>
+                      <m:mtext>force</m:mtext>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mi>ε</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msubsup>
+                      <m:mi>t</m:mi>
+                      <m:mi>α</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msubsup>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:mi>λ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msub>
+                      <m:mi>b</m:mi>
+                      <m:mrow>
+                        <m:mi>λ</m:mi>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>β</m:mi>
+                        <m:mi>μ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:msup>
+                          <m:mi>n</m:mi>
+                          <m:mi>j</m:mi>
+                        </m:msup>
+                        <m:msub>
+                          <m:mi>U</m:mi>
+                          <m:mi>j</m:mi>
+                        </m:msub>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mo>,</m:mo>
+                        <m:mi>μ</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mtext>effect</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>of</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>varing</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>normal</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>velocity</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>n</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msup>
+                    <m:mn>2</m:mn>
+                    <m:mi>H</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>κ</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>ε</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msubsup>
+                        <m:mi>t</m:mi>
+                        <m:mi>λ</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:msubsup>
+                      <m:mspace width="0.166667em"/>
+                      <m:msup>
+                        <m:mi>a</m:mi>
+                        <m:mrow>
+                          <m:mi>λ</m:mi>
+                          <m:mi>μ</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mspace width="0.166667em"/>
+                      <m:msub>
+                        <m:mi>U</m:mi>
+                        <m:mrow>
+                          <m:mi>j</m:mi>
+                          <m:mo>,</m:mo>
+                          <m:mi>μ</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mtext>normal</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>force</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>due</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>to</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>dilatation</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>n</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msup>
+                    <m:mn>2</m:mn>
+                    <m:mi>ε</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msubsup>
+                      <m:mi>t</m:mi>
+                      <m:mi>λ</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msubsup>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>λ</m:mi>
+                        <m:mi>α</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mspace width="0.166667em"/>
+                    <m:msub>
+                      <m:mi>b</m:mi>
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>β</m:mi>
+                        <m:mi>μ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mspace width="0.166667em"/>
+                    <m:msub>
+                      <m:mi>U</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mo>,</m:mo>
+                        <m:mi>μ</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mtext>normal</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>force</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>due</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>to</m:mtext>
+                    <m:mspace width="0.277778em"/>
+                    <m:mtext>shear</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </para>
+        <para id="id77078">The surface constitutive equation for a Newtonian interface is (Slattery, 1990)</para>
+        <para id="id77082">
+          <m:math overflow="scroll">
+            <m:mrow>
+              <m:msup>
+                <m:mrow>
+                  <m:mi mathvariant="bold">T</m:mi>
+                </m:mrow>
+                <m:mi mathvariant="bold">s</m:mi>
+              </m:msup>
+              <m:mo>=</m:mo>
+              <m:mfenced separators="" open="[" close="]">
+                <m:mrow>
+                  <m:mi>σ</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mrow>
+                      <m:mi>κ</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>ε</m:mi>
+                    </m:mrow>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>∇</m:mi>
+                    <m:mi>s</m:mi>
+                  </m:msub>
+                  <m:mo>•</m:mo>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mi mathvariant="bold">v</m:mi>
+                    </m:mrow>
+                    <m:mi mathvariant="bold">s</m:mi>
+                  </m:msup>
+                </m:mrow>
+              </m:mfenced>
+              <m:msup>
+                <m:mrow>
+                  <m:mi mathvariant="bold">I</m:mi>
+                </m:mrow>
+                <m:mi mathvariant="bold">s</m:mi>
+              </m:msup>
+              <m:mo>+</m:mo>
+              <m:mn>2</m:mn>
+              <m:mi>ε</m:mi>
+              <m:msub>
+                <m:mi mathvariant="bold">e</m:mi>
+                <m:mi mathvariant="bold">s</m:mi>
+              </m:msub>
+            </m:mrow>
+          </m:math>
+        </para>
+        <para id="id77187">The surface properties are a function of the composition of the interface. The species mass balance at the interface is given as (Edwards, et al., 1991)
+</para>
+        <equation id="eip-178"><m:math overflow="scroll"><m:mrow><m:mfrac><m:mrow><m:mi>∂</m:mi><m:msub><m:mi>Γ</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mrow><m:mi>∂</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>+</m:mo><m:msub><m:mi>∇</m:mi><m:mi>s</m:mi></m:msub><m:mo>•</m:mo><m:mfenced separators="" open="(" close=")"><m:mrow><m:msup><m:mrow><m:mi mathvariant="bold">v</m:mi></m:mrow><m:mi mathvariant="bold">s</m:mi></m:msup><m:mspace width="0.166667em"/><m:msub><m:mi>Γ</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:mfenced><m:mo>+</m:mo><m:msub><m:mi>∇</m:mi><m:mi>s</m:mi></m:msub><m:mo>•</m:mo><m:mfenced separators="" open="(" close=")"><m:mrow><m:msub><m:mi mathvariant="bold">I</m:mi><m:mi mathvariant="bold">s</m:mi></m:msub><m:mo>•</m:mo><m:msubsup><m:mi mathvariant="bold">j</m:mi><m:mi>n</m:mi><m:mi>s</m:mi></m:msubsup></m:mrow></m:mfenced><m:mo>=</m:mo><m:msubsup><m:mi>R</m:mi><m:mi>n</m:mi><m:mi>s</m:mi></m:msubsup><m:mo>+</m:mo><m:mi mathvariant="bold">n</m:mi><m:mo>•</m:mo><m:mfenced separators="" open="[" close="]"><m:mspace width="-1.49994pt"/><m:mfenced separators="" open="[" close="]"><m:msub><m:mi mathvariant="bold">j</m:mi><m:mi>n</m:mi></m:msub></m:mfenced><m:mspace width="-1.49994pt"/></m:mfenced></m:mrow></m:math></equation><para id="id77362">The parallel between the mass and momentum balances and constitutive equations for interfaces and bulk fluids should be noted (Gurmeet Singh, 1996). This analogy with bulk fluids is more complete if a <emphasis effect="italics">surface pressure</emphasis> due to the reduction of the surface or interfacial tension due to adsorption is defined.</para>
+        
+        <equation id="eip-563"><m:math overflow="scroll">
+            <m:mrow>
+              <m:mi>π</m:mi>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>σ</m:mi>
+                <m:mi>o</m:mi>
+              </m:msub>
+              <m:mo>-</m:mo>
+              <m:mi>σ</m:mi>
+              <m:mfenced open="(" close=")">
+                <m:mi>Γ</m:mi>
+              </m:mfenced>
+            </m:mrow>
+          </m:math>
+        </equation><para id="id77406">The surface properties are as follows.</para>
+        <table id="id77409" summary="">
+          <tgroup cols="2">
+            <tbody>
+              <row>
+                <entry>Symbol</entry>
+                <entry>Property</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mi>γ</m:mi>
+                  </m:math>
+                </entry>
+                <entry>mass per unit area</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:msub>
+                      <m:mi>Γ</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:msub>
+                  </m:math>
+                </entry>
+                <entry>surface excess concentration of species <m:math overflow="scroll"><m:mi>n</m:mi></m:math></entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mi>σ</m:mi>
+                  </m:math>
+                </entry>
+                <entry>surface or interfacial tension</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mi>π</m:mi>
+                  </m:math>
+                </entry>
+                <entry>surface pressure</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mi>κ</m:mi>
+                  </m:math>
+                </entry>
+                <entry>surface dilatational viscosity</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mi>ε</m:mi>
+                  </m:math>
+                </entry>
+                <entry>surface shear viscosity</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>a</m:mi>
+                        <m:mrow>
+                          <m:mi>α</m:mi>
+                          <m:mi>β</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mspace width="0.166667em"/>
+                      <m:msub>
+                        <m:mi>b</m:mi>
+                        <m:mrow>
+                          <m:mi>α</m:mi>
+                          <m:mi>β</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                      <m:mspace width="0.277778em"/>
+                      <m:msubsup>
+                        <m:mi>t</m:mi>
+                        <m:mi>α</m:mi>
+                        <m:mi>i</m:mi>
+                      </m:msubsup>
+                    </m:mrow>
+                  </m:math>
+                </entry>
+                <entry>surface tensors</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:msup>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:math>
+                </entry>
+                <entry>surface permutation symbol</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>U</m:mi>
+                        <m:mi>i</m:mi>
+                      </m:msup>
+                      <m:mo>,</m:mo>
+                      <m:mspace width="1.em"/>
+                      <m:msup>
+                        <m:mrow>
+                          <m:mi mathvariant="bold">v</m:mi>
+                        </m:mrow>
+                        <m:mi mathvariant="bold">s</m:mi>
+                      </m:msup>
+                    </m:mrow>
+                  </m:math>
+                </entry>
+                <entry>surface velocity</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:msubsup>
+                      <m:mi mathvariant="bold">j</m:mi>
+                      <m:mi>n</m:mi>
+                      <m:mi>s</m:mi>
+                    </m:msubsup>
+                  </m:math>
+                </entry>
+                <entry>surface diffusional flux</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mi>H</m:mi>
+                  </m:math>
+                </entry>
+                <entry>mean curvature</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mi>K</m:mi>
+                  </m:math>
+                </entry>
+                <entry>Gaussian or total curvature</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        <para id="id77870"><emphasis effect="underline">The normal component of stress.</emphasis> The discontinuity in the normal component of the total stress tensor for a hydrostatic system is as follows.</para>
+        <equation id="id77879">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mrow>
+                  <m:mo>[</m:mo>
+                  <m:mi mathvariant="bold">T</m:mi>
+                  <m:mo>]</m:mo>
+                </m:mrow>
+                <m:mi mathvariant="bold">n</m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mfenced open="[" close="]">
+                <m:mi>p</m:mi>
+              </m:mfenced>
+              <m:mi mathvariant="bold">n</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>2</m:mn>
+              <m:mi>H</m:mi>
+              <m:mspace width="0.166667em"/>
+              <m:mi>σ</m:mi>
+              <m:mspace width="0.166667em"/>
+              <m:mi mathvariant="bold">n</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id77940">where <m:math overflow="scroll"><m:mi>H</m:mi></m:math> is the mean curvature of the surface and <m:math overflow="scroll"><m:mi>σ</m:mi></m:math> is the surface or interfacial tension. The mean curvature can be expressed as a function greatest and least curvatures of curves in the surface <m:math overflow="scroll"><m:msub><m:mi>k</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>k</m:mi><m:mn>2</m:mn></m:msub></m:math> or the <emphasis effect="italics">principal curvatures</emphasis> in the directions of the principal curvature.</para>
+        <equation id="id77997">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>H</m:mi>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>κ</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>+</m:mo>
+              <m:msub>
+                <m:mi>κ</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id78031">The curvature in one of the principal directions can be expressed in terms of the equation for the arc of the curve. Suppose one principal direction is in the x-y plane.</para>
+        <equation id="id78036"><m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                    <m:mi>y</m:mi>
+</m:mtd>
+<m:mtd>                  
+  <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">       
+             <m:mi>h</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>x</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:msup>
+                      <m:mi>h</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>h</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>x</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>h</m:mi>
+                    <m:mo>"</m:mo>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>d</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mi>h</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>x</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>d</m:mi>
+                    <m:mi>s</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>±</m:mo>
+                    <m:msqrt>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mrow>
+                            <m:mo>(</m:mo>
+                            <m:mi>d</m:mi>
+                            <m:mi>x</m:mi>
+                            <m:mo>)</m:mo>
+                          </m:mrow>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mo>+</m:mo>
+                        <m:msup>
+                          <m:mrow>
+                            <m:mo>(</m:mo>
+                            <m:mi>d</m:mi>
+                            <m:mi>y</m:mi>
+                            <m:mo>)</m:mo>
+                          </m:mrow>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:mrow>
+                    </m:msqrt>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+               
+                    <m:mi>ϕ</m:mi>
+</m:mtd>
+<m:mtd>               
+     <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">       
+             <m:mo form="prefix">arctan</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:msup>
+                      <m:mi>h</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+              <m:mtd columnalign="right">
+                    <m:mi>κ</m:mi>
+</m:mtd>
+<m:mtd>
+                    <m:mo>≡</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">       
+             <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>ϕ</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>s</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+
+<m:mtd>
+                    <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:mo form="prefix">cos</m:mo>
+                        <m:mspace width="0.166667em"/>
+                        <m:mi>ϕ</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:mi>h</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+<m:mtd/>              
+  <m:mtd>
+           <m:mo>=</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>h</m:mi>
+                        <m:mo>"</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:mi>x</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:msup>
+                        <m:mrow>
+                          <m:mfenced separators="" open="{" close="}">
+                            <m:mrow>
+                              <m:mn>1</m:mn>
+                              <m:mo>+</m:mo>
+                              <m:msup>
+                                <m:mrow>
+                                  <m:mfenced separators="" open="[" close="]">
+                                    <m:mrow>
+                                      <m:msup>
+                                        <m:mi>h</m:mi>
+                                        <m:mo>'</m:mo>
+                                      </m:msup>
+                                      <m:mrow>
+                                        <m:mo>(</m:mo>
+                                        <m:mi>x</m:mi>
+                                        <m:mo>)</m:mo>
+                                      </m:mrow>
+                                    </m:mrow>
+                                  </m:mfenced>
+                                </m:mrow>
+                                <m:mn>2</m:mn>
+                              </m:msup>
+                            </m:mrow>
+                          </m:mfenced>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mn>3</m:mn>
+                          <m:mo>/</m:mo>
+                          <m:mn>2</m:mn>
+                        </m:mrow>
+                      </m:msup>
+                    </m:mfrac>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id78331">Thus the curvature can be determined from the coordinates of the surface. We see that when the slope is small, the curvature can be approximated by the second derivative. A surface that is translational symmetric has zero curvature in one direction (e.g., surface of a cylinder). The two principal curvatures are equal on the surface of a sphere. A saddle shaped surface can have zero curvature because the principal curvatures have opposite signs.</para>
+        <para id="id78338">The difference in pressure across a curved interface is called the <emphasis effect="italics">Laplace pressure</emphasis> after the Laplace-Young equation. This is a classical equation used to determine the shape of a static meniscus or to determine the surface tension from the shape of a static meniscus such as the pendant drop shown here. This is a drop of water suspended from the tip of a capillary tube surrounded by air. Water surrounded by oil would be similar. Suppose we let the origin our coordinate system be the bottom of the drop. The system is an axisymmetric and has two radaii of curvature.</para>
+        <figure id="uid2">
+          <media id="uid2_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_1.png" id="uid2_onlineimage" width="274"><!-- NOTE: attribute width changes image size online (pixels). original width is 274. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_1.eps" id="uid2_printimage"/>
+          </media>
+          <caption>Pendant water drop in air (Adamson, 1990)</caption>
+        </figure>
+        <equation id="id78363">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>H</m:mi>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>κ</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>+</m:mo>
+              <m:msub>
+                <m:mi>κ</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>z</m:mi>
+                  <m:mo>"</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mn>1</m:mn>
+                        <m:mo>+</m:mo>
+                        <m:mi>z</m:mi>
+                        <m:msup>
+                          <m:mrow/>
+                          <m:mrow>
+                            <m:mo>'</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:mrow>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mn>3</m:mn>
+                    <m:mo>/</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mfrac>
+              <m:mo>+</m:mo>
+              <m:mfrac>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mi>x</m:mi>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:mrow>
+                          <m:mn>1</m:mn>
+                          <m:mo>+</m:mo>
+                          <m:mi>z</m:mi>
+                          <m:msup>
+                            <m:mrow/>
+                            <m:mrow>
+                              <m:mo>'</m:mo>
+                              <m:mn>2</m:mn>
+                            </m:mrow>
+                          </m:msup>
+                        </m:mrow>
+                      </m:mfenced>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>/</m:mo>
+                      <m:mn>2</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>ϕ</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>s</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>+</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mo form="prefix">sin</m:mo>
+                  <m:mi>ϕ</m:mi>
+                </m:mrow>
+                <m:mi>x</m:mi>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id78523">The system is hydrostatic so the pressure profile can be expressed as the pressure jump at the origin and the difference in hydrostatic pressure along the profile.</para>
+        <equation id="id78528">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfenced open="[" close="]">
+                      <m:mi>p</m:mi>
+                    </m:mfenced>
+                    <m:mo>=</m:mo>
+                    <m:mi>Δ</m:mi>
+                    <m:msub>
+                      <m:mi>p</m:mi>
+                      <m:mi>o</m:mi>
+                    </m:msub>
+                    <m:mo>-</m:mo>
+                    <m:mi>Δ</m:mi>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>Δ</m:mi>
+                    <m:msub>
+                      <m:mi>p</m:mi>
+                      <m:mi>o</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mi>σ</m:mi>
+                    <m:mo>/</m:mo>
+                    <m:msub>
+                      <m:mi>r</m:mi>
+                      <m:mi>o</m:mi>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfenced open="[" close="]">
+                      <m:mi>p</m:mi>
+                    </m:mfenced>
+                    <m:mo>=</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mi>σ</m:mi>
+                    <m:mo>/</m:mo>
+                    <m:msub>
+                      <m:mi>r</m:mi>
+                      <m:mi>o</m:mi>
+                    </m:msub>
+                    <m:mo>-</m:mo>
+                    <m:mi>Δ</m:mi>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id78658">where <m:math overflow="scroll"><m:mrow><m:mi>Δ</m:mi><m:msub><m:mi>p</m:mi><m:mi>o</m:mi></m:msub></m:mrow></m:math> Laplace pressure at the apex of the drop and <m:math overflow="scroll"><m:msub><m:mi>r</m:mi><m:mi>o</m:mi></m:msub></m:math> is the radius of curvature of the apex of the drop.</para>
+        <para id="id78695">The surface or interfacial tension is found using the pendant drop analysis by estimating the value of the tension that best fits the calculated meniscus shape with the shape captured in a video image.</para>
+        <para id="id78700">When the pendent drop apparatus is designed so the meniscus is <emphasis effect="italics">pinned</emphasis> to either the inner or outer edge of the tip of the needle, the contact angle does not influence the shape of the meniscus. If the drop rests on a flat surface, it is called a sessile drop and the elevation of the profile from the surface is a function of the contact angle that the meniscus makes with the substrate.</para>
+        <para id="id78712">A characteristic length scale can be determined for the hydrostatic meniscus. Suppose that the datum of elevation corresponds to the apex of the drop. The hydrostatic profile is described by the following dimensionless Young-Laplace equation.</para>
+        
+        <equation id="eip-894"><m:math overflow="scroll">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mi>σ</m:mi>
+                      <m:mi>L</m:mi>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:mn>2</m:mn>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:mrow>
+                          <m:msub>
+                            <m:mi>r</m:mi>
+                            <m:mi>o</m:mi>
+                          </m:msub>
+                          <m:mo>/</m:mo>
+                          <m:mi>L</m:mi>
+                        </m:mrow>
+                      </m:mfenced>
+                    </m:mfrac>
+                    <m:mo>-</m:mo>
+                    <m:mi>Δ</m:mi>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>L</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>z</m:mi>
+                    <m:mo>*</m:mo>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mi>σ</m:mi>
+                      <m:mi>L</m:mi>
+                    </m:mfrac>
+                    <m:mspace width="0.166667em"/>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:msubsup>
+                          <m:mi>κ</m:mi>
+                          <m:mn>1</m:mn>
+                          <m:mo>*</m:mo>
+                        </m:msubsup>
+                        <m:mo>+</m:mo>
+                        <m:msubsup>
+                          <m:mi>κ</m:mi>
+                          <m:mn>2</m:mn>
+                          <m:mo>*</m:mo>
+                        </m:msubsup>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>L</m:mi>
+                    </m:mfrac>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:mi>ϕ</m:mi>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:msup>
+                              <m:mi>s</m:mi>
+                              <m:mo>*</m:mo>
+                            </m:msup>
+                          </m:mrow>
+                        </m:mfrac>
+                        <m:mo>+</m:mo>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mo form="prefix">sin</m:mo>
+                            <m:mi>ϕ</m:mi>
+                          </m:mrow>
+                          <m:msup>
+                            <m:mi>x</m:mi>
+                            <m:mo>*</m:mo>
+                          </m:msup>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mn>2</m:mn>
+                      <m:mi>B</m:mi>
+                    </m:mfrac>
+                    <m:mo>-</m:mo>
+                    <m:mfenced separators="" open="[" close="]">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>Δ</m:mi>
+                          <m:mi>ρ</m:mi>
+                          <m:mspace width="0.166667em"/>
+                          <m:mi>g</m:mi>
+                          <m:mspace width="0.166667em"/>
+                          <m:msup>
+                            <m:mi>L</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                        </m:mrow>
+                        <m:mi>σ</m:mi>
+                      </m:mfrac>
+                    </m:mfenced>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>z</m:mi>
+                    <m:mo>*</m:mo>
+                    <m:mo>=</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:msubsup>
+                          <m:mi>κ</m:mi>
+                          <m:mn>1</m:mn>
+                          <m:mo>*</m:mo>
+                        </m:msubsup>
+                        <m:mo>+</m:mo>
+                        <m:msubsup>
+                          <m:mi>κ</m:mi>
+                          <m:mn>2</m:mn>
+                          <m:mo>*</m:mo>
+                        </m:msubsup>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>ϕ</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>s</m:mi>
+                          <m:mo>*</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mo form="prefix">sin</m:mo>
+                        <m:mi>ϕ</m:mi>
+                      </m:mrow>
+                      <m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mo>*</m:mo>
+                      </m:msup>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mi> where </m:mi>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>s</m:mi>
+                      <m:mo>*</m:mo>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mi>s</m:mi>
+                      <m:mi>L</m:mi>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mo>*</m:mo>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mi>x</m:mi>
+                      <m:mi>L</m:mi>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>*</m:mo>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mi>z</m:mi>
+                      <m:mi>L</m:mi>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:msup>
+                      <m:mi>κ</m:mi>
+                      <m:mo>*</m:mo>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mi>L</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>κ</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>B</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:msub>
+                        <m:mi>r</m:mi>
+                        <m:mi>o</m:mi>
+                      </m:msub>
+                      <m:mi>L</m:mi>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation><para id="id79135">If the dimensionless group is specified to equal unity, a characteristic length is defined.</para>
+        
+        <equation id="eip-77"><m:math overflow="scroll">
+            <m:mrow>
+              <m:mi>L</m:mi>
+              <m:mo>=</m:mo>
+              <m:msqrt>
+                <m:mfrac>
+                  <m:mi>σ</m:mi>
+                  <m:mrow>
+                    <m:mi>Δ</m:mi>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+              </m:msqrt>
+            </m:mrow>
+          </m:math>
+        </equation><para id="id79169">This characteristic length, called the <emphasis effect="italics">capillary</emphasis> constant, is sometimes defined with a factor of 2 multiplying the surface tension. It has a value of 2.7 mm for the water-air interface at ambient conditions. This length is representative of the meniscus height of water next to a vertical wall that is wetted by water.</para>
+        <para id="id79180">The dimensionless differential equations are now as follows.</para>
+        
+        <equation id="eip-838"><m:math overflow="scroll">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>ϕ</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>s</m:mi>
+                          <m:mo>*</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>2</m:mn>
+                      <m:mi>B</m:mi>
+                    </m:mfrac>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>*</m:mo>
+                    </m:msup>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mo form="prefix">sin</m:mo>
+                        <m:mi>ϕ</m:mi>
+                      </m:mrow>
+                      <m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mo>*</m:mo>
+                      </m:msup>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>z</m:mi>
+                          <m:mo>*</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>s</m:mi>
+                          <m:mo>*</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mo form="prefix">sin</m:mo>
+                    <m:mi>ϕ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>x</m:mi>
+                          <m:mo>*</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>s</m:mi>
+                          <m:mo>*</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mi>ϕ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+
+
+
+
+</equation>
+        <equation id="eip-574"><m:math overflow="scroll">
+            <m:mrow>
+              <m:mfenced separators="" open="" close="}">
+                <m:mtable>
+                  <m:mtr>
+                    <m:mtd>
+                      <m:mrow>
+                        <m:mi>ϕ</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>z</m:mi>
+                          <m:mo>*</m:mo>
+                        </m:msup>
+                        <m:mo>=</m:mo>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>x</m:mi>
+                          <m:mo>*</m:mo>
+                        </m:msup>
+                        <m:mo>=</m:mo>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                </m:mtable>
+              </m:mfenced>
+              <m:mspace width="1.em"/>
+              <m:mi> at </m:mi>
+              <m:mspace width="0.277778em"/>
+              <m:mspace width="0.277778em"/>
+              <m:msup>
+                <m:mi>s</m:mi>
+                <m:mo>*</m:mo>
+              </m:msup>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation><para id="id79411">The system of ODEs is computed from the apex of the drop where the dimensionless radius of curvature at the apex is a parameter, <m:math overflow="scroll"><m:mi>B</m:mi></m:math>. The value of <m:math overflow="scroll"><m:mi>B</m:mi></m:math> is adjusted until the best fit of the measured drop shape is obtained.</para>
+        <para id="id79435"><title>Assignment 11.1</title><emphasis effect="italics">Estimation of surface tension.</emphasis> Estimate the surface tension of a dilute surfactant solution, given the shape of a pendant drop shown here and data stored in the file, <emphasis effect="italics">shape.dat</emphasis> in the Surface directory. You may use the code in <emphasis effect="italics">pendant.m</emphasis> in the <emphasis effect="italics">Surface</emphasis> directory to generate the dimensionless pendant drop profiles. Use <emphasis effect="italics">units.m</emphasis> to plot the drop shape. Note: The program is not automated. <emphasis effect="italics">Pendant.m</emphasis> computes the dimensionless shape and <emphasis effect="italics">units.m</emphasis> converts it to cgs units to compare with the measured profile.</para>
+        <figure id="uid3">
+          <media id="uid3_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_2.png" id="uid3_onlineimage" width="410"><!-- NOTE: attribute width changes image size online (pixels). original width is 410. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_2.eps" id="uid3_printimage"/>
+          </media>
+        </figure>
+        <para id="id79488"><emphasis effect="underline">Surface tension gradients.</emphasis> If the system has only two components, i.e., the components comprising each phase then the surface or interfacial tension and contact angle is all that is required to describe the surface effects. However, if the system has another component that is surface active as to adsorb at the interface and reduce the surface or interfacial tension, then the interface must be treated as a two dimensional phase for which a mass and momentum balance is required. The mass per unit area of the surface-active component is the surface excess concentration or the amount adsorbed. If the system is not at equilibrium, i.e., not hydrostatic, then concentration gradients may exist in the interface that result in surface tension gradients in the interface. The difference between the clean interface tension and the local tension is called the <emphasis effect="italics">surface pressure</emphasis>. The gradients in the surface pressure contribute to tangential stresses in the interface. It has the same role in the surface momentum balance as pressure gradient in the momentum balance for three-dimensional flow. For example, as liquid drains from a soap film, the drag of the liquid on the interface stretches the interface. The resulting expansion of the interface reduces the surface concentration of soap on the interfaces. This establishes a surface tension or surface pressure gradient between the interface in the film and the interface in the meniscus. This gradient tends to oppose the motion of the interface and thus tends to maintain the interface immobile as the liquid drains from between the two near-immobile interfaces. At the same time this surface tension gradient tends to pull the interface from the meniscus back into the film. This leads to a turbulent motion of the interface at the boundary between the meniscus and the film. This effect called "marginal regeneration" is a <emphasis effect="italics">Marangoni</emphasis> effect caused by the surface tension gradient.</para>
+        <figure id="uid4">
+          <media id="uid4_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_3.png" id="uid4_onlineimage" width="254"><!-- NOTE: attribute width changes image size online (pixels). original width is 254. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_3.eps" id="uid4_printimage"/>
+          </media>
+          <caption>Plate IV. An irregular mobile film in a vertical rectangle</caption>
+        </figure>
+        <figure id="uid5">
+          <media id="uid5_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_4.png" id="uid5_onlineimage" width="272"><!-- NOTE: attribute width changes image size online (pixels). original width is 272. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_4.eps" id="uid5_printimage"/>
+          </media>
+          <caption>Plate I. Rigid film in a rectangular vertical</caption>
+        </figure>
+        <para id="id79556"><emphasis effect="underline">Surface viscosity.</emphasis> Adsorption of a surface-active component at an interface not only changes the surface tension or surface pressure but can also affect the surface rheology. Material adsorbed at interfaces form two-dimensional surface phases that may be gasous, expanded liquid, condensed liquid, or solid. The surface viscosity can change by more than a order of magnitude at a transition from one surface phase to another. This is analogous to the change in viscosity of bulk fluids at phase transitions. The attached figure shows vertical soap film drainage of a system is similar to that of the mobile film except that dodecanol was added to the sodium dodecyl sulfate (SDS) solution. The dodecanol screens the electrostatic repulsion of the SDS at the interface and promote the formation of a condensed liquid monolayer. This monolayer is rigid in this system and the films drains much more slowly than in the case of the mobile film. The mechanism of this difference in the drainage of foam films has been explained in terms of the surface tension gradient driven instability and the stabilizing effect of a large surface viscosity (Joye, et al., 1994, 1996).</para>
+      </section>
+      <section id="uid6">
+        <title>Film Drainage and Deposition with Laplace Pressure</title>
+        <para id="id79584">In Chapter 8 we modeled the gravity drainage of a film along a wall neglecting the pressure between the liquid and gas because the mean curvature of the system was very small compared to the length of the film. Now suppose that we have a film that in connected to a curved meniscus. The meniscus may be moving along a substrate and depositing a film or gathering up a deposited film, e.g., a bubble in a capillary tube. Alternatively, the substrate may be stationary with respect to the meniscus and the film is draining into the mensicus, e.g. foam or emulsion film between two bubbles or drops. For simplicity, we will assume that we have a pure system so there are no surface tension gradients or effects of surface viscosity. We will assume that the system is translational invarient. A schematic of some possible system configurations are shown below.</para>
+        <figure id="uid7">
+          <media id="uid7_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_5.png" id="uid7_onlineimage" width="401"><!-- NOTE: attribute width changes image size online (pixels). original width is 401. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_5.eps" id="uid7_printimage"/>
+          </media>
+          <caption>Section of a bubble in a horizontal tube.</caption>
+        </figure>
+        <figure id="uid8">
+          <media id="uid8_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_6.png" id="uid8_onlineimage" width="452"><!-- NOTE: attribute width changes image size online (pixels). original width is 452. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_6.eps" id="uid8_printimage"/>
+          </media>
+          <caption>The transition region.</caption>
+        </figure>
+        <para id="id79620">Configration of a bubble in a tube (Breatherton, 1961)</para>
+        <figure id="uid9">
+          <media id="uid9_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_7.png" id="uid9_onlineimage" width="528"><!-- NOTE: attribute width changes image size online (pixels). original width is 528. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_7.eps" id="uid9_printimage"/>
+          </media>
+        </figure>
+        <para id="id79632">The continuity equation and equations of motion were specialized for lubrication and film flow in Chapter 6. The equations to <m:math overflow="scroll"><m:mrow><m:mi>O</m:mi><m:mo>(</m:mo><m:msub><m:mi>h</m:mi><m:mi>o</m:mi></m:msub><m:mo>/</m:mo><m:mi>L</m:mi><m:mo>)</m:mo></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>O</m:mi><m:mo>(</m:mo><m:msub><m:mi>h</m:mi><m:mi>o</m:mi></m:msub><m:mo>/</m:mo><m:mi>L</m:mi><m:mo>)</m:mo><m:mn>2</m:mn></m:mrow></m:math> are as follows.</para>
+        <equation id="id79692">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mfenced separators="" open="(" close=")">
+                          <m:mrow>
+                            <m:mi>h</m:mi>
+                            <m:mspace width="0.166667em"/>
+                            <m:msub>
+                              <m:mover accent="true">
+                                <m:mi>v</m:mi>
+                                <m:mo>¯</m:mo>
+                              </m:mover>
+                              <m:mn>12</m:mn>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mfenced>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mn>12</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>h</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>∇</m:mi>
+                      <m:mn>12</m:mn>
+                    </m:msub>
+                    <m:mi>P</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>μ</m:mi>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>∂</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mn>12</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msubsup>
+                          <m:mi>x</m:mi>
+                          <m:mn>3</m:mn>
+                          <m:mn>2</m:mn>
+                        </m:msubsup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>h</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>h</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>P</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>Δ</m:mi>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id79941">The systems with a solid substrate will have the boundary condition of no-slip at the solid boundary and zero shear stress at the pure-fluid interface. In the case of two bubbles or drops coming into contact, the mid-plane is a plane of symmetry and has zero shear stress. It will be assumed the fluid interface is immobile in this latter case. The variable, <m:math overflow="scroll"><m:mi>h</m:mi></m:math>, is the half-film thickness in this case. Since this case has zero shear on one surface and no slip on the other surface, the solution will be derived as for the cases with the solid substrate. The boundary conditions are as follows.</para>
+        <equation id="id79959">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mn>12</m:mn>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfenced separators="" open="{" close="">
+                      <m:mtable>
+                        <m:mtr>
+                          <m:mtd>
+                            <m:mrow>
+                              <m:mn>0</m:mn>
+                              <m:mspace width="0.277778em"/>
+                              <m:mspace width="1.em"/>
+                              <m:mi> at </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:msub>
+                                <m:mi>x</m:mi>
+                                <m:mn>3</m:mn>
+                              </m:msub>
+                              <m:mo>=</m:mo>
+                              <m:mn>0</m:mn>
+                              <m:mo>,</m:mo>
+                              <m:mspace width="1.em"/>
+                              <m:mi> for </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:mi> stationary </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:mi> substrate </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:mi> or </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:mi> bubble </m:mi>
+                              <m:mspace width="1.em"/>
+                              <m:mspace width="1.em"/>
+                              <m:mspace width="1.em"/>
+                            </m:mrow>
+                          </m:mtd>
+                        </m:mtr>
+                        <m:mtr>
+                          <m:mtd>
+                            <m:mrow>
+                              <m:mo>±</m:mo>
+                              <m:mi>U</m:mi>
+                              <m:mspace width="1.em"/>
+                              <m:mi> at </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:msub>
+                                <m:mi>x</m:mi>
+                                <m:mn>3</m:mn>
+                              </m:msub>
+                              <m:mo>=</m:mo>
+                              <m:mn>0</m:mn>
+                              <m:mo>,</m:mo>
+                              <m:mspace width="1.em"/>
+                              <m:mi> for </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:mi> substrate </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:mi> moving </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:mi> relative </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:mi> to </m:mi>
+                              <m:mspace width="0.277778em"/>
+                              <m:mi> meniscus </m:mi>
+                            </m:mrow>
+                          </m:mtd>
+                        </m:mtr>
+                      </m:mtable>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mn>12</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mspace width="1.em"/>
+                    <m:mi> at </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mi>h</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id80181">The pressure is uniform across the thickness of the film so the velocity profile can be determined by integrating the equation of motion over the film thickness and applying the boundary conditions.</para>
+        <equation id="id80186">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mn>12</m:mn>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∇</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mi>μ</m:mi>
+                    </m:mfrac>
+                    <m:mspace width="0.166667em"/>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mfrac>
+                          <m:msubsup>
+                            <m:mi>x</m:mi>
+                            <m:mn>3</m:mn>
+                            <m:mn>2</m:mn>
+                          </m:msubsup>
+                          <m:mn>2</m:mn>
+                        </m:mfrac>
+                        <m:mo>-</m:mo>
+                        <m:mi>h</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>+</m:mo>
+                    <m:mfenced separators="" open="{" close="">
+                      <m:mtable>
+                        <m:mtr>
+                          <m:mtd>
+                            <m:mn>0</m:mn>
+                          </m:mtd>
+                        </m:mtr>
+                        <m:mtr>
+                          <m:mtd>
+                            <m:mrow>
+                              <m:mo>±</m:mo>
+                              <m:mi>U</m:mi>
+                            </m:mrow>
+                          </m:mtd>
+                        </m:mtr>
+                      </m:mtable>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mover accent="true">
+                        <m:mi>v</m:mi>
+                        <m:mo>¯</m:mo>
+                      </m:mover>
+                      <m:mn>12</m:mn>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:msup>
+                        <m:mi>h</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mrow>
+                        <m:mn>3</m:mn>
+                        <m:mi>μ</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mi>∇</m:mi>
+                    <m:mi>P</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mfenced separators="" open="{" close="">
+                      <m:mtable>
+                        <m:mtr>
+                          <m:mtd>
+                            <m:mn>0</m:mn>
+                          </m:mtd>
+                        </m:mtr>
+                        <m:mtr>
+                          <m:mtd>
+                            <m:mrow>
+                              <m:mo>±</m:mo>
+                              <m:mi>U</m:mi>
+                            </m:mrow>
+                          </m:mtd>
+                        </m:mtr>
+                      </m:mtable>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id80352">The average velocity is substituted into the equation of continuity.</para>
+        <equation id="id80355">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:mi>h</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:mrow>
+                  <m:mn>3</m:mn>
+                  <m:mi>μ</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>h</m:mi>
+                        <m:mn>3</m:mn>
+                      </m:msup>
+                      <m:msub>
+                        <m:mi>∇</m:mi>
+                        <m:mn>12</m:mn>
+                      </m:msub>
+                      <m:mi>P</m:mi>
+                    </m:mrow>
+                  </m:mfenced>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mn>12</m:mn>
+                  </m:msub>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>-</m:mo>
+              <m:mfenced separators="" open="{" close="">
+                <m:mtable>
+                  <m:mtr>
+                    <m:mtd>
+                      <m:mn>0</m:mn>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd>
+                      <m:mrow>
+                        <m:mo>±</m:mo>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:mi>h</m:mi>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:msub>
+                              <m:mi>x</m:mi>
+                              <m:mn>12</m:mn>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mfrac>
+                        <m:mi>U</m:mi>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                </m:mtable>
+              </m:mfenced>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id80474">The pressure can be expressed in terms of the thickness by application of the Young-Laplace equation assuming that the system has no dependence on <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:math>.</para>
+        <equation id="id80493">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>P</m:mi>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>σ</m:mi>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>h</m:mi>
+                  <m:mo>"</m:mo>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:mrow>
+                        <m:mn>1</m:mn>
+                        <m:mo>+</m:mo>
+                        <m:msup>
+                          <m:mrow>
+                            <m:mfenced separators="" open="[" close="]">
+                              <m:mrow>
+                                <m:msup>
+                                  <m:mi>h</m:mi>
+                                  <m:mo>'</m:mo>
+                                </m:msup>
+                                <m:mrow>
+                                  <m:mo>(</m:mo>
+                                  <m:mi>x</m:mi>
+                                  <m:mo>)</m:mo>
+                                </m:mrow>
+                              </m:mrow>
+                            </m:mfenced>
+                          </m:mrow>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mn>3</m:mn>
+                    <m:mo>/</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mfrac>
+              <m:mo>+</m:mo>
+              <m:mi>Δ</m:mi>
+              <m:mi>ρ</m:mi>
+              <m:mspace width="0.166667em"/>
+              <m:mi>g</m:mi>
+              <m:mspace width="0.166667em"/>
+              <m:mi>z</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id80598">Substituting the pressure into the previous equation results in a forth order quasilinear partial differential equation for the film thickness. These equations can be solved directly by numerical simulation. The equations will be specialized for special cases.</para>
+        <para id="id80604"><emphasis effect="underline">Drainage of foam film.</emphasis> Deriving the equations in cylindrical coordinates and dropping the terms that originated from the substrate velocity and gravity can describe the drainage of the thin, horizontal, circular film between two bubbles. If the interface remains plane-parallel, the Reynolds film drainage model in Chapter 9 can describe the drainage. The shape if the interface described by the above equations is "dimpled" and was investigated by Joye, et al., (1992). The pressure gradient in the film would be zero if the film were flat. The change in curvature where the film merges into the meniscus results in a large pressure gradient. This pressure gradient drains liquid from this region and this drainage causes a local thinning of the film. This leaves a thicker film or "dimple" in the center of the film. This axisymmetric drainage is unstable if the surface shear viscosity is small and the dimple will slip out to one side (Joye, et al., 1994, 1996).</para>
+        <figure id="uid10">
+          <media id="uid10_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_8.png" id="uid10_onlineimage" width="392"><!-- NOTE: attribute width changes image size online (pixels). original width is 392. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_8.eps" id="uid10_printimage"/>
+          </media>
+          <caption>Film profile: <m:math overflow="scroll"><m:mrow><m:msub><m:mi>R</m:mi><m:mi>c</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo><m:mn>8</m:mn><m:mi>m</m:mi><m:mi>m</m:mi></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:msup><m:mn>10</m:mn><m:mrow><m:mo>-</m:mo><m:mn>10</m:mn></m:mrow></m:msup><m:msup><m:mi>m</m:mi><m:mn>3</m:mn></m:msup><m:mo>/</m:mo><m:mn>8</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>=</m:mo><m:mn>30</m:mn><m:mi>d</m:mi><m:mi>y</m:mi><m:mi>n</m:mi><m:mo>/</m:mo><m:mi>c</m:mi><m:mi>m</m:mi></m:mrow></m:math>, disjoining pressure not included.</caption>
+        </figure>
+        <para id="id80731"><emphasis effect="underline">Bubble in a capillary.</emphasis> The motion of a bubble in a small capillary was investigated by Bretherton in 1961. With steady state, absence of gravity, and small slope in the film, the differential equations for the thickness of the film simplify to</para>
+        <equation id="id80740">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msup>
+                  <m:mi>h</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msup>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mn>3</m:mn>
+                  <m:mi>μ</m:mi>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>U</m:mi>
+                </m:mrow>
+                <m:mi>σ</m:mi>
+              </m:mfrac>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>h</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>b</m:mi>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>h</m:mi>
+                  <m:mn>3</m:mn>
+                </m:msup>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id80808">where <m:math overflow="scroll"><m:mi>b</m:mi></m:math> is the asymptotic thickness of the film that is left on the wall far from the meniscus. Near the front of the film where the thickness is very large compared to the asymptotic thickness, the right-hand side of the above equation can be approximated by zero. The general solution in this region for some constants <m:math overflow="scroll"><m:mi>A</m:mi></m:math>, <m:math overflow="scroll"><m:mi>B</m:mi></m:math>, and <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is as follows.</para>
+        <equation id="id80850">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>d</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msup>
+                        <m:mi>h</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>x</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>≈</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>h</m:mi>
+                    <m:mo>&gt;</m:mo>
+                    <m:mo>&gt;</m:mo>
+                    <m:mi>b</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>h</m:mi>
+                    <m:mo>≅</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mn>2</m:mn>
+                    </m:mfrac>
+                    <m:mi>A</m:mi>
+                    <m:msup>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mn>3</m:mn>
+                            <m:mi>μ</m:mi>
+                            <m:mspace width="0.166667em"/>
+                            <m:mi>U</m:mi>
+                          </m:mrow>
+                          <m:mi>σ</m:mi>
+                        </m:mfrac>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mo>/</m:mo>
+                        <m:mn>3</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mfrac>
+                      <m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mi>b</m:mi>
+                    </m:mfrac>
+                    <m:mo>+</m:mo>
+                    <m:mi>B</m:mi>
+                    <m:msup>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mn>3</m:mn>
+                            <m:mi>μ</m:mi>
+                            <m:mspace width="0.166667em"/>
+                            <m:mi>U</m:mi>
+                          </m:mrow>
+                          <m:mi>σ</m:mi>
+                        </m:mfrac>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mn>1</m:mn>
+                        <m:mo>/</m:mo>
+                        <m:mn>3</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>C</m:mi>
+                    <m:mi>b</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id81016">This thick portion of the film merges with the spherical cap at the front of the bubble. Thus the asymptotic film thickness, <m:math overflow="scroll"><m:mi>b</m:mi></m:math>, can be determined by requiring this portion of the film to have the same mean curvature as the front of the bubble.</para>
+        <equation id="id81031">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>H</m:mi>
+                    <m:mo>≅</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>d</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mi>h</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>x</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>R</m:mi>
+                    </m:mfrac>
+                    <m:mo>≅</m:mo>
+                    <m:msup>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mn>3</m:mn>
+                            <m:mi>μ</m:mi>
+                            <m:mspace width="0.166667em"/>
+                            <m:mi>U</m:mi>
+                          </m:mrow>
+                          <m:mi>σ</m:mi>
+                        </m:mfrac>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mo>/</m:mo>
+                        <m:mn>3</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mfrac>
+                      <m:mi>A</m:mi>
+                      <m:mi>b</m:mi>
+                    </m:mfrac>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>R</m:mi>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> near </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> front </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> of </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> film </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>H</m:mi>
+                    <m:mo>≅</m:mo>
+                    <m:mfrac>
+                      <m:mn>2</m:mn>
+                      <m:mi>R</m:mi>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mi> in </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> front </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> of </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> bubble </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mi> thus </m:mi>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mi>b</m:mi>
+                      <m:mi>R</m:mi>
+                    </m:mfrac>
+                    <m:mo>≈</m:mo>
+                    <m:mi>A</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mn>3</m:mn>
+                            <m:mi>μ</m:mi>
+                            <m:mspace width="0.166667em"/>
+                            <m:mi>U</m:mi>
+                          </m:mrow>
+                          <m:mi>σ</m:mi>
+                        </m:mfrac>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mo>/</m:mo>
+                        <m:mn>3</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id81277">The constants of integration of the general solution of this film profile was determined matching with the shape of the meniscus at the front of the bubble with the solution by numerical integration. The asymptotic thickness of the film deposited by the advancing meniscus thus was found to be</para>
+        <equation id="id81282">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mi>b</m:mi>
+                <m:mi>R</m:mi>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>.</m:mo>
+              <m:mn>643</m:mn>
+              <m:msup>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mn>3</m:mn>
+                      <m:mi>μ</m:mi>
+                      <m:mspace width="0.166667em"/>
+                      <m:mi>U</m:mi>
+                    </m:mrow>
+                    <m:mi>σ</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:mrow>
+                  <m:mn>2</m:mn>
+                  <m:mo>/</m:mo>
+                  <m:mn>3</m:mn>
+                </m:mrow>
+              </m:msup>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id81340">where <m:math overflow="scroll"><m:mi>R</m:mi></m:math> is the mean radius of curvature of the spherical cap at the front of the bubble.
+</para>
+        <para id="eip-782">In the thin film region, <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mi>D</m:mi></m:mrow></m:math>, the film thickness is approximately equal to the asymptotic thickness and the differential equation can be linearized.</para><equation id="id81367">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>d</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msup>
+                        <m:mi>h</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>x</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>≅</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mn>3</m:mn>
+                        <m:mi>μ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:mi>U</m:mi>
+                      </m:mrow>
+                      <m:mi>σ</m:mi>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>h</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>b</m:mi>
+                      </m:mrow>
+                      <m:msup>
+                        <m:mi>b</m:mi>
+                        <m:mn>3</m:mn>
+                      </m:msup>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi> with </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> the </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> general </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> solution </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mi>h</m:mi>
+                      <m:mi>b</m:mi>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mi>α</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mi>ξ</m:mi>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:mi>β</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:mn>1</m:mn>
+                          <m:mn>2</m:mn>
+                        </m:mfrac>
+                        <m:mi>ξ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:msqrt>
+                          <m:mn>3</m:mn>
+                        </m:msqrt>
+                        <m:mi>ξ</m:mi>
+                        <m:mo>/</m:mo>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>+</m:mo>
+                    <m:mi>γ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:mn>1</m:mn>
+                          <m:mn>2</m:mn>
+                        </m:mfrac>
+                        <m:mi>ξ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo form="prefix">sin</m:mo>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:msqrt>
+                          <m:mn>3</m:mn>
+                        </m:msqrt>
+                        <m:mi>ξ</m:mi>
+                        <m:mo>/</m:mo>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>ξ</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:msup>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mn>3</m:mn>
+                            <m:mi>μ</m:mi>
+                            <m:mspace width="0.166667em"/>
+                            <m:mi>U</m:mi>
+                          </m:mrow>
+                          <m:mi>σ</m:mi>
+                        </m:mfrac>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mn>1</m:mn>
+                        <m:mo>/</m:mo>
+                        <m:mn>3</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mfrac>
+                      <m:mi>x</m:mi>
+                      <m:mi>b</m:mi>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id81642">The asymptotic film thickness is approached if the dimensionless length of the bubble is large compared to unity. It is assumed that this is the case. Different parts of the general solution apply to the front and back of the bubble.</para>
+        <equation id="id81648">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mi>h</m:mi>
+                      <m:mi>b</m:mi>
+                    </m:mfrac>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mi>α</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mi>ξ</m:mi>
+                    </m:msup>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> near </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> front </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> of </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> bubbl </m:mi>
+                    <m:mi>e</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mi>h</m:mi>
+                      <m:mi>b</m:mi>
+                    </m:mfrac>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mi>β</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:mn>1</m:mn>
+                          <m:mn>2</m:mn>
+                        </m:mfrac>
+                        <m:mi>ξ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:msqrt>
+                          <m:mn>3</m:mn>
+                        </m:msqrt>
+                        <m:mi>ξ</m:mi>
+                        <m:mo>/</m:mo>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>+</m:mo>
+                    <m:mi>γ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:mn>1</m:mn>
+                          <m:mn>2</m:mn>
+                        </m:mfrac>
+                        <m:mi>ξ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo form="prefix">sin</m:mo>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:msqrt>
+                          <m:mn>3</m:mn>
+                        </m:msqrt>
+                        <m:mi>ξ</m:mi>
+                        <m:mo>/</m:mo>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> near </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> rear </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> of </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> bubble </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id81906">The integration constant for the front part of the film, <m:math overflow="scroll"><m:mi>α</m:mi></m:math> , can be set to unity by a suitable choice of the origin of the axis. One integration constant for the rear of the bubble can be set to unity by suitable choice of the origin of the coordinate axis but the other must be specified to match the thickness of the film that is approaching the rear of the bubble. If this thickness is the asymptotic thickness, <m:math overflow="scroll"><m:mi>b</m:mi></m:math>, then there is a unique solution for the film at the back of the bubble. These profiles shows oscillations in thickness as the rear of the bubble is approached. If the approach thickness is <m:math overflow="scroll"><m:mi>b</m:mi></m:math>, then the minimum thickness is <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>.</m:mo><m:mn>716</m:mn><m:mi>b</m:mi></m:mrow></m:math>. The capillary suction at the back of the bubble results in a local thinning of the film similar to the local thinning that occurs in the foam film between two bubbles.</para>
+        <figure id="uid11">
+          <media id="uid11_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_9.png" id="uid11_onlineimage" width="279"><!-- NOTE: attribute width changes image size online (pixels). original width is 279. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_9.eps" id="uid11_printimage"/>
+          </media>
+        </figure>
+        <para id="id81968">Under static conditions, the Laplace pressures at the front and back of the bubble are both equal to <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mi>σ</m:mi><m:mo>/</m:mo><m:mi>R</m:mi></m:mrow></m:math> with opposite sign, so the net pressure drop is zero. Under dynamic conditions the film profiles and thus the curvature at the front and back of the bubble are different. The dissimilar shapes of the front and back of the bubble results in a net dynamic pressure drop across the bubble.</para>
+        <figure id="uid12">
+          <media id="uid12_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_10.png" id="uid12_onlineimage" width="313"><!-- NOTE: attribute width changes image size online (pixels). original width is 313. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_10.eps" id="uid12_printimage"/>
+          </media>
+        </figure>
+        <equation id="id81999">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>Δ</m:mi>
+              <m:mi>p</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>4</m:mn>
+              <m:mo>.</m:mo>
+              <m:mn>52</m:mn>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mfrac>
+                  <m:mi>σ</m:mi>
+                  <m:mi>R</m:mi>
+                </m:mfrac>
+              </m:mfenced>
+              <m:msup>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mn>3</m:mn>
+                      <m:mi>μ</m:mi>
+                      <m:mspace width="0.166667em"/>
+                      <m:mi>U</m:mi>
+                    </m:mrow>
+                    <m:mi>σ</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:mrow>
+                  <m:mn>2</m:mn>
+                  <m:mo>/</m:mo>
+                  <m:mn>3</m:mn>
+                </m:mrow>
+              </m:msup>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id82069"><emphasis effect="underline">Train of Bubbles or Foam in a Smooth Capillary.</emphasis> The resistance to flow of a single bubble in a tube is the starting point for the flow of a coarse foam through a tube. The contributing factors to the pressure drop are the slugs of liquid, interface deformation as described by Bretherton, and the additional resistance due to surface tension gradients. (Hirasaki and Lawson, 1985). Assume that the tube is small enough that the bubble train consists of bubbles separated by individual lamella. In this case the radius of curvature of the meniscus is smaller that the radius of the capillary. However, it can be determined from the capillary radius, bubble size, and foam quality or gas fraction. The comparison of the apparent viscosity for the flow of foam through the capillary tube is shown in the attached figure. These results show that interfacial deformation alone greatly underestimate the resistance to flow. Analysis shows that surface tension gradients have a significant effect in retarding the motion of the interface of bubbles when surface active material is present. The following figure shows the dimensionless interfacial velocity for different values of the dimensionless surface tension gradient group. The final figure shows that satisfactory agreement with theory can be obtained if surface tension gradient effects are taken into account.</para>
+        <figure id="uid13">
+          <media id="uid13_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_11.png" id="uid13_onlineimage" width="304"><!-- NOTE: attribute width changes image size online (pixels). original width is 304. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_11.eps" id="uid13_printimage"/>
+          </media>
+        </figure>
+        <figure id="uid14">
+          <media id="uid14_media" alt="">
+            <image mime-type="image/png" src="../../media/fig11_12.png" id="uid14_onlineimage" width="282"><!-- NOTE: attribute width changes image size online (pixels). original width is 282. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig11_12.eps" id="uid14_printimage"/>
+          </media>
+        </figure>
+        <para id="id82105"><title>Assignment 11.2 </title><emphasis effect="italics">Thickness of entrained film</emphasis>
+Compare the thickness of the film entrained by a plate pulled vertically out of a bath of liquid assuming one or the other of the two assumptions: (1) surface tension has no effect and (2) the capillary number is much less than unity. Make the thickness dimensionless with respect to a common reference length and compare the results as a function of the capillary number. You may accept the solution by Landau and Levich.</para>
+      </section>
+   
+  </content>
+</document>

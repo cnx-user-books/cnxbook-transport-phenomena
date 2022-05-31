@@ -1,0 +1,2570 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Stress in Fluids</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34426</md:content-id>
+  <md:title>Stress in Fluids</md:title>
+  <md:abstract/>
+  <md:uuid>cf56b315-8145-4388-b82a-272891ed7366</md:uuid>
+</metadata>
+
+<content>
+      <list id="id137873" display="block" list-type="bulleted"><title>Topics Covered in this Chapter</title><item id="uid1">Cauchy's stress principle and the conservation of momentum
+</item>
+        <item id="uid2">The stress tensor
+</item>
+        <item id="uid3">The symmetry of the stress tensor
+</item>
+        <item id="uid4">Hydrostatic pressure
+</item>
+        <item id="uid5">Principal axes of stress and the notion of isotropy
+</item>
+        <item id="uid6">The Stokesian fluid
+</item>
+        <item id="uid7">Constitutive equations of the Stokesian fluid
+</item>
+        <item id="uid8">The Newtonian fluid
+</item>
+        <item id="uid9">Interpretation of the constants <m:math overflow="scroll"><m:mi>λ</m:mi></m:math> and <m:math overflow="scroll"><m:mi>μ</m:mi></m:math></item>
+      </list>
+      <para id="id138334"><emphasis effect="bold">Reading assignment</emphasis>
+<newline/>
+Chapter 1 in BSL
+<newline/>
+Chapter 5 in Aris</para>
+      <para id="id138341">The only material property of the fluid we have so far discussed is the density. In the last chapter we introduced the rate of deformation or rate of strain tensor. The distinguishing characteristic between fluids and solids is that fluids can undergo unlimited deformation and yet maintain its integrity. The relation between the rate of deformation tensor and stress tensor is the <emphasis effect="italics">mechanical constitutive equation</emphasis> of the material. An ideal fluid has a stress tensor that is independent of the rate of deformation, i.e., it has an isotropic component, which is identified as the pressure and has zero viscosity.</para>
+      <section id="uid10">
+        <title>Cauchy's stress principle and the conservation of momentum</title>
+        <para id="id138363">The forces acting on an element of a continuous medium may be of two kinds. <emphasis effect="italics">External</emphasis> or <emphasis effect="italics">body forces</emphasis>, such as gravitation or electromagnetic forces, can be regarded as reaching into the medium and acting throughout the volume. If the external force can be describes as the gradient of a scalar, the force is said to be conservative. <emphasis effect="italics">Internal</emphasis> or <emphasis effect="italics">contact forces</emphasis> are to be regarded as acting on an element of volume through its bounding surfaces. If an element of volume has an external-bounding surface, the forces there may be specified, e.g., when a constant pressure is applied over a free surface. If the element is internal, the resultant force is that exerted by the material outside the surface upon that inside. Let <m:math overflow="scroll"><m:mi mathvariant="bold">n</m:mi></m:math> be the unit outward normal at a point of the surface <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and <m:math overflow="scroll"><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:math> the force per unit area exerted there by the material outside <m:math overflow="scroll"><m:mi>S</m:mi></m:math>. Then Cauchy's principle asserts that <m:math overflow="scroll"><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:math> is a function of the position <m:math overflow="scroll"><m:mi mathvariant="bold">x</m:mi></m:math>, the time <m:math overflow="scroll"><m:mi>t</m:mi></m:math>, and the orientation <m:math overflow="scroll"><m:mi mathvariant="bold">n</m:mi></m:math> of the surface element. Thus the total internal force exerted on the volume <m:math overflow="scroll"><m:mi>V</m:mi></m:math> through the bounding surface <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is</para>
+        <equation id="id138685">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>s</m:mi>
+              </m:munder>
+              <m:msub>
+                <m:mi mathvariant="bold">t</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:msub>
+              <m:mi>d</m:mi>
+              <m:mi>S</m:mi>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id138739">If <m:math overflow="scroll"><m:mi mathvariant="bold">f</m:mi></m:math> is the external force per unit mass (e.g. if 03 is vertical, gravitation will exert a force <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:msub><m:mi mathvariant="bold">e</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:msub></m:mrow></m:math> per unit mass or <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>ρ</m:mi><m:mi>g</m:mi><m:msub><m:mi mathvariant="bold">e</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:msub></m:mrow></m:math> per unit volume, the total external force will be</para>
+        <equation id="id138807">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>v</m:mi>
+              </m:munder>
+              <m:mi>ρ</m:mi>
+              <m:mi mathvariant="bold">f</m:mi>
+              <m:mi>d</m:mi>
+              <m:mi>V</m:mi>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id138857">The principle of the conservation of linear momentum asserts that the sum of these two forces equals the rate of change of linear momentum of the volume, i.e.,</para>
+        <equation id="id138861">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mi>D</m:mi>
+                <m:mrow>
+                  <m:mi>D</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>v</m:mi>
+              </m:munder>
+              <m:mi>ρ</m:mi>
+              <m:mi mathvariant="bold">v</m:mi>
+              <m:mi>d</m:mi>
+              <m:mi>V</m:mi>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>v</m:mi>
+              </m:munder>
+              <m:mi>ρ</m:mi>
+              <m:mi mathvariant="bold">f</m:mi>
+              <m:mi>d</m:mi>
+              <m:mi>V</m:mi>
+              <m:mo>+</m:mo>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>s</m:mi>
+              </m:munder>
+              <m:msub>
+                <m:mi mathvariant="bold">t</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:msub>
+              <m:mi>d</m:mi>
+              <m:mi>S</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id139003">This is just a generalization of Newton's law of motion, which states that the rate of change of momentum of a particle is equal to the sum of forces acting on it. It has been extended to a volume that contains a number of particles.
+</para>
+        <para id="eip-248">From the form of these integral relations we can deduce an important relation. Suppose <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is a volume of a given shape with characteristic dimension <m:math overflow="scroll"><m:mi>d</m:mi></m:math>. Then the volume of <m:math overflow="scroll"><m:mi>V</m:mi></m:math> will be proportional to <m:math overflow="scroll"><m:msup><m:mi>d</m:mi><m:mn>3</m:mn></m:msup></m:math> and the area of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> to <m:math overflow="scroll"><m:msup><m:mi>d</m:mi><m:mn>2</m:mn></m:msup></m:math>, with the proportionality constants depending only on the shape. Now let <m:math overflow="scroll"><m:mi>V</m:mi></m:math> shrink to a point but preserve its shape, then the volume integrals in the last equation will decrease as <m:math overflow="scroll"><m:msup><m:mi>d</m:mi><m:mn>3</m:mn></m:msup></m:math> but the surface integral will decrease as <m:math overflow="scroll"><m:msup><m:mi>d</m:mi><m:mn>2</m:mn></m:msup></m:math>. It follows that</para><equation id="id139105">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mo movablelimits="false" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mn>0</m:mn>
+                </m:mrow>
+              </m:munder>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:msup>
+                  <m:mi>d</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mfrac>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>s</m:mi>
+              </m:munder>
+              <m:msub>
+                <m:mi mathvariant="bold">t</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:msub>
+              <m:mi>d</m:mi>
+              <m:mi>S</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id139188">or, <emphasis effect="italics">the stresses are locally in equilibrium</emphasis>.</para>
+      </section>
+      <section id="uid11">
+        <title>The stress tensor</title>
+        <para id="id139201">To elucidate the nature of the stress system at a point <m:math overflow="scroll"><m:mi>P</m:mi></m:math> we consider a small tetrahedron with three of its faces parallel to the coordinate planes through <m:math overflow="scroll"><m:mi>P</m:mi></m:math> and the fourth with normal <m:math overflow="scroll"><m:mi>n</m:mi></m:math> (see Fig. 5.1 of Aris). If <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mi>A</m:mi></m:mrow></m:math> is the area of the slanted face, the areas of the faces perpendicular to the coordinate axis <emphasis effect="italics">Pi</emphasis> is</para>
+        <equation id="id139247">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>d</m:mi>
+              <m:msub>
+                <m:mi>A</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>n</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+              <m:mi>d</m:mi>
+              <m:mi>A</m:mi>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id139281">The outward normals to these faces are <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:msub><m:mi mathvariant="bold">e</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:mrow></m:math> and we may denote the stress vector over these faces by <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:mrow></m:math>. (<m:math overflow="scroll"><m:mrow><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:mrow></m:math> denotes the stress vector when <m:math overflow="scroll"><m:mrow><m:mo>+</m:mo><m:msub><m:mi mathvariant="bold">e</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:mrow></m:math> is the outward normal.) Then applying the principle of local equilibrium to the stress forces when the tetrahedron is very small we have</para>
+        <equation id="uid12">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:mi>A</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:msub>
+                      <m:mi>A</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:msub>
+                      <m:mi>A</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mn>3</m:mn>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:msub>
+                      <m:mi>A</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mo>=</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>n</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>n</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mn>3</m:mn>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>n</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                    <m:mo>)</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mi>A</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id139608">Now let <m:math overflow="scroll"><m:msub><m:mi>T</m:mi><m:mrow><m:mi>j</m:mi><m:mi>i</m:mi></m:mrow></m:msub></m:math> denote the <m:math overflow="scroll"><m:msup><m:mi>i</m:mi><m:mrow><m:mi>t</m:mi><m:mi>h</m:mi></m:mrow></m:msup></m:math> component of <m:math overflow="scroll"><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo><m:mi>i</m:mi></m:mrow></m:msub></m:math> the <m:math overflow="scroll"><m:msup><m:mi>i</m:mi><m:mrow><m:mi>t</m:mi><m:mi>h</m:mi></m:mrow></m:msup></m:math> component of <m:math overflow="scroll"><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:math> so that this equation can be written</para>
+        <equation id="id139722">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>t</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mi>i</m:mi>
+                </m:mrow>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>T</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>i</m:mi>
+                </m:mrow>
+              </m:msub>
+              <m:msub>
+                <m:mi>n</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id139768">However, <m:math overflow="scroll"><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:math> is a vector and <m:math overflow="scroll"><m:mi mathvariant="bold">n</m:mi></m:math> is a unit vector quite independent of the <m:math overflow="scroll"><m:msub><m:mi>T</m:mi><m:mrow><m:mi>j</m:mi><m:mi>i</m:mi></m:mrow></m:msub></m:math> so that by the quotient rule the <m:math overflow="scroll"><m:msub><m:mi>T</m:mi><m:mrow><m:mi>j</m:mi><m:mi>i</m:mi></m:mrow></m:msub></m:math> are components of a second order tensor <m:math overflow="scroll"><m:mi mathvariant="bold">T</m:mi></m:math>. In dyadic notation we might write</para>
+        <equation id="id139845">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi mathvariant="bold">t</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mi mathvariant="bold">T</m:mi>
+              <m:mo>•</m:mo>
+              <m:mi mathvariant="bold">n</m:mi>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id139883">This tells us that the system of stresses in a fluid is not so complicated as to demand a whole table of functions <m:math overflow="scroll"><m:mrow><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="bold">x</m:mi><m:mo>,</m:mo><m:mi mathvariant="bold">n</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> at any given instant, but that it depends rather simply on <m:math overflow="scroll"><m:mi mathvariant="bold">n</m:mi></m:math> through the nine quantities <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mrow><m:mi>j</m:mi><m:mi>i</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi mathvariant="bold">x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>. Moreover, because these are components of a tensor, any equation we derive with them will be true under any rotation of the coordinate axis.
+</para>
+        <para id="eip-510">Inserting the tensor expression for the stress into the momentum balance and using the equation of continuity and Green's theorem we have</para><equation id="uid13">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mi>D</m:mi>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>ρ</m:mi>
+                    <m:mi mathvariant="bold">v</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>ρ</m:mi>
+                    <m:mi mathvariant="bold">f</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>s</m:mi>
+                    </m:munder>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>ρ</m:mi>
+                    <m:mi mathvariant="bold">f</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>s</m:mi>
+                    </m:munder>
+                    <m:mi mathvariant="bold">n</m:mi>
+                    <m:mo>•</m:mo>
+                    <m:mi mathvariant="bold">T</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>ρ</m:mi>
+                      <m:mi mathvariant="bold">f</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>∇</m:mi>
+                      <m:mo>•</m:mo>
+                      <m:mi mathvariant="bold">T</m:mi>
+                      <m:mi>d</m:mi>
+                      <m:mi>V</m:mi>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mi>D</m:mi>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>ρ</m:mi>
+                    <m:mi mathvariant="bold">v</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mfenced separators="" open="[" close="]">
+                      <m:mfrac>
+                        <m:mi>D</m:mi>
+                        <m:mrow>
+                          <m:mi>D</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>ρ</m:mi>
+                        <m:mi mathvariant="bold">v</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>+</m:mo>
+                      <m:mi>ρ</m:mi>
+                      <m:mi mathvariant="bold">v</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>∇</m:mi>
+                        <m:mo>•</m:mo>
+                        <m:mi mathvariant="bold">v</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mfenced separators="" open="[" close="]">
+                      <m:mi>ρ</m:mi>
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>D</m:mi>
+                          <m:mi mathvariant="bold">v</m:mi>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mi>D</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                      <m:mo>+</m:mo>
+                      <m:mi mathvariant="bold">v</m:mi>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>D</m:mi>
+                            <m:mi>ρ</m:mi>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>D</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                        <m:mo>+</m:mo>
+                        <m:mi>ρ</m:mi>
+                        <m:mi>∇</m:mi>
+                        <m:mo>•</m:mo>
+                        <m:mi mathvariant="bold">v</m:mi>
+                      </m:mfenced>
+                    </m:mfenced>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>ρ</m:mi>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi mathvariant="bold">v</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id140614">Since all the integrals are now volume integrals, they can be combined as a single integrand.</para>
+        <equation id="id140618">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>v</m:mi>
+              </m:munder>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>ρ</m:mi>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>d</m:mi>
+                    <m:mi mathvariant="bold">v</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>D</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mi>ρ</m:mi>
+                <m:mi mathvariant="bold">f</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>∇</m:mi>
+                <m:mo>•</m:mo>
+                <m:mi mathvariant="bold">T</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>V</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id140710">However, since <m:math overflow="scroll"><m:mi>V</m:mi></m:math> is an arbitrary volume this equation is satisfied only if the integrand vanishes identically.</para>
+        <equation id="uid14">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>ρ</m:mi>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi mathvariant="bold">v</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>ρ</m:mi>
+                    <m:mi mathvariant="bold">f</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>∇</m:mi>
+                    <m:mo>•</m:mo>
+                    <m:mi mathvariant="bold">T</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>ρ</m:mi>
+                    <m:mi mathvariant="bold">a</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mtext>or</m:mtext>
+                </m:mtd>
+                <m:mtd/>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>ρ</m:mi>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mi>i</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>ρ</m:mi>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:msub>
+                      <m:mi>T</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mi>i</m:mi>
+                        <m:mo>,</m:mo>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>ρ</m:mi>
+                    <m:msub>
+                      <m:mi>α</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id140891">This is Cauchy's equation of motion and <m:math overflow="scroll"><m:mi mathvariant="bold">a</m:mi></m:math> is the acceleration. It holds for any continuum no matter how the stress tensor <m:math overflow="scroll"><m:mi mathvariant="bold">T</m:mi></m:math> is connected with the rate of strain.</para>
+      </section>
+      <section id="uid15">
+        <title>The symmetry of the stress tensor</title>
+        <para id="id140928">A polar fluid is one that is capable of transmitting stress couples and being subject to body torques, as in magnetic fluids. In case of a polar fluid we must introduce a body torque per unit mass in addition to the body force and a couple stress in addition to the normal stress <m:math overflow="scroll"><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:math>. The stress for polar fluids is discussed by Aris.
+</para>
+        <para id="eip-555">A fluid is nonpolar if the torques within it arise only as the moments of direct forces. For the nonpolar fluid we can make the assumption either that angular momentum is conserved or that the stress tensor is symmetric. We will make the first assumption and deduce the symmetry.
+</para><para id="eip-920">Return now to the integral linear momentum balance with the internal force expressed as a surface integral. If we assume that all torques arise from macroscopic forces, then not only linear momentum but also the angular momentum <m:math overflow="scroll"><m:mrow><m:mi mathvariant="bold">x</m:mi><m:mo>×</m:mo><m:mo>(</m:mo><m:mi>ρ</m:mi><m:mi mathvariant="bold">v</m:mi><m:mo>)</m:mo></m:mrow></m:math> are expressible in terms of <m:math overflow="scroll"><m:mi mathvariant="bold">f</m:mi></m:math> and <m:math overflow="scroll"><m:msub><m:mi mathvariant="bold">t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msub></m:math>.</para><equation id="uid16"><m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>ρ</m:mi>
+                    <m:mi mathvariant="bold">a</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>ρ</m:mi>
+                    <m:mi mathvariant="bold">f</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>s</m:mi>
+                    </m:munder>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>ρ</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi mathvariant="bold">x</m:mi>
+                      <m:mo>×</m:mo>
+                      <m:mi mathvariant="bold">a</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>ρ</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi mathvariant="bold">x</m:mi>
+                      <m:mo>×</m:mo>
+                      <m:mi mathvariant="bold">f</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>s</m:mi>
+                    </m:munder>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi mathvariant="bold">x</m:mi>
+                      <m:mo>×</m:mo>
+                    </m:mrow>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id141341">The surface integral has as its <m:math overflow="scroll"><m:msup><m:mi>i</m:mi><m:mrow><m:mi>t</m:mi><m:mi>h</m:mi></m:mrow></m:msup></m:math> component</para>
+        <equation id="uid17">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>s</m:mi>
+                    </m:munder>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi mathvariant="bold">x</m:mi>
+                      <m:mo>×</m:mo>
+                    </m:mrow>
+                    <m:msub>
+                      <m:mi mathvariant="bold">t</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>T</m:mi>
+                      <m:mrow>
+                        <m:mi>k</m:mi>
+                        <m:mi>p</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>n</m:mi>
+                      <m:mi>p</m:mi>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:msub>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mi>j</m:mi>
+                        </m:msub>
+                        <m:msub>
+                          <m:mi mathvariant="bold">T</m:mi>
+                          <m:mrow>
+                            <m:mi>p</m:mi>
+                            <m:mi>k</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mo>,</m:mo>
+                        <m:mi>p</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id141580">by Green's theorem. However, since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>j</m:mi><m:mo>,</m:mo><m:mi>p</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>δ</m:mi><m:mrow><m:mi>j</m:mi><m:mi>p</m:mi></m:mrow></m:msub></m:mrow></m:math>, this last integrand is</para>
+        <equation id="uid18">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mi>j</m:mi>
+                        </m:msub>
+                        <m:msub>
+                          <m:mi>T</m:mi>
+                          <m:mrow>
+                            <m:mi>p</m:mi>
+                            <m:mi>k</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mo>,</m:mo>
+                        <m:mi>p</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>T</m:mi>
+                      <m:mrow>
+                        <m:mi>p</m:mi>
+                        <m:mi>k</m:mi>
+                        <m:mo>,</m:mo>
+                        <m:mi>p</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:msub>
+                      <m:mi>ε</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>T</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mtext>or</m:mtext>
+                </m:mtd>
+                <m:mtd/>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi mathvariant="bold">x</m:mi>
+                    <m:mo>×</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>∇</m:mi>
+                      <m:mo>•</m:mo>
+                      <m:mi mathvariant="bold">T</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:msub>
+                      <m:mi mathvariant="bold">T</m:mi>
+                      <m:mo>×</m:mo>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id141803">where <m:math overflow="scroll"><m:mi mathvariant="bold">T</m:mi></m:math> is the vector <m:math overflow="scroll"><m:mrow><m:msub><m:mi>ε</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi><m:mi>k</m:mi></m:mrow></m:msub><m:mspace width="0.277778em"/><m:msub><m:mi mathvariant="bold">T</m:mi><m:mrow><m:mi>j</m:mi><m:mi>k</m:mi></m:mrow></m:msub></m:mrow></m:math>.
+</para>
+        <para id="eip-31">Since <m:math overflow="scroll"><m:mrow><m:mi mathvariant="bold">v</m:mi><m:mo>×</m:mo><m:mi mathvariant="bold">v</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.277778em"/><m:mi>d</m:mi><m:mo>(</m:mo><m:mi mathvariant="bold">x</m:mi><m:mo>×</m:mo><m:mi mathvariant="bold">v</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mi mathvariant="bold">x</m:mi><m:mo>×</m:mo><m:mi mathvariant="bold">a</m:mi></m:mrow></m:math>, applying the transport theorem to the angular momentum we have</para><equation id="id141921">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mi>D</m:mi>
+                <m:mrow>
+                  <m:mi>D</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>v</m:mi>
+              </m:munder>
+              <m:mi>ρ</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi mathvariant="bold">x</m:mi>
+                <m:mo>×</m:mo>
+                <m:mi mathvariant="bold">v</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>V</m:mi>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>v</m:mi>
+              </m:munder>
+              <m:mi>ρ</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi mathvariant="bold">x</m:mi>
+                <m:mo>×</m:mo>
+                <m:mi mathvariant="bold">a</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>V</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id142050">Substituting back into the equation for the angular momentum and rearranging gives</para>
+        <equation id="id142056">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>V</m:mi>
+              </m:munder>
+              <m:mi mathvariant="bold">v</m:mi>
+              <m:mo>×</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>ρ</m:mi>
+                <m:mi mathvariant="bold">a</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>ρ</m:mi>
+                <m:mi mathvariant="bold">f</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>∇</m:mi>
+                <m:mo>•</m:mo>
+                <m:mi mathvariant="bold">T</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>V</m:mi>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>V</m:mi>
+              </m:munder>
+              <m:msub>
+                <m:mi mathvariant="bold">T</m:mi>
+                <m:mo>×</m:mo>
+              </m:msub>
+              <m:mi>d</m:mi>
+              <m:mi>V</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id142186">However, the left-hand side vanishes for an arbitrary volume and so</para>
+        <equation id="id142190">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>T</m:mi>
+                <m:mo>×</m:mo>
+              </m:msub>
+              <m:mo>≡</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id142214">The components of <m:math overflow="scroll"><m:msub><m:mi mathvariant="bold">T</m:mi><m:mo>×</m:mo></m:msub></m:math> are <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>T</m:mi><m:mn>23</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>T</m:mi><m:mn>32</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>T</m:mi><m:mn>31</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>T</m:mi><m:mn>13</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math>, and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>T</m:mi><m:mn>12</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>T</m:mi><m:mn>21</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> and the vanishing of these implies</para>
+        <equation id="id142322">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>T</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mi>j</m:mi>
+                </m:mrow>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>T</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>i</m:mi>
+                </m:mrow>
+              </m:msub>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id142356">so that <m:math overflow="scroll"><m:mi mathvariant="bold">T</m:mi></m:math> is symmetric for nonpolar fluids.</para>
+      </section>
+      <section id="uid19">
+        <title>Hydrostatic pressure</title>
+        <para id="id142380">If the stress system is such that an element of area always experiences a stress normal to itself and this stress is independent of orientation, the stress is called <emphasis effect="italics">hydrostatic</emphasis>. All fluids at rest exhibit this stress behavior. It implies that <m:math overflow="scroll"><m:mrow><m:mi mathvariant="bold">n</m:mi><m:mo>•</m:mo><m:mi mathvariant="bold">T</m:mi></m:mrow></m:math> is always proportional to <m:math overflow="scroll"><m:mi mathvariant="bold">n</m:mi></m:math> and that the constant of proportionality is independent of <m:math overflow="scroll"><m:mi mathvariant="bold">n</m:mi></m:math>. Let us write this constant <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>p</m:mi></m:mrow></m:math>, then</para>
+        <equation id="uid20">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>n</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>T</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:msub>
+                      <m:mi>n</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>hydrostatic</m:mtext>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>stress</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi mathvariant="bold">n</m:mi>
+                    <m:mo>•</m:mo>
+                    <m:mi mathvariant="bold">T</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:mi mathvariant="bold">n</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id142548">However, this equation means that any vector is a characteristic vector or eigenvector of <m:math overflow="scroll"><m:mi mathvariant="bold">T</m:mi></m:math>. This implies that the hydrostatic stress tensor is spherical or isotropic. Thus</para>
+        <equation id="uid21"><m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:msub>
+                    <m:mi>T</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+<m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:msub>
+                      <m:mi>δ</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>hydrostatic</m:mtext>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>stress</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mi mathvariant="bold">T</m:mi>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:mi mathvariant="bold">I</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id142654">for the state of hydrostatic stress.
+</para>
+        <para id="eip-641">For a compressible fluid at rest, <m:math overflow="scroll"><m:mi>p</m:mi></m:math> may be identified with the classical thermodynamic pressure. On the assumption that there is local thermodynamic equilibrium even when the fluid is in motion this concept of stress may be retained. For an incompressible fluid the thermodynamic, or more correctly thermostatic, pressure cannot be defined except as the limit of pressure in a sequence of compressible fluids. We shall see later that it has to be taken as an independent dynamical variable.
+</para><para id="eip-24">The stress tensor for a fluid may always be written</para><equation id="uid22">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:msub>
+                    <m:mi>T</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:msub>
+                      <m:mi>δ</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:msub>
+                      <m:mi>P</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mi mathvariant="bold">T</m:mi>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:mi mathvariant="bold">I</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi mathvariant="bold">P</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id142768">and <m:math overflow="scroll"><m:msub><m:mi>P</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> is called the <emphasis effect="italics">viscous stress tensor</emphasis>. The viscous stress tensor of a fluid vanishes under hydrostatic conditions.
+</para>
+        <para id="eip-503">If the external or body force is conservative (i.e., gradient of a scalar) the hydrostatic pressure is determined up to an arbitrary constant from the potential of the body force.</para><equation id="uid23">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>∇</m:mi>
+                    <m:mo>•</m:mo>
+                    <m:mi mathvariant="bold">T</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>ρ</m:mi>
+                    <m:mi mathvariant="bold">f</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>static</m:mtext>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>conditions</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi mathvariant="bold">f</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi mathvariant="bold">g</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>g</m:mi>
+                    <m:mi>∇</m:mi>
+                    <m:mi>z</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>uniform</m:mtext>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>gravity</m:mtext>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>field</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>∇</m:mi>
+                    <m:mo>•</m:mo>
+                    <m:mi mathvariant="bold">T</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>∇</m:mi>
+                    <m:mi>p</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>hydrostatic</m:mtext>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>conditions</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>∇</m:mi>
+                    <m:mi>p</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>ρ</m:mi>
+                    <m:mi>∇</m:mi>
+                    <m:mi>Φ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd/>
+                <m:mtd columnalign="left">
+                  <m:mo>⇒</m:mo>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>Φ</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msup>
+                      <m:mo>∫</m:mo>
+                      <m:mi>p</m:mi>
+                    </m:msup>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>p</m:mi>
+                      </m:mrow>
+                      <m:mi>ρ</m:mi>
+                    </m:mfrac>
+                    <m:mo>+</m:mo>
+                    <m:msub>
+                      <m:mi>C</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>z</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:msub>
+                      <m:mi>C</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>z</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:msub>
+                      <m:mi>C</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>if</m:mtext>
+                    <m:mspace width="4.pt"/>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>is</m:mtext>
+                    <m:mspace width="4.pt"/>
+                    <m:mtext>constant</m:mtext>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+      </section>
+      <section id="uid24">
+        <title>Buoyancy (Deen, 1998)</title>
+        <para id="id143111">A consequence of the fact that pressure increases with depth in a static fluid is that the pressure exerts a net upward force on any submerged object. To calculate this force, consider an object of arbitrary shape submerged in a constant-density fluid as shown in the figure. The net force on this object, <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mi>p</m:mi></m:msub></m:math>, is given by</para>
+        <equation id="id143132">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi mathvariant="bold">F</m:mi>
+                <m:mi>p</m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mo>-</m:mo>
+              <m:munder>
+                <m:mrow>
+                  <m:mspace width="0.277778em"/>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mpadded width="-3pt">
+                    <m:mo>∫</m:mo>
+                  </m:mpadded>
+                  <m:mspace width="0.277778em"/>
+                </m:mrow>
+                <m:mi>s</m:mi>
+              </m:munder>
+              <m:mi>p</m:mi>
+              <m:mi mathvariant="bold">n</m:mi>
+              <m:mi>d</m:mi>
+              <m:mi>S</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <figure id="uid25"><media id="uid25_media" alt="Consisting of two subfigures. The left figure is labeled (a) and consist an oval with a solid border and gray shading on the inside. Inside the oval is phrase Solid ρ=ρ_s, and above the figure is the phrase Fluid ρ= ρ_t. The right figure is labeled (b) and consist of an oval with a dashed border. Inside the oval is the phrase Fluid ρ= ρ_t and above the  oval is  the phrase Fluid ρ= ρ_t.">
+            <image mime-type="image/png" src="../../media/fig5_1.png" id="uid25_onlineimage" width="362"><!-- NOTE: attribute width changes image size online (pixels). original width is 362. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig5_1.eps" id="uid25_printimage"/>
+          </media>
+        </figure>
+        <para id="id143199">where the minus sign reflects the fact that positive pressure are compressive (i.e., pressure acts in the <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi mathvariant="bold">n</m:mi></m:mrow></m:math> direction). The pressure force is evaluated most easily by considering the situation in the figure where the solid has been replaced by an identical volume of fluid. Because the pressure in the fluid depends on depth only, this replacement of the solid does not affect the pressure distribution in the surrounding fluid. In particular, the pressure distribution on the fluid control surface in (b) must be identical to that on the solid surface in (a). Situation (b) has the advantage that we can apply the divergence theorem to the integral in the last equation, because <m:math overflow="scroll"><m:mi>p</m:mi></m:math> is a continuous function of position within the volume V; this is not necessarily true for (a), because we have said nothing about the meaning of <m:math overflow="scroll"><m:mi>p</m:mi></m:math> within a solid. Applying the divergence theorem and using the hydrostatic pressure field, we find that</para>
+        <equation id="uid26">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:msub>
+                    <m:mi mathvariant="bold">F</m:mi>
+                    <m:mi>p</m:mi>
+                  </m:msub>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>s</m:mi>
+                    </m:munder>
+                    <m:mi>p</m:mi>
+                    <m:mi mathvariant="bold">n</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:munder>
+                      <m:mrow>
+                        <m:mspace width="0.277778em"/>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mpadded width="-3pt">
+                          <m:mo>∫</m:mo>
+                        </m:mpadded>
+                        <m:mspace width="0.277778em"/>
+                      </m:mrow>
+                      <m:mi>v</m:mi>
+                    </m:munder>
+                    <m:mi>∇</m:mi>
+                    <m:mi>p</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>V</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>ρ</m:mi>
+                      <m:mi>f</m:mi>
+                    </m:msub>
+                    <m:mi mathvariant="bold">g</m:mi>
+                    <m:mi>V</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id143387">where <m:math overflow="scroll"><m:msub><m:mi>ρ</m:mi><m:mi>f</m:mi></m:msub></m:math> is the (constant) density of the fluid. Thus, the upward force on the object due to pressure equals the weight of an equivalent volume of liquid; this is <emphasis effect="bold">Archimedes' law</emphasis>. An important implication of this equation is that <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mi>p</m:mi></m:msub></m:math> is independent of the absolute pressure (provided that the density is independent of pressure).</para>
+        <para id="id143428">The <emphasis effect="bold">buoyancy force</emphasis> is the net force on the object due to the same static pressure variation and gravity. Evaluating the gravitational force on the solid body by setting <m:math overflow="scroll"><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:msub><m:mi>ρ</m:mi><m:mi>f</m:mi></m:msub></m:mrow></m:math>, the buoyancy force is found to be</para>
+        <equation id="id143458">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi mathvariant="bold">F</m:mi>
+                <m:mi>B</m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>ρ</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>ρ</m:mi>
+                  <m:mi>f</m:mi>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi mathvariant="bold">g</m:mi>
+              <m:mi>V</m:mi>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+      </section>
+      <section id="uid27">
+        <title>Principal axes of stress and the notion of isotropy</title>
+        <para id="id143521">The diagonal terms <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mn>11</m:mn></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mn>22</m:mn></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mn>33</m:mn></m:msub></m:mrow></m:math> of the stress tensor are sometimes called the <emphasis effect="italics">direct stresses</emphasis> and the terms <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mn>12</m:mn></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mn>21</m:mn></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mn>31</m:mn></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mn>13</m:mn></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mn>23</m:mn></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mn>32</m:mn></m:msub></m:mrow></m:math> the <emphasis effect="italics">shear stresses</emphasis>. When there are no external or stress couples, the stress tensor is symmetric and we can invoke the known properties of symmetric tensors. In particular, there are three principal directions and referred to coordinates parallel to these, the shear stresses vanish. The direct stresses with these coordinates are called the <emphasis effect="italics">principal stresses</emphasis> and the axes the <emphasis effect="italics">principal axes of stress</emphasis>.
+</para><para id="eip-652">An <emphasis effect="italics">isotropic</emphasis> fluid is such that simple direct stress acting in it does not produce a shearing deformation. This is an entirely reasonable view to take for isotropy means that there is no internal sense of direction within the fluid. Another way of expressing the absence of any internally preferred direction is to say that the functional relation between stress and rate of deformation must be independent of the orientation of the coordinate system. We shall show in the next section that this implies that the principal axes of stress and rate of deformation coincide.</para>
+      </section>
+      <section id="uid28">
+        <title>The Stokesian fluid</title>
+        <para id="id143724">The constitutive equation of a non-elastic fluid satisfying the hypothesis of Stokes is called a Stokesian fluid. This fluid is based on the following assumptions.</para>
+        <list id="id143729" display="block" list-type="enumerated" number-style="upper-roman"><item id="uid29">The stress tensor <m:math overflow="scroll"><m:msub><m:mi>T</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> is a continuous function of the rate of deformation tensor <m:math overflow="scroll"><m:msub><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> and the local thermodynamic state, but independent of other kinematical quantities.
+</item>
+          <item id="uid30">The fluid is homogeneous, that is, <m:math overflow="scroll"><m:msub><m:mi>T</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> does not depend explicitly on <m:math overflow="scroll"><m:mi mathvariant="bold">x</m:mi></m:math>.
+</item>
+          <item id="uid31">The fluid is isotropic, that is, there is no preferred direction.
+</item>
+          <item id="uid32">When there is no deformation <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:math> the stress is hydrostatic, <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>T</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>p</m:mi><m:msub><m:mi>δ</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub><m:mo>)</m:mo></m:mrow></m:math>.
+</item>
+        </list>
+        <para id="id143914">The first assumption implies that the relation between the stress and rate of strain is independent of the rigid body rotation of an element given by the antisymmetric kinematical tensor <m:math overflow="scroll"><m:msub><m:mi>Ω</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math>. The thermodynamic variables, for example, pressure and temperature, will be carried along this discussion without specific mention except where it is necessary for emphasis. We are concerned with a homogeneous portion of fluid so the second assumption is that the stress tensor depends only on position through the variation of <m:math overflow="scroll"><m:msub><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> and thermodynamic variables with position. The third assumption is that of isotropy and this implies that the principal directions of the two tensors coincide. To express this as an equation we write <m:math overflow="scroll"><m:mrow><m:msub><m:mi>T</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>f</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub><m:mfenced separators="" open="(" close=")"><m:msub><m:mi>e</m:mi><m:mrow><m:mi>p</m:mi><m:mi>q</m:mi></m:mrow></m:msub></m:mfenced></m:mrow></m:math>, then if there is no preferred direction <m:math overflow="scroll"><m:msub><m:mi>T</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> is the same function <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> of <m:math overflow="scroll"><m:msub><m:mi>e</m:mi><m:mrow><m:mi>p</m:mi><m:mi>q</m:mi></m:mrow></m:msub></m:math> as <m:math overflow="scroll"><m:msub><m:mi>T</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> is of <m:math overflow="scroll"><m:msub><m:mi>e</m:mi><m:mrow><m:mi>p</m:mi><m:mi>q</m:mi></m:mrow></m:msub></m:math>. Thus</para>
+        <equation id="id144094">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mover>
+                  <m:mi>T</m:mi>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mi>j</m:mi>
+                </m:mrow>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mi>j</m:mi>
+                </m:mrow>
+              </m:msub>
+              <m:mfenced separators="" open="(" close=")">
+                <m:msub>
+                  <m:mover>
+                    <m:mi>e</m:mi>
+                    <m:mo>¯</m:mo>
+                  </m:mover>
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:mi>q</m:mi>
+                  </m:mrow>
+                </m:msub>
+              </m:mfenced>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id144156">The fourth assumption is that the tensor</para>
+        <equation id="id144160">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mi>j</m:mi>
+                </m:mrow>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>T</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mi>j</m:mi>
+                </m:mrow>
+              </m:msub>
+              <m:mo>+</m:mo>
+              <m:mi>p</m:mi>
+              <m:msub>
+                <m:mi>δ</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mi>j</m:mi>
+                </m:mrow>
+              </m:msub>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id144208">vanishes when there is no motion. <m:math overflow="scroll"><m:msub><m:mi>P</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> is called the viscous stress tensor.</para>
+      </section>
+      <section id="uid33">
+        <title>Constitutive equations of the Stokesian fluid</title>
+        <para id="id144240">The arguments for the form of the constitutive equation for the Stokesian fluid is given by Aris and is not repeated here. The equation takes the form</para>
+        <equation id="uid34"><m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>T</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:msub>
+                      <m:mi>δ</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mi>β</m:mi>
+                    <m:msub>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mi>γ</m:mi>
+                    <m:msub>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>k</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>,</m:mo>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi mathvariant="bold">T</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:mi mathvariant="bold">I</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>β</m:mi>
+                    <m:mi mathvariant="bold">e</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>γ</m:mi>
+                    <m:mi mathvariant="bold">e</m:mi>
+                    <m:mo>•</m:mo>
+                    <m:mi mathvariant="bold">e</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id144382">which insures that <m:math overflow="scroll"><m:msub><m:mi>T</m:mi><m:mrow><m:mi>i</m:mi><m:mi>j</m:mi></m:mrow></m:msub></m:math> reduces to the hydrostatic form when the rate of deformation vanishes.</para>
+      </section>
+      <section id="uid35">
+        <title>The Newtonian fluid</title>
+        <para id="id144414">The Newtonian fluid is a linear Stokesian fluid, that is, the stress components depend linearly on the rates of deformation. Aris gives two arguments that deduce the form of the constitutive equation for a Newtonian fluid.</para>
+        <equation id="uid36"><m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>T</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mo>-</m:mo>
+                      <m:mi>p</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>λ</m:mi>
+                      <m:mi>Θ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msub>
+                      <m:mi>δ</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mi>μ</m:mi>
+                    <m:msub>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mtext>where</m:mtext>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>Θ</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>ν</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mo>,</m:mo>
+                        <m:mi>i</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mi>∇</m:mi>
+                    <m:mo>•</m:mo>
+                    <m:mi mathvariant="bold">v</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+      </section>
+      <section id="uid37">
+        <title>Interpretation of the constants <m:math overflow="scroll"><m:mi>λ</m:mi></m:math> and <m:math overflow="scroll"><m:mi>μ</m:mi></m:math></title>
+        <para id="id144580">Consider the shear flow given by</para>
+        <equation id="eip-179"><m:math display="block">
+ <m:mrow>
+  <m:msub>
+   <m:mi>v</m:mi>
+   <m:mn>1</m:mn>
+  </m:msub>
+  <m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub>
+   <m:mi>x</m:mi>
+   <m:mn>2</m:mn>
+  </m:msub>
+  <m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mo>⤢</m:mo><m:msub>
+   <m:mi>v</m:mi>
+   <m:mn>2</m:mn>
+  </m:msub>
+  <m:mo>=</m:mo><m:msub>
+   <m:mi>v</m:mi>
+   <m:mn>3</m:mn>
+  </m:msub>
+  <m:mo>=</m:mo><m:mn>0</m:mn>
+ </m:mrow>
+</m:math>
+</equation><para id="eip-131">For this we have all the <m:math>
+<m:msub>
+<m:mi>e</m:mi>
+<m:mrow>
+<m:mi>i</m:mi>
+<m:mi>j</m:mi>
+</m:mrow>
+</m:msub>
+</m:math> zero except</para><equation id="id144583">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>e</m:mi>
+                <m:mn>12</m:mn>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>e</m:mi>
+                <m:mn>21</m:mn>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:mn>2</m:mn>
+              </m:mfrac>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>x</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:mn>2</m:mn>
+              </m:mfrac>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                </m:mrow>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id144671">Thus</para>
+        <equation id="id144674">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>P</m:mi>
+                <m:mn>12</m:mn>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:msub>
+                <m:mi>P</m:mi>
+                <m:mn>21</m:mn>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mi>μ</m:mi>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>x</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mi>μ</m:mi>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                </m:mrow>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id144755">and all other viscous stresses are zero. It is evident that <m:math overflow="scroll"><m:mi>μ</m:mi></m:math> is the proportionality constant relating the shear stress to the velocity gradient. This is the common definition of the viscosity, or more precisely the coefficient of shear viscosity of a fluid.
+</para>
+        <para id="eip-286">For an incompressible, Newtonian fluid the pressure is the mean of the principal stresses since this is</para><equation id="uid38">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mn>3</m:mn>
+                    </m:mfrac>
+                    <m:msub>
+                      <m:mi>T</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>i</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>λ</m:mi>
+                    <m:mi>Θ</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mn>2</m:mn>
+                      <m:mn>3</m:mn>
+                    </m:mfrac>
+                    <m:mi>μ</m:mi>
+                    <m:mi>Θ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id144855">For a compressible fluid we should take the pressure <m:math overflow="scroll"><m:mi>p</m:mi></m:math> as the thermodynamic pressure to be consistent with our ideas of equilibrium. Thus if we call <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mover><m:mi>p</m:mi><m:mo>¯</m:mo></m:mover></m:mrow></m:math> the mean of the principal stresses,</para>
+        <equation id="uid39">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mover>
+                      <m:mi>p</m:mi>
+                      <m:mo>¯</m:mo>
+                    </m:mover>
+                    <m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:mi>λ</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mn>2</m:mn>
+                      <m:mn>3</m:mn>
+                    </m:mfrac>
+                    <m:mi>μ</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mi>Θ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:mi>λ</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mn>2</m:mn>
+                      <m:mn>3</m:mn>
+                    </m:mfrac>
+                    <m:mi>μ</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mi>∇</m:mi>
+                    <m:mo>•</m:mo>
+                    <m:mi mathvariant="bold">v</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>λ</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mn>2</m:mn>
+                        <m:mn>3</m:mn>
+                      </m:mfrac>
+                      <m:mi>μ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>ρ</m:mi>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>ρ</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id145037">Since <m:math overflow="scroll"><m:mi>p</m:mi></m:math>, the thermodynamic pressure, is in principle known from the equation of state <m:math overflow="scroll"><m:mrow><m:mover><m:mi>p</m:mi><m:mo>¯</m:mo></m:mover><m:mo>-</m:mo><m:mi>p</m:mi></m:mrow></m:math> is a measurable quantity. The coefficient in the equation is known as the <emphasis effect="italics">coefficient of bulk viscosity</emphasis>. It is difficult to measure, however, since relatively large rates of change of density must be used and the assumption of linearity is then dubious. Stokes assumed that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:munder><m:mi>p</m:mi><m:mo>̲</m:mo></m:munder></m:mrow></m:math> and on this ground claimed that</para>
+        <equation id="id145096">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>λ</m:mi>
+              <m:mo>+</m:mo>
+              <m:mfrac>
+                <m:mn>2</m:mn>
+                <m:mn>3</m:mn>
+              </m:mfrac>
+              <m:mi>μ</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id145122">supporting this from an argument from the kinetic theory of gases.</para>
+        <para id="id145126"><title>Assignment 5.1</title>Assume a Newtonian fluid and calculate the stress tensor for the flow fields of assignment 4.2. Evaluate the force due to the stress on the surface <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>.</para>
+      </section>
+  </content>
+</document>

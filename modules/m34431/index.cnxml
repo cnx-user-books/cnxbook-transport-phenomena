@@ -1,0 +1,3941 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Laminar Flows with Dependence on One Dimension</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34431</md:content-id>
+  <md:title>Laminar Flows with Dependence on One Dimension</md:title>
+  <md:abstract/>
+  <md:uuid>38a882ec-afb9-4f2a-a2cd-75749a9979c6</md:uuid>
+</metadata>
+
+<content>
+      <list id="id2253180" display="block" list-type="labeled-item"><item id="uid1">Couette flow
+<list id="id2253822" display="block" list-type="labeled-item"><item id="uid2">Planar Couette flow
+</item><item id="uid3">Cylindrical Couette flow
+</item><item id="uid4">Planer rotational Couette flow
+</item></list></item>
+        <item id="uid5">Hele-Shaw flow
+</item>
+        <item id="uid6">Poiseuille flow
+<list id="id2253885" display="block" list-type="labeled-item"><item id="uid7">Friction factor and Reynolds number
+</item><item id="uid8">Non-Newtonian fluids
+</item></list></item>
+        <item id="uid9">Steady film flow down inclined plane
+</item>
+        <item id="uid10">Unsteady viscous flow
+<list id="id2253938" display="block" list-type="labeled-item"><item id="uid11">Suddenly accelerated plate
+</item><item id="uid12">Developing Couette flow
+</item></list></item>
+      </list>
+      <para id="id2253967"><title>Reading Assignment</title>Chapter 2 of BSL, <emphasis effect="italics">Transport Phenomena</emphasis></para>
+      <para id="id2253980">One-dimensional (1-D) flow fields are flow fields that vary in only one spatial dimension in Cartesian coordinates. This excludes turbulent flows because it cannot be one-dimensional. Acoustic waves are an example of 1-D compressible flow. We will concern ourselves here with incompressible 1-D flow fields that result from axial or planar symmetry. Cartesian, 1-D incompressible flows do not have a velocity component (other than possibly a uniform translation) in the direction of the spatial dependence because of the condition of zero divergence. Thus the nonlinear convective derivative disappears from the equations of motion in Cartesian coordinates. They may not disappear with curvilinear coordinates.</para>
+      <equation id="id2253995">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable>
+            <m:mtr>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mi mathvariant="bold">v</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mi mathvariant="bold">v</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mi>∇</m:mi>
+                  <m:mo>•</m:mo>
+                  <m:mi mathvariant="bold">v</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mspace width="1.em"/>
+                  <m:mo>⇒</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mn>3</m:mn>
+                      </m:msub>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:msub>
+                        <m:mi>x</m:mi>
+                        <m:mn>3</m:mn>
+                      </m:msub>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mo>=</m:mo>
+                  <m:mn>0</m:mn>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mspace width="1.em"/>
+                  <m:mo>⇒</m:mo>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                  <m:mo>=</m:mo>
+                  <m:mn>0</m:mn>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mi mathvariant="bold">v</m:mi>
+                  <m:mo>•</m:mo>
+                  <m:mi>∇</m:mi>
+                  <m:mi mathvariant="bold">v</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mspace width="0.166667em"/>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>i</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>=</m:mo>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:msub>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:msub>
+                        <m:mi>x</m:mi>
+                        <m:mn>3</m:mn>
+                      </m:msub>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mo>=</m:mo>
+                  <m:mn>0</m:mn>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mi>ρ</m:mi>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:msub>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mo>=</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mi>∇</m:mi>
+                  <m:mi>p</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>ρ</m:mi>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi mathvariant="bold">f</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>∇</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                  <m:mo>•</m:mo>
+                  <m:mi>τ</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mi>∇</m:mi>
+                  <m:mi>p</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>ρ</m:mi>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi mathvariant="bold">f</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>μ</m:mi>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>∂</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>j</m:mi>
+                      </m:msub>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:msubsup>
+                        <m:mi>x</m:mi>
+                        <m:mn>3</m:mn>
+                        <m:mn>2</m:mn>
+                      </m:msubsup>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mo>,</m:mo>
+                  <m:mspace width="1.em"/>
+                  <m:mi>j</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>,</m:mo>
+                  <m:mspace width="0.166667em"/>
+                  <m:mn>2</m:mn>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id2254596">We can demonstrate that this relation may not apply in curvilinear coordinates by considering an example with cylindrical polar coordinates. Suppose that the only nonzero component of velocity is in the <m:math overflow="scroll"><m:mi>θ</m:mi></m:math> direction and the only spatial dependence is on the <m:math overflow="scroll"><m:mi>r</m:mi></m:math> coordinate. The radial component of the convective derivative is non-zero due to centrifugal forces.</para>
+      <equation id="id2254623">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable>
+            <m:mtr>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mi mathvariant="bold">v</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mo>[</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mo>,</m:mo>
+                  <m:mspace width="0.277778em"/>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>θ</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>r</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:mspace width="0.277778em"/>
+                  <m:mn>0</m:mn>
+                  <m:mo>]</m:mo>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:msub>
+                    <m:mfenced separators="" open="[" close="]">
+                      <m:mrow>
+                        <m:mi mathvariant="bold">v</m:mi>
+                        <m:mo>•</m:mo>
+                        <m:mi>∇</m:mi>
+                        <m:mi mathvariant="bold">v</m:mi>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                  <m:mo>=</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mfrac>
+                    <m:msubsup>
+                      <m:mi>v</m:mi>
+                      <m:mi>θ</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msubsup>
+                    <m:mi>r</m:mi>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id2254728">The flows can be classified as either forced flow resulting from the gradient of the pressure or the potential of the body force or induced flow resulting from motion of one of the bounding surfaces.</para>
+      <para id="id2254735">Some flow fields that result in 1-D flow are listed below and illustrated in the following figure (Churchill, 1988)</para>
+      <list id="id2254740" display="block" list-type="enumerated">
+        <item id="uid13">Forced flow through a round tube
+</item>
+        <item id="uid14">Forced flow between parallel plates
+</item>
+        <item id="uid15">Forced flow through the annulus between concentric round tubes of different diameters
+</item>
+        <item id="uid16">Gravitational flow of a liquid film down an inclined or vertical plane
+</item>
+        <item id="uid17">Gravitational flow of a liquid film down the inner or outer surface of a round vertical tube
+</item>
+        <item id="uid18">Gravitational flow of a liquid through an inclined half-full round tube
+</item>
+        <item id="uid19">Flow induced by the movement of one of a pair of parallel planes
+</item>
+        <item id="uid20">Flow induced in a concentric annulus between round tubes by the axial movement of either the outer or the inner tube
+</item>
+        <item id="uid21">Flow induced in a concentric annulus between round tubes by the axial rotation of either the outer or the inner tube
+</item>
+        <item id="uid22">Flow induced in the cylindrical layer of fluid between a rotating circular disk and a parallel plane
+</item>
+        <item id="uid23">Flow induced by the rotation of a central circular cylinder whose axis is perpendicular to parallel circular disks enclosing a thin cylindrical layer of fluid
+</item>
+        <item id="uid24">Combined forced and induced flow between parallel plates
+</item>
+        <item id="uid25">Combined forced and induced longitudinal flow in the annulus between concentric round tubes
+</item>
+        <item id="uid26">Combined forced and rotationally induced flow in the annulus between concentric round tubes
+</item>
+      </list>
+      <figure id="uid27">
+        <media id="uid27_media" alt="">
+          <image mime-type="image/png" src="../../media/fig8_1.png" id="uid27_onlineimage" width="390"><!-- NOTE: attribute width changes image size online (pixels). original width is 390. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/fig8_1.eps" id="uid27_printimage"/>
+        </media>
+      </figure>
+      <figure id="uid28">
+        <media id="uid28_media" alt="">
+          <image mime-type="image/png" src="../../media/fig8_2.png" id="uid28_onlineimage" width="384"><!-- NOTE: attribute width changes image size online (pixels). original width is 384. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/fig8_2.eps" id="uid28_printimage"/>
+        </media>
+        <caption>Geometry and conditions that produce one-dimensional velocity fields (Churchill, 1988)</caption>
+      </figure>
+      <section id="uid29">
+        <title>Couette Flow</title>
+        <para id="id2254954">The flows when the fluid between two parallel surfaces are induced to flow by the motion of one surface relative to the other is called <emphasis effect="italics">Couette flow</emphasis>. This is the generic shear flow that is used to illustrate Newton's law of viscosity. Pressure and body forces balance each other and at steady state the equation of motion simplify to the divergence of the viscous stress tensor or the Laplacian of velocity in the case of a Newtonian fluid.</para>
+        <para id="id2254970"><emphasis effect="italics">Planar Couette flow</emphasis>. (case 7).</para>
+        <equation id="id2254977">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>τ</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>μ</m:mi>
+              <m:mfrac>
+                <m:mrow>
+                  <m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msub>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mn>3</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:msubsup>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="0.166667em"/>
+              <m:mn>2</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2255066">The coordinates system can be defined so that <m:math overflow="scroll"><m:mrow><m:mi mathvariant="bold">v</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> at <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> and the <m:math overflow="scroll"><m:mi>j</m:mi></m:math> component of velocity is non-zero at <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math>.</para>
+        <equation id="id2255134">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>U</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mi>L</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2255235">The velocity field is</para>
+        <equation id="id2255239">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>U</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msub>
+                  <m:mspace width="0.166667em"/>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                </m:mrow>
+                <m:mi>L</m:mi>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2255282">The shear stress can be determined from Newton's law of viscosity.</para>
+        <equation id="id2255286">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>τ</m:mi>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mn>3</m:mn>
+                </m:mrow>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>μ</m:mi>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msub>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>μ</m:mi>
+              <m:mfrac>
+                <m:msub>
+                  <m:mi>U</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msub>
+                <m:mi>L</m:mi>
+              </m:mfrac>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="0.166667em"/>
+              <m:mn>2</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2255373"><emphasis effect="underline">Cylindrical Couette flow.</emphasis> The above example was the translational movement of two planes relative to each other. Couette flow is also possible in the annular gap between two concentric cylindrical surfaces (cases 8 and 9) if secondary flows do not occur due to centrifugal forces. We use cylindrical polar coordinates rather than Cartesian and <emphasis effect="underline">assume</emphasis> vanishing Reynolds number. The only independent variable is the radius.</para>
+        <equation id="id2255393">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>r</m:mi>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:mi>∂</m:mi>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>r</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mi>r</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mfenced separators="" open="[" close="]">
+                        <m:mrow>
+                          <m:mi>∇</m:mi>
+                          <m:mo>•</m:mo>
+                          <m:mi>τ</m:mi>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mi>r</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>r</m:mi>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:mi>∂</m:mi>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>r</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>r</m:mi>
+                            <m:mi>r</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:msub>
+                        <m:mi>τ</m:mi>
+                        <m:mrow>
+                          <m:mi>θ</m:mi>
+                          <m:mi>θ</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                      <m:mi>r</m:mi>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> may </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> not </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> vanish </m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi> if </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> Reynolds </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> number </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> is </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> high </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mfenced separators="" open="[" close="]">
+                        <m:mrow>
+                          <m:mi>∇</m:mi>
+                          <m:mo>•</m:mo>
+                          <m:mi>τ</m:mi>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mi>θ</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:msup>
+                        <m:mi>r</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:mi>∂</m:mi>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>r</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>r</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>r</m:mi>
+                            <m:mi>θ</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>θ</m:mi>
+                            <m:mi>r</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                        <m:mo>-</m:mo>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>r</m:mi>
+                            <m:mi>θ</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mi>r</m:mi>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> may </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> not </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> vanish </m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi> if </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> Reynolds </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> number </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> is </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> high </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mfenced separators="" open="[" close="]">
+                        <m:mrow>
+                          <m:mi>∇</m:mi>
+                          <m:mo>•</m:mo>
+                          <m:mi>τ</m:mi>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mi>z</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>r</m:mi>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:mi>∂</m:mi>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>r</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>r</m:mi>
+                            <m:mi>z</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfenced separators="" open="" close="}">
+                      <m:mtable>
+                        <m:mtr>
+                          <m:mtd>
+                            <m:mrow>
+                              <m:mfrac>
+                                <m:mi>∂</m:mi>
+                                <m:mrow>
+                                  <m:mi>∂</m:mi>
+                                  <m:mi>r</m:mi>
+                                </m:mrow>
+                              </m:mfrac>
+                              <m:mfenced separators="" open="[" close="]">
+                                <m:mrow>
+                                  <m:mfrac>
+                                    <m:mn>1</m:mn>
+                                    <m:mi>r</m:mi>
+                                  </m:mfrac>
+                                  <m:mfrac>
+                                    <m:mi>∂</m:mi>
+                                    <m:mrow>
+                                      <m:mi>∂</m:mi>
+                                      <m:mi>r</m:mi>
+                                    </m:mrow>
+                                  </m:mfrac>
+                                  <m:mfenced separators="" open="(" close=")">
+                                    <m:mrow>
+                                      <m:mi>r</m:mi>
+                                      <m:mspace width="0.166667em"/>
+                                      <m:msub>
+                                        <m:mi>v</m:mi>
+                                        <m:mi>θ</m:mi>
+                                      </m:msub>
+                                    </m:mrow>
+                                  </m:mfenced>
+                                </m:mrow>
+                              </m:mfenced>
+                              <m:mo>=</m:mo>
+                              <m:mn>0</m:mn>
+                            </m:mrow>
+                          </m:mtd>
+                        </m:mtr>
+                        <m:mtr>
+                          <m:mtd>
+                            <m:mrow>
+                              <m:mfrac>
+                                <m:mi>∂</m:mi>
+                                <m:mrow>
+                                  <m:mi>∂</m:mi>
+                                  <m:mi>r</m:mi>
+                                </m:mrow>
+                              </m:mfrac>
+                              <m:mfenced separators="" open="(" close=")">
+                                <m:mrow>
+                                  <m:mi>r</m:mi>
+                                  <m:mfrac>
+                                    <m:mrow>
+                                      <m:mi>∂</m:mi>
+                                      <m:msub>
+                                        <m:mi>v</m:mi>
+                                        <m:mi>z</m:mi>
+                                      </m:msub>
+                                    </m:mrow>
+                                    <m:mrow>
+                                      <m:mi>∂</m:mi>
+                                      <m:mi>r</m:mi>
+                                    </m:mrow>
+                                  </m:mfrac>
+                                </m:mrow>
+                              </m:mfenced>
+                              <m:mo>=</m:mo>
+                              <m:mn>0</m:mn>
+                            </m:mrow>
+                          </m:mtd>
+                        </m:mtr>
+                      </m:mtable>
+                    </m:mfenced>
+                    <m:mspace width="1.em"/>
+                    <m:mi> Newtonian </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> fluid </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2255935">The stress profile can be calculated by integration.</para>
+        <equation id="id2255940">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>r</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mi>θ</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mfenced separators="" open="" close="|">
+                        <m:mrow>
+                          <m:msup>
+                            <m:mi>r</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:msub>
+                            <m:mi>τ</m:mi>
+                            <m:mrow>
+                              <m:mi>r</m:mi>
+                              <m:mi>θ</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:msub>
+                          <m:mi>r</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mfenced separators="" open="" close="|">
+                        <m:mrow>
+                          <m:msup>
+                            <m:mi>r</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:msub>
+                            <m:mi>τ</m:mi>
+                            <m:mrow>
+                              <m:mi>r</m:mi>
+                              <m:mi>θ</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:msub>
+                          <m:mi>r</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>r</m:mi>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mfenced separators="" open="" close="|">
+                        <m:mrow>
+                          <m:mi>r</m:mi>
+                          <m:msub>
+                            <m:mi>τ</m:mi>
+                            <m:mrow>
+                              <m:mi>r</m:mi>
+                              <m:mi>z</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:msub>
+                          <m:mi>r</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mfenced separators="" open="" close="|">
+                        <m:mrow>
+                          <m:mi>r</m:mi>
+                          <m:msub>
+                            <m:mi>τ</m:mi>
+                            <m:mrow>
+                              <m:mi>r</m:mi>
+                              <m:mi>z</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:msub>
+                          <m:mi>r</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2256160">The boundary conditions on velocity depend on whether the cylindrical surfaces move relative to each other as a result of rotation, axial translation, or both.</para>
+        <equation id="id2256166">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi mathvariant="bold">v</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>r</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>r</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi mathvariant="bold">v</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>U</m:mi>
+                        <m:mi>θ</m:mi>
+                      </m:msub>
+                      <m:mo>,</m:mo>
+                      <m:msub>
+                        <m:mi>U</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:msub>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>r</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>r</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2256259">The velocity field for cylindrical Couette flow of a Newtonian fluid is .</para>
+        <equation id="id2256264">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>θ</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:msub>
+                        <m:mi>U</m:mi>
+                        <m:mi>θ</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mfrac>
+                          <m:msub>
+                            <m:mi>r</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msub>
+                          <m:msub>
+                            <m:mi>r</m:mi>
+                            <m:mn>1</m:mn>
+                          </m:msub>
+                        </m:mfrac>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:msub>
+                            <m:mi>r</m:mi>
+                            <m:mn>1</m:mn>
+                          </m:msub>
+                          <m:msub>
+                            <m:mi>r</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msub>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mfrac>
+                          <m:mi>r</m:mi>
+                          <m:msub>
+                            <m:mi>r</m:mi>
+                            <m:mn>1</m:mn>
+                          </m:msub>
+                        </m:mfrac>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:msub>
+                            <m:mi>r</m:mi>
+                            <m:mn>1</m:mn>
+                          </m:msub>
+                          <m:mi>r</m:mi>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>z</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msub>
+                          <m:mi>U</m:mi>
+                          <m:mi>z</m:mi>
+                        </m:msub>
+                        <m:mspace width="0.166667em"/>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mo form="prefix">log</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>r</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mo>/</m:mo>
+                        <m:msub>
+                          <m:mi>r</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mspace width="0.166667em"/>
+                    <m:mo form="prefix">log</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>r</m:mi>
+                      <m:mo>/</m:mo>
+                      <m:msub>
+                        <m:mi>r</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2256447"><emphasis effect="underline">Planer rotational Couette flow.</emphasis> The parallel plate viscometer has the configuration shown in case 10. The system is not strictly 1-D because the velocity of one of the surfaces is a function of radius. Also, there is a centrifugal force present near the rotating surface but is absent at the stationary surface. However, if the Reynolds number is small enough that secondary flows do not occur, then the velocity at a given value of the radius may be approximated as a function of only the <m:math overflow="scroll"><m:mi>z</m:mi></m:math> distance in the gap. The differential equations at zero Reynolds number are as follows.</para>
+        <equation id="id2256473">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mfenced separators="" open="[" close="]">
+                        <m:mrow>
+                          <m:mi>∇</m:mi>
+                          <m:mo>•</m:mo>
+                          <m:mi>τ</m:mi>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mi>θ</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>θ</m:mi>
+                            <m:mi>z</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>∂</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mi>θ</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msup>
+                          <m:mi>z</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> Newtonian </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> fluid </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2256590">Suppose the bottom surface is stationary and the top surface is rotating. Then the boundary conditions are as follows.</para>
+        <equation id="id2256596">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>θ</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mi>z</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>θ</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>r</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>z</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>L</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2256688">The stress and velocity profiles are as follows.</para>
+        <equation id="id2256692">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mrow>
+                        <m:mi>θ</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mrow>
+                        <m:mi>θ</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>r</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>r</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>Ω</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>μ</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>r</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>/</m:mo>
+                    <m:mi>L</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>θ</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>r</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>Ω</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>z</m:mi>
+                    <m:mo>/</m:mo>
+                    <m:mi>L</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> Newtonian </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> fluid </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2256831">The stress is a function of the radius and if the fluid is non-Newtonian, the viscosity may be changing with radial position.</para>
+      </section>
+      <section id="uid30">
+        <title>Plane-Poiseuille and Hele-Shaw flow</title>
+        <para id="id2256847">Forced flow between two stationary, parallel plates, case 2, is called plane-Poiseuille flow or if the flow depends on two spatial variables in the plane, it is called Hele-Shaw flow. The flow is forced by a specified flow rate or a specified pressure or gravity potential gradient. The pressure and gravitational potential can be combined into a single variable, <m:math overflow="scroll"><m:mi>P</m:mi></m:math>.</para>
+        <equation id="id2253692">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>∇</m:mi>
+                    <m:mi>p</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi mathvariant="bold">f</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>∇</m:mi>
+                    <m:mi>P</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mi> where </m:mi>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>P</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>h</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2253769">The product <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mi>h</m:mi></m:mrow></m:math> is the gravitational potential, where <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is the acceleration of gravity and <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is distance upward relative to some datum. The pressure, <m:math overflow="scroll"><m:mi>p</m:mi></m:math>, is also relative to a datum, which may be the datum for <m:math overflow="scroll"><m:mi>h</m:mi></m:math>.</para>
+        <para id="id2257135">The primary spatial dependence is in the direction normal to the plane of the plates. If there is no dependence on one spatial direction, then the flow is truly one-dimensional. However, if the velocity and pressure gradients have components in two directions in the plane of the plates, the flow is not strictly 1-D and nonlinear, inertial terms will be present in the equations of motion. The significance of these terms is quantified by the Reynolds number. If the flow is steady, and the Reynolds number negligible, the equations of motion are as follows.</para>
+        <equation id="id2257148">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mi>j</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>j</m:mi>
+                            <m:mn>3</m:mn>
+                          </m:mrow>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>-</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mi>j</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>+</m:mo>
+                    <m:mi>μ</m:mi>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>∂</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mi>j</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:msubsup>
+                          <m:mi>x</m:mi>
+                          <m:mn>3</m:mn>
+                          <m:mn>2</m:mn>
+                        </m:msubsup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mn>2</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> Newtonian </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> fluid </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2257376">Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be the spacing between the plates and the velocity is zero at each surface.</para>
+        <equation id="id2257391">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>3</m:mn>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="0.277778em"/>
+              <m:mi>h</m:mi>
+              <m:mspace width="1.em"/>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="0.166667em"/>
+              <m:mn>2</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2257454">The velocity profile for a Newtonian fluid in plane-Poiseuille flow is</para>
+        <equation id="id2257458">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>j</m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:msup>
+                  <m:mi>h</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mrow>
+                  <m:mn>2</m:mn>
+                  <m:mi>μ</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:mi>P</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msub>
+                </m:mrow>
+              </m:mfrac>
+              <m:mfenced separators="" open="[" close="]">
+                <m:mrow>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:mfrac>
+                          <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mn>3</m:mn>
+                          </m:msub>
+                          <m:mi>h</m:mi>
+                        </m:mfrac>
+                      </m:mfenced>
+                    </m:mrow>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:mfrac>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>3</m:mn>
+                    </m:msub>
+                    <m:mi>h</m:mi>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mfenced>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="0.166667em"/>
+              <m:mn>2</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mn>0</m:mn>
+              <m:mo>≤</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>3</m:mn>
+              </m:msub>
+              <m:mo>≤</m:mo>
+              <m:mi>h</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2257601">The average velocity over the thickness of the plate can be determined by integrating the profile.</para>
+        <equation id="id2257606">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mover accent="true">
+                  <m:mi>v</m:mi>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+                <m:mi>j</m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mo>-</m:mo>
+              <m:mfrac>
+                <m:msup>
+                  <m:mi>h</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mrow>
+                  <m:mn>12</m:mn>
+                  <m:mi>μ</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mspace width="0.166667em"/>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:mi>P</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msub>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="0.166667em"/>
+              <m:mn>2</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2257691">This equation for the average velocity can be written as a vector equation if it is recognized that the vectors have components only in the <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:math> directions.</para>
+        <equation id="id2257715">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mover accent="true">
+                <m:mi mathvariant="bold">v</m:mi>
+                <m:mo>¯</m:mo>
+              </m:mover>
+              <m:mo>=</m:mo>
+              <m:mo>-</m:mo>
+              <m:mfrac>
+                <m:msup>
+                  <m:mi>h</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mrow>
+                  <m:mn>12</m:mn>
+                  <m:mi>μ</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mspace width="0.166667em"/>
+              <m:mi>∇</m:mi>
+              <m:mi>P</m:mi>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mover accent="true">
+                <m:mi mathvariant="bold">v</m:mi>
+                <m:mo>¯</m:mo>
+              </m:mover>
+              <m:mo>=</m:mo>
+              <m:mover accent="true">
+                <m:mi mathvariant="bold">v</m:mi>
+                <m:mo>¯</m:mo>
+              </m:mover>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>x</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mo>,</m:mo>
+                <m:mspace width="0.166667em"/>
+                <m:msub>
+                  <m:mi>x</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>,</m:mo>
+              <m:mspace width="0.277778em"/>
+              <m:mspace width="1.em"/>
+              <m:mi>∇</m:mi>
+              <m:mi>P</m:mi>
+              <m:mo>=</m:mo>
+              <m:mi>∇</m:mi>
+              <m:mi>P</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>x</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mo>,</m:mo>
+                <m:mspace width="0.166667em"/>
+                <m:msub>
+                  <m:mi>x</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2257865">If the flow is incompressible, the divergence of velocity is zero and the potential, <m:math overflow="scroll"><m:mi>P</m:mi></m:math>, is a solution of the Laplace equation except where sources are present. If the strength of the sources or the flux at boundaries are known, the potential, <m:math overflow="scroll"><m:mi>P</m:mi></m:math>, can be determined from the methods for the solution of the Laplace equation.</para>
+        <para id="id2257892">We now have the result that the average velocity vector is proportional to a potential gradient. Thus the average velocity field in a Hele-Shaw flow is irrotational. If the fluid is incompressible, the average velocity field is also solenoidal can can be expressed as the curl of a vector potential or the stream function. The average velocity field of Hele-Shaw flow is an physical analog for the irrotational, solenoidal, 2-D flow described by the complex potential. It is also a physical analog for 2-D flow of incompressible fluids through porous media by Darcy's law and was used for that purpose before numerical reservoir simulators were developed.</para>
+      </section>
+      <section id="uid31">
+        <title>Poiseuille Flow</title>
+        <para id="id2257916">Poiseuille law describes laminar flow of a Newtonian fluid in a round tube (case 1). We will derive Poiseuille law for a Newtonian fluid and leave the flow of a power-law fluid as an assignment. The equation of motion for the steady, developed (from end effects) flow of a fluid in a round tube of uniform radius is as follows.</para>
+        <equation id="id2257924">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>r</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>r</m:mi>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:mi>∂</m:mi>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>r</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>r</m:mi>
+                            <m:mi>z</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mn>0</m:mn>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>r</m:mi>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>R</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>+</m:mo>
+                    <m:mi>μ</m:mi>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>r</m:mi>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:mi>∂</m:mi>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>r</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:msub>
+                              <m:mi>v</m:mi>
+                              <m:mi>z</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:mi>r</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> Newtonian </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> fluid </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2258130">The boundary conditions are symmetry at <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> and no slip at <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>R</m:mi></m:mrow></m:math>.</para>
+        <equation id="id2258164">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mfenced separators="" open="" close="|">
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>r</m:mi>
+                            <m:mi>z</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>μ</m:mi>
+                    <m:msub>
+                      <m:mfenced separators="" open="" close="|">
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:msub>
+                              <m:mi>v</m:mi>
+                              <m:mi>z</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:mi>r</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>z</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>r</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>R</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2258285">From the radial component of the equations of motion, <m:math overflow="scroll"><m:mi>P</m:mi></m:math> does not depend on radial position. Since the flow is steady and fully developed, the gradient of <m:math overflow="scroll"><m:mi>P</m:mi></m:math> is a constant. The <m:math overflow="scroll"><m:mi>z</m:mi></m:math> component of the equations of motion can be integrated once to derive the <emphasis effect="italics">stress profile</emphasis> and <emphasis effect="italics">wall shear stress</emphasis>.</para>
+        <equation id="id2258396">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mrow>
+                        <m:mi>r</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:mi>P</m:mi>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:mi>z</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mfrac>
+                      <m:mi>r</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mn>0</m:mn>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>r</m:mi>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>R</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mi>w</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:mi>P</m:mi>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>∂</m:mi>
+                            <m:mi>z</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mfrac>
+                      <m:mi>R</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2258523">If the fluid is Newtonian, the equation of motion can be integrated once more to obtain the <emphasis effect="italics">velocity profile</emphasis> and <emphasis effect="italics">maximum velocity</emphasis>.</para>
+        <equation id="id2258539">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfenced separators="" open="" close="}">
+                <m:mtable>
+                  <m:mtr>
+                    <m:mtd>
+                      <m:mrow>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mi>z</m:mi>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                          <m:msup>
+                            <m:mi>R</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mi>μ</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                        <m:mspace width="0.166667em"/>
+                        <m:mfenced separators="" open="(" close=")">
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mfrac>
+                              <m:mrow>
+                                <m:mi>∂</m:mi>
+                                <m:mi>P</m:mi>
+                              </m:mrow>
+                              <m:mrow>
+                                <m:mi>∂</m:mi>
+                                <m:mi>z</m:mi>
+                              </m:mrow>
+                            </m:mfrac>
+                          </m:mrow>
+                        </m:mfenced>
+                        <m:mfenced separators="" open="[" close="]">
+                          <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:msup>
+                              <m:mrow>
+                                <m:mfenced separators="" open="(" close=")">
+                                  <m:mfrac>
+                                    <m:mi>r</m:mi>
+                                    <m:mi>R</m:mi>
+                                  </m:mfrac>
+                                </m:mfenced>
+                              </m:mrow>
+                              <m:mn>2</m:mn>
+                            </m:msup>
+                          </m:mrow>
+                        </m:mfenced>
+                        <m:mo>,</m:mo>
+                        <m:mspace width="1.em"/>
+                        <m:mn>0</m:mn>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>r</m:mi>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>R</m:mi>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd>
+                      <m:mrow>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mrow>
+                            <m:mi>z</m:mi>
+                            <m:mo>,</m:mo>
+                            <m:mspace width="0.277778em"/>
+                            <m:mo movablelimits="true" form="prefix">max</m:mo>
+                          </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                          <m:msup>
+                            <m:mi>R</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mi>μ</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                        <m:mspace width="0.166667em"/>
+                        <m:mfenced separators="" open="(" close=")">
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mfrac>
+                              <m:mrow>
+                                <m:mi>∂</m:mi>
+                                <m:mi>P</m:mi>
+                              </m:mrow>
+                              <m:mrow>
+                                <m:mi>∂</m:mi>
+                                <m:mi>z</m:mi>
+                              </m:mrow>
+                            </m:mfrac>
+                          </m:mrow>
+                        </m:mfenced>
+                        <m:mspace width="1.em"/>
+                        <m:mspace width="1.em"/>
+                        <m:mspace width="1.em"/>
+                        <m:mspace width="1.em"/>
+                        <m:mspace width="1.em"/>
+                        <m:mspace width="1.em"/>
+                        <m:mspace width="1.em"/>
+                        <m:mspace width="1.em"/>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                </m:mtable>
+              </m:mfenced>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mi> Newtonian </m:mi>
+              <m:mspace width="0.277778em"/>
+              <m:mi> fluid </m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2258771">The <emphasis effect="italics">volumetric rate</emphasis> of flow through the pipe can be determined by integration of the velocity profile across the cross-section of the pipe, i.e., <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mi>R</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>θ</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:math>.</para>
+        <equation id="id2258823">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>Q</m:mi>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>π</m:mi>
+                  <m:mspace width="0.166667em"/>
+                  <m:msup>
+                    <m:mi>R</m:mi>
+                    <m:mn>4</m:mn>
+                  </m:msup>
+                </m:mrow>
+                <m:mrow>
+                  <m:mn>8</m:mn>
+                  <m:mi>μ</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:mi>P</m:mi>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:mi>z</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mfenced>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mi> Newtonian </m:mi>
+              <m:mspace width="0.277778em"/>
+              <m:mi> fluid </m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2258896">This relation is the <emphasis effect="italics">Hagen-Poiseuille law</emphasis>. If the flow rate is specified, then the potential gradient can be expressed as a function of the flow rate and substituted into the above expressions.</para>
+        <para id="id2258908">The <emphasis effect="italics">average velocity</emphasis> or volumetric flux can be determined by dividing the volumetric rate by the cross-sectional area.</para>
+        <equation id="id2258919">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfenced separators="" open="〈" close="〉">
+                <m:msub>
+                  <m:mi>v</m:mi>
+                  <m:mi>z</m:mi>
+                </m:msub>
+              </m:mfenced>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:msup>
+                  <m:mi>R</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mrow>
+                  <m:mn>8</m:mn>
+                  <m:mi>μ</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mspace width="0.166667em"/>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:mi>P</m:mi>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>∂</m:mi>
+                      <m:mi>z</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mfenced>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mi> Newtonian </m:mi>
+              <m:mspace width="0.277778em"/>
+              <m:mi> fluid </m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2259002">Before one begins to believe that the Hagen-Poiseuille law is a "law" that applies under all conditions, the following is a list of assumptions are implicit in this relation (BSL, 1960).</para>
+        <list id="id2259009" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid32">The flow is laminar-NRe less than about 2100.
+</item>
+          <item id="uid33">The density is constant ("incompressible flow").
+</item>
+          <item id="uid34">The flow is independent of time ("steady state").
+</item>
+          <item id="uid35">The fluid is Newtonian.
+</item>
+          <item id="uid36">End effects are neglected-actually an "entrance length" (beyond the tube entrance) on the order of Le = 0.035D NRe is required for build-up to the parabolic profiles; if the section of pipe of interest includes the entrance region, a correction must be applied. The fractional correction introduced in either P or Q never exceeds Le/L if L &gt; Le.
+</item>
+          <item id="uid37">The fluid behaves as a continuum-this assumption is valid except for very dilute gases or very narrow capillary tubes, in which the molecular mean free path is comparable to the tube diameter ("slip flow" regime) or much greater than the tube diameter ("Knudsen flow" or "free molecule flow" regime).
+</item>
+          <item id="uid38">There is no slip at the wall-this is an excellent assumption for pure fluids under the conditions assumed in ( f ).
+</item>
+        </list>
+        <para id="id2259119"><emphasis effect="underline">Friction factor and Reynolds number.</emphasis> Because pressure drop in pipes is commonly used in process design, correlation expressed as friction factor versus Reynolds number are available for laminar and turbulent flow. The Hagen-Poiseuille law describes the laminar flow portion of the correlation. The correlations in the literature differ when they use different definitions for the friction factor. Correlations are usually are usually expressed in terms of the Fanning friction factor and the Darcy-Weisbach friction factor.</para>
+        <equation id="id2259135">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mrow>
+                        <m:mi>S</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>≡</m:mo>
+                    <m:mfrac>
+                      <m:msub>
+                        <m:mi>τ</m:mi>
+                        <m:mi>w</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mi>ρ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msubsup>
+                          <m:mi>u</m:mi>
+                          <m:mi>m</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msubsup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> Stanton </m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi> Pannell </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> friction </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> factor </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>F</m:mi>
+                    </m:msub>
+                    <m:mo>≡</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mi>w</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>ρ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msubsup>
+                          <m:mi>u</m:mi>
+                          <m:mi>m</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msubsup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> Fanning </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> friction </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> factor </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>W</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>≡</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mn>8</m:mn>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mi>w</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>ρ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msubsup>
+                          <m:mi>u</m:mi>
+                          <m:mi>m</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msubsup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> Darcy </m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi> Weisbach </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> friction </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> factor </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mfenced open="(" close=")">
+                      <m:mi> Moody </m:mi>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>u</m:mi>
+                      <m:mi>m</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfenced open="〈" close="〉">
+                      <m:mi>v</m:mi>
+                    </m:mfenced>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> mean </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> velocity </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2259402">The Reynolds number is expressed as a ratio of inertial stress and shear stress.</para>
+        <equation id="id2259407">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>N</m:mi>
+                <m:mi> Re </m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>ρ</m:mi>
+                  <m:mspace width="0.166667em"/>
+                  <m:msubsup>
+                    <m:mi>u</m:mi>
+                    <m:mi>m</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msubsup>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>μ</m:mi>
+                  <m:mspace width="0.166667em"/>
+                  <m:msub>
+                    <m:mi>u</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub>
+                  <m:mo>/</m:mo>
+                  <m:mi>D</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>ρ</m:mi>
+                  <m:mspace width="0.166667em"/>
+                  <m:msub>
+                    <m:mi>u</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>D</m:mi>
+                </m:mrow>
+                <m:mi>μ</m:mi>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mn>2</m:mn>
+                  <m:mi>ρ</m:mi>
+                  <m:mspace width="0.166667em"/>
+                  <m:msub>
+                    <m:mi>u</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>R</m:mi>
+                </m:mrow>
+                <m:mi>μ</m:mi>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2259520">Both the friction factor and the Reynolds number have as a common factor, the kinetic energy per unit volume <m:math overflow="scroll"><m:mrow><m:mi>ρ</m:mi><m:msubsup><m:mi>u</m:mi><m:mi>m</m:mi><m:mn>2</m:mn></m:msubsup></m:mrow></m:math> . This factor may be eliminated between the two equations to express the friction factor as a function of the Reynolds number.</para>
+        <equation id="id2259549">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mrow>
+                        <m:mi>S</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:msub>
+                        <m:mi>N</m:mi>
+                        <m:mrow>
+                          <m:mi>R</m:mi>
+                          <m:mi>E</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:msub>
+                        <m:mi>τ</m:mi>
+                        <m:mi>w</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mi>μ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msub>
+                          <m:mi>u</m:mi>
+                          <m:mi>m</m:mi>
+                        </m:msub>
+                        <m:mo>/</m:mo>
+                        <m:mi>D</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>F</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>2</m:mn>
+                      <m:msub>
+                        <m:mi>N</m:mi>
+                        <m:mrow>
+                          <m:mi>R</m:mi>
+                          <m:mi>E</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:msub>
+                        <m:mi>τ</m:mi>
+                        <m:mi>w</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mi>μ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msub>
+                          <m:mi>u</m:mi>
+                          <m:mi>m</m:mi>
+                        </m:msub>
+                        <m:mo>/</m:mo>
+                        <m:mi>D</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>W</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>8</m:mn>
+                      <m:msub>
+                        <m:mi>N</m:mi>
+                        <m:mrow>
+                          <m:mi>R</m:mi>
+                          <m:mi>E</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                    </m:mfrac>
+                    <m:mfrac>
+                      <m:msub>
+                        <m:mi>τ</m:mi>
+                        <m:mi>w</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mi>μ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msub>
+                          <m:mi>u</m:mi>
+                          <m:mi>m</m:mi>
+                        </m:msub>
+                        <m:mo>/</m:mo>
+                        <m:mi>D</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2259741">Recall the expressions derived earlier for the wall shear stress and the average velocity for a Newtonian fluid and substitute into the above expressions.</para>
+        <equation id="id2259747">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mrow>
+                        <m:mi>S</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>8</m:mn>
+                      <m:msub>
+                        <m:mi>N</m:mi>
+                        <m:mi> Re </m:mi>
+                      </m:msub>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>F</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>16</m:mn>
+                      <m:msub>
+                        <m:mi>N</m:mi>
+                        <m:mi> Re </m:mi>
+                      </m:msub>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mrow>
+                        <m:mi>D</m:mi>
+                        <m:mi>W</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mn>64</m:mn>
+                      <m:msub>
+                        <m:mi>N</m:mi>
+                        <m:mi> Re </m:mi>
+                      </m:msub>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2259845">Correlation of friction factor versus Reynolds number appear in the literature with all three definitions of the friction factor and usually without a subscript to denote which definition is being used.</para>
+        <para id="id2259851"><emphasis effect="underline">Non-Newtonian fluids.</emphasis> The velocity profiles above were derived for a Newtonian fluid. A constitutive relation is necessary to determine the velocity profile and mean velocity for non-Newtonian fluids. We will consider the cases of a Bingham model fluid and a power-law or Ostwald-de Waele model fluid. The constitutive relations for these fluids are as follows.</para>
+        <equation id="id2259865">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi> The </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> Bingham </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> Model </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mrow>
+                        <m:mi>y</m:mi>
+                        <m:mi>x</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>μ</m:mi>
+                      <m:mi>o</m:mi>
+                    </m:msub>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mi>x</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>y</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>±</m:mo>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mi>o</m:mi>
+                    </m:msub>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> if </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mfenced separators="" open="|" close="|">
+                      <m:msub>
+                        <m:mi>τ</m:mi>
+                        <m:mrow>
+                          <m:mi>y</m:mi>
+                          <m:mi>x</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                    </m:mfenced>
+                    <m:mo>&gt;</m:mo>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mi>o</m:mi>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mi>x</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>y</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mi> if </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mfenced separators="" open="|" close="|">
+                      <m:msub>
+                        <m:mi>τ</m:mi>
+                        <m:mrow>
+                          <m:mi>y</m:mi>
+                          <m:mi>x</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                    </m:mfenced>
+                    <m:mo>&lt;</m:mo>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mi>o</m:mi>
+                    </m:msub>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi> The </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> Ostwald </m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi> de </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> Waele </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mo>(</m:mo>
+                    <m:mi> power </m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi> law </m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> Model </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mrow>
+                        <m:mi>y</m:mi>
+                        <m:mi>x</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>m</m:mi>
+                    <m:msup>
+                      <m:mfenced separators="" open="|" close="|">
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:msub>
+                              <m:mi>v</m:mi>
+                              <m:mi>x</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:mi>y</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mi>x</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>y</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2260195">The power-law model is an empirical model that is often valid over an intermediate range of shear rates. At very low and very high shear rates limiting values of viscosity are approached.</para>
+        <para id="id2260201"><title>Assignment 8.1</title>Flow in annular space between concentric cylinders as function of relative translation, rotation, potential gradient, flow or no-net flow. Assume incompressible, Newtonian fluid with small Reynolds number. The outer radius has zero velocity. Parameters:</para>
+        <table id="id2260213" summary="">
+          <tgroup cols="2">
+            <tbody>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:msub>
+                      <m:mi>R</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                  </m:math>
+                </entry>
+                <entry>outer radius</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:msub>
+                      <m:mi>R</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                  </m:math>
+                </entry>
+                <entry>inner radius, maybe zero</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>∂</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:math>
+                </entry>
+                <entry>potential gradient, may be zero</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:msub>
+                      <m:mi>V</m:mi>
+                      <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msub>
+                  </m:math>
+                </entry>
+                <entry>translation velocity of inner radius, may be zero</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:msub>
+                      <m:mi>V</m:mi>
+                      <m:mrow>
+                        <m:mi>θ</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msub>
+                  </m:math>
+                </entry>
+                <entry>rotational velocity of inner radius</entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mi>q</m:mi>
+                  </m:math>
+                </entry>
+                <entry>net flow rate, may be zero</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        <list id="id2260374" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid39"> Express dimensionless velocity as a function of the dimensionless radius and dimensionless groups. Plot the following cases:
+<table id="id2260391" summary=""><tgroup cols="6"><colspec colnum="1" colname="c1"/><colspec colnum="2" colname="c2"/><colspec colnum="3" colname="c3"/><colspec colnum="4" colname="c4"/><colspec colnum="5" colname="c5"/><colspec colnum="6" colname="c6"/><tbody><row><entry namest="c1" nameend="c6">Table of cases to plot</entry></row><row><entry>Case</entry><entry><m:math overflow="scroll"><m:mrow><m:msub><m:mi>R</m:mi><m:mn>1</m:mn></m:msub><m:mo>/</m:mo><m:msub><m:mi>R</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></entry><entry><m:math overflow="scroll"><m:mrow><m:mi>∂</m:mi><m:mi>P</m:mi><m:mo>/</m:mo><m:mi>∂</m:mi><m:mi>z</m:mi></m:mrow></m:math></entry><entry><m:math overflow="scroll"><m:msub><m:mi>v</m:mi><m:mrow><m:mi>z</m:mi><m:mn>1</m:mn></m:mrow></m:msub></m:math></entry><entry><m:math overflow="scroll"><m:msub><m:mi>v</m:mi><m:mrow><m:mi>θ</m:mi><m:mn>1</m:mn></m:mrow></m:msub></m:math></entry><entry><m:math overflow="scroll"><m:mi>q</m:mi></m:math></entry></row><row><entry>1</entry><entry>0</entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry><entry/><entry/><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry></row><row><entry>2</entry><entry>0.5</entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry><entry>0</entry><entry>0</entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry></row><row><entry>3</entry><entry>0.5</entry><entry><m:math overflow="scroll"><m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry><entry>0</entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry></row><row><entry>4</entry><entry>0.5</entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry><entry>0</entry><entry>0</entry></row><row><entry>5</entry><entry>0.5</entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry><entry><m:math overflow="scroll"><m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry></row></tbody></tgroup></table></item>
+          <item id="uid40">What is the net flow if the inner cylinder is translating and the pressure gradient is zero?
+</item>
+          <item id="uid41"> What is the pressure gradient if the net flow is zero? Plot the velocity profile for this case.
+</item>
+        </list><para id="eip-338"><title>Assignment 8.2  </title><emphasis effect="italics">Capillary flow of power-law model fluid.</emphasis>  Calculate the following for a power-law model fluid (see hint in BSL, 1960).
+<list id="eip-id8258642" list-type="enumerated" number-style="lower-alpha"><item>Calculate and plot the velocity profile, normalized with respect to the mean velocity for <m:math>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>,</m:mo>
+<m:mn>0.67</m:mn>
+<m:mo>,</m:mo>
+<m:mn>0.5</m:mn>
+<m:mo>,</m:mo>
+<m:mtext> and </m:mtext>
+<m:mn>0.33</m:mn>
+</m:math>.</item>
+<item>Derive an expression corresponding to Poiseuille law.</item>
+<item>Derive the same relation between friction factor and Reynolds number as for Newtonian flow by defining a modified Reynolds number for power-law fluids.</item>
+</list>
+</para>
+      </section>
+      <section id="uid42">
+        <title>Steady film flow down inclined plane</title>
+        <para id="id2260970">Steady film flow down an inclined plane corresponds to case 4 (Churchill, 1988) or Section 2.2; Flow of a Falling Film (BSL, 1960). These flows occur in chemical processing with falling film sulfonation reactors, evaporation and gas adsorption, and film-condensation heat transfer. It is assumed that the flow is steady and there is no dependence on distance in the plane of the surface due to entrance effects, side walls, or ripples. The Reynolds number must be small enough for ripples to be avoided. The configuration will be similar to that of BSL except <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> corresponds to the wall and the thickness is denoted by <m:math overflow="scroll"><m:mi>h</m:mi></m:math> rather than <m:math overflow="scroll"><m:mi>δ</m:mi></m:math>.</para>
+        <para id="id2261017">It is assumed that the gas has negligible density compared to the liquid such that the pressure at the gas-liquid interface can be assumed to be constant. The potential gradient in the plane of the film is constant and can be expressed either in term of the angle from the vertical, <m:math overflow="scroll"><m:mi>β</m:mi></m:math> , or the angle from the horizontal, <m:math overflow="scroll"><m:mi>α</m:mi></m:math>.</para>
+        <equation id="id2261044">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>∇</m:mi>
+              <m:mi>P</m:mi>
+              <m:mo>=</m:mo>
+              <m:mi>ρ</m:mi>
+              <m:mspace width="0.166667em"/>
+              <m:mi>g</m:mi>
+              <m:mspace width="0.166667em"/>
+              <m:mo form="prefix">cos</m:mo>
+              <m:mspace width="0.166667em"/>
+              <m:mi>β</m:mi>
+              <m:mo>=</m:mo>
+              <m:mi>ρ</m:mi>
+              <m:mspace width="0.166667em"/>
+              <m:mi>g</m:mi>
+              <m:mspace width="0.166667em"/>
+              <m:mo form="prefix">sin</m:mo>
+              <m:mspace width="0.166667em"/>
+              <m:mi>α</m:mi>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mi>α</m:mi>
+              <m:mo>=</m:mo>
+              <m:mi>π</m:mi>
+              <m:mo>/</m:mo>
+              <m:mn>2</m:mn>
+              <m:mo>-</m:mo>
+              <m:mi>β</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2261129">The equations of motion are as follows.</para>
+        <equation id="id2261132">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>P</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>x</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>β</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msub>
+                          <m:mi>τ</m:mi>
+                          <m:mrow>
+                            <m:mi>x</m:mi>
+                            <m:mi>z</m:mi>
+                          </m:mrow>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>x</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mn>0</m:mn>
+                    <m:mo>=</m:mo>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>β</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>μ</m:mi>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>d</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mi>z</m:mi>
+                        </m:msub>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>x</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi> Newtonian </m:mi>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi> fluid </m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2261298">The boundary conditions are zero stress at the gas-liquid interface and no slip at the wall.</para>
+        <equation id="id2261303">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>z</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>x</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>x</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>h</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2261378">The shear stress profile can be determined by integration and application of the zero stress boundary condition.</para>
+        <equation id="id2261383">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>h</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>β</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mrow>
+                        <m:mfrac>
+                          <m:mi>x</m:mi>
+                          <m:mi>h</m:mi>
+                        </m:mfrac>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mn>0</m:mn>
+                    <m:mo>≤</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>≤</m:mo>
+                    <m:mi>h</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>τ</m:mi>
+                      <m:mi>w</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>h</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>β</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2261522">The velocity profile for a Newtonian fluid can be determined by a second integration and application of the no slip boundary condition.</para>
+        <equation id="id2261527">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>z</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>ρ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:mi>g</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msup>
+                          <m:mi>h</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mspace width="0.166667em"/>
+                        <m:mo form="prefix">cos</m:mo>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mi>μ</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mfenced separators="" open="[" close="]">
+                      <m:mrow>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mi>x</m:mi>
+                          </m:mrow>
+                          <m:mi>h</m:mi>
+                        </m:mfrac>
+                        <m:mo>-</m:mo>
+                        <m:msup>
+                          <m:mrow>
+                            <m:mfenced separators="" open="(" close=")">
+                              <m:mfrac>
+                                <m:mi>x</m:mi>
+                                <m:mi>h</m:mi>
+                              </m:mfrac>
+                            </m:mfenced>
+                          </m:mrow>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfenced>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mn>0</m:mn>
+                    <m:mo>≤</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>≤</m:mo>
+                    <m:mi>h</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>,</m:mo>
+                        <m:mspace width="0.277778em"/>
+                        <m:mo movablelimits="true" form="prefix">max</m:mo>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>ρ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:mi>g</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msup>
+                          <m:mi>h</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mspace width="0.166667em"/>
+                        <m:mo form="prefix">cos</m:mo>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mi>μ</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2261712">The average velocity and volumetric flow rate can be determined by integration of the velocity profile over the film thickness.</para>
+        <equation id="id2261718">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfenced separators="" open="〈" close="〉">
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:msub>
+                    </m:mfenced>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>ρ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:mi>g</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msup>
+                          <m:mi>h</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mspace width="0.166667em"/>
+                        <m:mo form="prefix">cos</m:mo>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mn>3</m:mn>
+                        <m:mi>μ</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>Q</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>ρ</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:mi>g</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:mi>W</m:mi>
+                        <m:mspace width="0.166667em"/>
+                        <m:msup>
+                          <m:mi>h</m:mi>
+                          <m:mn>3</m:mn>
+                        </m:msup>
+                        <m:mspace width="0.166667em"/>
+                        <m:mo form="prefix">cos</m:mo>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mn>3</m:mn>
+                        <m:mi>μ</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2261841">The film thickness, h, can be given in terms of the average velocity, the volume rate of flow, or the mass rate of flow per unit width of wall <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>Γ</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.166667em"/><m:mi>h</m:mi><m:mspace width="0.166667em"/><m:mfenced separators="" open="〈" close="〉"><m:msub><m:mi>v</m:mi><m:mi>z</m:mi></m:msub></m:mfenced><m:mo>)</m:mo></m:mrow></m:math>:</para>
+        <equation id="id2261890">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>h</m:mi>
+              <m:mo>=</m:mo>
+              <m:msqrt>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mn>3</m:mn>
+                    <m:mi>μ</m:mi>
+                    <m:mfenced separators="" open="〈" close="〉">
+                      <m:msub>
+                        <m:mi>v</m:mi>
+                        <m:mi>z</m:mi>
+                      </m:msub>
+                    </m:mfenced>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mi>β</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+              </m:msqrt>
+              <m:mo>=</m:mo>
+              <m:mroot>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mn>3</m:mn>
+                    <m:mi>μ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>Q</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ρ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>W</m:mi>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mi>β</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mn>3</m:mn>
+              </m:mroot>
+              <m:mo>=</m:mo>
+              <m:mroot>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mn>3</m:mn>
+                    <m:mi>μ</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>Γ</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>ρ</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mspace width="0.166667em"/>
+                    <m:mi>g</m:mi>
+                    <m:mspace width="0.166667em"/>
+                    <m:mo form="prefix">cos</m:mo>
+                    <m:mi>β</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mn>3</m:mn>
+              </m:mroot>
+            </m:mrow>
+          </m:math>
+        </equation>
+      </section>
+      <section id="uid43">
+        <title>Unsteady viscous flow</title>
+        <para id="id2262042"><emphasis effect="underline">Suddenly accelerated plate.</emphasis> (BSL, 1960) A semi-infinite body of liquid with constant density and viscosity is bounded on one side by a flat surface ( the <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mi>z</m:mi></m:mrow></m:math> plane). Initially the fluid and solid surface is at rest; but at time <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> the solid surface is set in motion in the positive <m:math overflow="scroll"><m:mi>x</m:mi></m:math>-direction with a velocity <m:math overflow="scroll"><m:mi>U</m:mi></m:math>. It is desired to know the velocity as a function of <m:math overflow="scroll"><m:mi>y</m:mi></m:math> and <m:math overflow="scroll"><m:mi>t</m:mi></m:math>. The pressure is hydrostatic and the flow is assumed to be laminar.
+</para>
+        <para id="eip-82">The only nonzero component of velocity is <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mi>x</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>v</m:mi><m:mi>x</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>. Thus the only non-zero equation of motion is as follows.</para><equation id="id2262158">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>ρ</m:mi>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:msub>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mi>μ</m:mi>
+              <m:mfrac>
+                <m:mrow>
+                  <m:msup>
+                    <m:mi>∂</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:msub>
+                    <m:mi>v</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:msub>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>∂</m:mi>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>,</m:mo>
+              <m:mspace width="1.em"/>
+              <m:mi>y</m:mi>
+              <m:mo>&gt;</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>,</m:mo>
+              <m:mspace width="0.277778em"/>
+              <m:mi>t</m:mi>
+              <m:mo>&gt;</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2262247">The initial condition and boundary conditions are as follows.</para>
+        <equation id="id2262251">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>t</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>y</m:mi>
+                    <m:mo>&gt;</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mi>U</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>y</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>t</m:mi>
+                    <m:mo>&gt;</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>y</m:mi>
+                    <m:mo>→</m:mo>
+                    <m:mi>∞</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>t</m:mi>
+                    <m:mo>&gt;</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2262385">If we normalize the velocity with respect to the boundary condition, we see that this is the same parabolic PDE and boundary condition as we solved with a similarity transformation. Thus the solution is</para>
+        <equation id="id2262392">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mi>v</m:mi>
+                <m:mi>x</m:mi>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mi>U</m:mi>
+              <m:mspace width="0.166667em"/>
+              <m:mi>e</m:mi>
+              <m:mi>r</m:mi>
+              <m:mi>f</m:mi>
+              <m:mi>c</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mfrac>
+                  <m:mi>y</m:mi>
+                  <m:msqrt>
+                    <m:mrow>
+                      <m:mn>4</m:mn>
+                      <m:mi>μ</m:mi>
+                      <m:mspace width="0.166667em"/>
+                      <m:mi>t</m:mi>
+                      <m:mo>/</m:mo>
+                      <m:mi>ρ</m:mi>
+                    </m:mrow>
+                  </m:msqrt>
+                </m:mfrac>
+              </m:mfenced>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id2262454">The presence of the ratio of viscosity and density, the kinematic viscosity, in the expression for the velocity implies that both viscous and inertial forces are operative.</para>
+        <para id="id2262460">The velocity profiles for the wall at <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> suddenly set in motion is illustrated below.</para>
+        <figure id="uid44">
+          <media id="uid44_media" alt="">
+            <image mime-type="image/png" src="../../media/fig8_3.png" id="uid44_onlineimage" width="470"><!-- NOTE: attribute width changes image size online (pixels). original width is 470. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig8_3.eps" id="uid44_printimage"/>
+          </media>
+        </figure>
+        <para id="id2262488"><emphasis effect="underline">Developing Couette flow.</emphasis> The transient development to the steady-state Couette flow discussed earlier can now be easily derived. We will let the plane <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> be the surface with zero velocity and let the velocity be specified at <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math>. The initial and boundary conditions are as follows.</para>
+        <equation id="id2262530">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>t</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mn>0</m:mn>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>L</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>y</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mi>t</m:mi>
+                    <m:mo>&gt;</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mi>U</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>y</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>L</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mi>t</m:mi>
+                    <m:mo>&gt;</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mi> or </m:mi>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>t</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mo>-</m:mo>
+                    <m:mi>L</m:mi>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>&lt;</m:mo>
+                    <m:mi>L</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>U</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mi>y</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>L</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mi>t</m:mi>
+                    <m:mo>&gt;</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mi>U</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>y</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>L</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="1.em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>t</m:mi>
+                    <m:mo>&gt;</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id2262852">It should be apparent that the two formulations of the boundary conditions give the same solution. However, the latter gives a clue how one should obtain a solution. The solution is antisymmetric about <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> and the zero velocity condition is satisfied. A series of additional terms are needed to satisfy the boundary conditions at <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo>±</m:mo><m:mi>L</m:mi></m:mrow></m:math>. The solution is</para>
+        <equation id="id2262892"><m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mi>U</m:mi>
+                    <m:munderover>
+<m:mrow>
+                      <m:mo>∑</m:mo>
+</m:mrow>        
+              <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:munderover>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:mrow>
+                        <m:mi>e</m:mi>
+                        <m:mi>r</m:mi>
+                        <m:mi>f</m:mi>
+                        <m:mi>c</m:mi>
+                        <m:mfenced separators="" open="[" close="]">
+                          <m:mfrac>
+                            <m:mrow>
+                              <m:mo>(</m:mo>
+                              <m:mn>2</m:mn>
+                              <m:mi>n</m:mi>
+                              <m:mo>+</m:mo>
+                              <m:mn>1</m:mn>
+                              <m:mo>)</m:mo>
+                              <m:mi>L</m:mi>
+                              <m:mo>-</m:mo>
+                              <m:mi>y</m:mi>
+                            </m:mrow>
+                            <m:msqrt>
+                              <m:mrow>
+                                <m:mn>4</m:mn>
+                                <m:mi>ν</m:mi>
+                                <m:mspace width="0.166667em"/>
+                                <m:mi>t</m:mi>
+                              </m:mrow>
+                            </m:msqrt>
+                          </m:mfrac>
+                        </m:mfenced>
+                        <m:mo>-</m:mo>
+                        <m:mi>e</m:mi>
+                        <m:mi>r</m:mi>
+                        <m:mi>f</m:mi>
+                        <m:mi>c</m:mi>
+                        <m:mfenced separators="" open="[" close="]">
+                          <m:mfrac>
+                            <m:mrow>
+                              <m:mo>(</m:mo>
+                              <m:mn>2</m:mn>
+                              <m:mi>n</m:mi>
+                              <m:mo>+</m:mo>
+                              <m:mn>1</m:mn>
+                              <m:mo>)</m:mo>
+                              <m:mi>L</m:mi>
+                              <m:mo>+</m:mo>
+                              <m:mi>y</m:mi>
+                            </m:mrow>
+                            <m:msqrt>
+                              <m:mrow>
+                                <m:mn>4</m:mn>
+                                <m:mi>ν</m:mi>
+                                <m:mspace width="0.166667em"/>
+                                <m:mi>t</m:mi>
+                              </m:mrow>
+                            </m:msqrt>
+                          </m:mfrac>
+                        </m:mfenced>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>ν</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                      <m:mi>μ</m:mi>
+                      <m:mi>ρ</m:mi>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <figure id="uid45">
+          <media id="uid45_media" alt="">
+            <image mime-type="image/png" src="../../media/fig8_4.png" id="uid45_onlineimage" width="472"><!-- NOTE: attribute width changes image size online (pixels). original width is 472. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/fig8_4.eps" id="uid45_printimage"/>
+          </media>
+        </figure>
+      </section>
+      
+      
+        <para id="id2263083"><title>Asignment. 8.3 </title><emphasis effect="italics">Flow of a fluid with a suddenly applied constant wall stress.</emphasis>
+
+This problem is similar to that of flow <m:math overflow="scroll"><m:mfenced separators="" open="(" close=")"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mspace width="0.277778em"/><m:mi>y</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.277778em"/><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:mfenced></m:math>
+near a wall <m:math overflow="scroll"><m:mfenced separators="" open="(" close=")"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mspace width="0.277778em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:mfenced></m:math>
+suddenly set into motion, except that the shear stress at the wall is constant rather than the velocity. Let the fluid be at rest before <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. At time <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> a constant force is applied to the fluid at the wall, so that the shear stress <m:math overflow="scroll"><m:msub><m:mi>τ</m:mi><m:mrow><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub></m:math> takes on a new constant value <m:math overflow="scroll"><m:msub><m:mi>τ</m:mi><m:mi>o</m:mi></m:msub></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>.<list id="id2263275" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid47">Start with the continuity and Navier-Stokes equations and eliminate the terms that are identically zero. Differentiate the resulting equation with respect to distance from the wall and multiply by viscosity to derive an equation for the evolution of the shear stress. List all assumptions.
+</item>
+          <item id="uid48">Write the boundary and initial conditions for this equation.
+</item>
+          <item id="uid49">Solve for the time and distance dependence of the shear stress. Sketch the solution.
+</item>
+          <item id="uid50">Calculate the velocity profile from the solution of the shear stress. The following equation will be helpful.
+</item>
+          <item id="uid51">Suppose the fluid is not infinite but rather there is another wall at a distance 2h away from the original wall and it was also set into motion but in the opposite direction with the same wall shear stress. What are the stress and velocity profiles for the fluid between the two walls? Sketch and express as series solutions.
+</item>
+          <item id="uid52">What are the steady state stress and velocity profiles for the problem of part (e)? Sketch and express as analytical solutions.
+</item>
+        </list>
+</para>
+       </content>
+</document>
