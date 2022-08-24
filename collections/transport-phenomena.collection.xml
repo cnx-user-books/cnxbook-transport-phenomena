@@ -1,3 +1,24 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" type="Course">  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">  <md:content-id>col11205</md:content-id>  <md:title>Transport Phenomena</md:title>      <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License 3.0</md:license>  <md:language>en</md:language>        <md:uuid>4361f654-78a4-4f3c-b483-ef620ba5abdf</md:uuid>
-<md:slug>transport-phenomena</md:slug>
-</metadata>  <col:content>          <col:module document="m34419"/>                            <col:module document="m34420"/>                            <col:module document="m34423"/>                            <col:module document="m34425"/>                            <col:module document="m34426"/>                            <col:module document="m34427"/>                            <col:module document="m34429"/>                            <col:module document="m34431"/>                            <col:module document="m34432"/>                            <col:module document="m34434"/>                            <col:module document="m34437"/>                    </col:content></col:collection>
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" type="Course" authors="George Hirasaki">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+    <md:content-id>col11205</md:content-id>
+    <md:title>Transport Phenomena</md:title>
+    <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License 3.0</md:license>
+    <md:language>en</md:language>
+    <md:uuid>4361f654-78a4-4f3c-b483-ef620ba5abdf</md:uuid>
+    <md:slug>transport-phenomena</md:slug>
+  </metadata>
+  <col:content>
+    <col:module document="m34419"/>
+    <col:module document="m34420"/>
+    <col:module document="m34423"/>
+    <col:module document="m34425"/>
+    <col:module document="m34426"/>
+    <col:module document="m34427"/>
+    <col:module document="m34429"/>
+    <col:module document="m34431"/>
+    <col:module document="m34432"/>
+    <col:module document="m34434"/>
+    <col:module document="m34437"/>
+  </col:content>
+</col:collection>
